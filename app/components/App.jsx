@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './App.scss';
 
+import RootRouter from '../rootRouter';
+
 class App extends Component {
   render() {
     return (
-      <h2>Well, you render react page.</h2>
+      <RootRouter />
     );
   }
 }

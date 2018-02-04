@@ -1,24 +1,35 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-
 import { AppContainer } from 'react-hot-loader';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import Component from './components/App';
+import theme from './ui/themes/custom';
+
+const Component = require('./components/App').default;
 
 ReactDOM.render(
-  <AppContainer>
-    <Component />
-  </AppContainer>,
-document.getElementById('root'),
+  <Router>
+    <AppContainer>
+      <ThemeProvider theme={theme}>
+        <Component {...window.__APP_INITIAL_STATE__} />
+      </ThemeProvider>
+    </AppContainer>
+  </Router>,
+ document.getElementById('root')
 );
 
 if (module.hot) {
   module.hot.accept(() => {
     ReactDOM.render(
-      <AppContainer>
-        <Component />
-      </AppContainer>,
-document.getElementById('root'),
+      <Router>
+        <AppContainer>
+          <ThemeProvider theme={theme}>
+            <Component {...window.__APP_INITIAL_STATE__} />
+          </ThemeProvider>
+        </AppContainer>
+      </Router>,
+  document.getElementById('root')
 );
   });
 }

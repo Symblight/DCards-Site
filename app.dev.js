@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+import webpackHotServerMiddleware from 'webpack-hot-server-middleware';
 import webpack from 'webpack';
 import webpackConf from './webpack.config';
 
@@ -30,7 +31,8 @@ app.use(webpackDevMiddleware(compiler, {
     modules: false,
   }
 }));
-app.use(webpackHotMiddleware(compiler));
+app.use(webpackHotMiddleware(compiler.compilers.find(comp => comp.name === 'client')));
+app.use(webpackHotServerMiddleware(compiler));
 
 const server = http.createServer(app).listen(port, () => {
   console.info(`server is up on port: ${port}`);
