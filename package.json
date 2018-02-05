@@ -17,6 +17,7 @@
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
     "express": "^4.16.2",
+    "formik": "^0.11.4",
     "morgan": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -25,6 +26,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "sass": "^1.0.0-beta.5.2",
+    "semantic-ui-react": "^0.78.1",
     "serve-favicon": "^2.4.5",
     "styled-components": "^3.1.6"
   },

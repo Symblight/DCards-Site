@@ -101,7 +101,14 @@ module.exports = [{
         options: {
           name: 'assets/images/[hash].[ext]'
         },
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)$/,
+          loader: 'file-loader',
+          options: {
+            name: 'assets/fonts/[name]-[hash].[ext]'
+          },
+        },
     ],
   }
 }

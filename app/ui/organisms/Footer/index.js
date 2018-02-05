@@ -9,9 +9,9 @@ class Footer extends PureComponent {
     return (
       <Wrapper>
         <Content>
-          <Label>React</Label>
+          <Label>Discount cards store</Label>
           <Label>&copy; 2017 Alexey</Label>
-          <Label>version 1.1</Label>
+          <Label>version 0.1</Label>
         </Content>
       </Wrapper>
     );
