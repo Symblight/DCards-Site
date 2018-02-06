@@ -22,6 +22,7 @@ app.use(morgan('dev'));
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
   publicPath: '/',
+  historyApiFallback: true,
   stats: {
     colors: true,
     hash: false,
