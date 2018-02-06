@@ -1,14 +1,17 @@
-import ReactDOM from 'react-dom';
+import { hydrate } from 'react-dom';
 import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter as Router } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 import { ThemeProvider } from 'styled-components';
 
 import theme from './ui/themes/custom';
 
 const Component = require('./components/App').default;
 
-ReactDOM.render(
+const history = createHistory({ basename: '/' });
+
+hydrate(
   <Router>
     <AppContainer>
       <ThemeProvider theme={theme}>
@@ -21,7 +24,7 @@ ReactDOM.render(
 
 if (module.hot) {
   module.hot.accept(() => {
-    ReactDOM.render(
+    hydrate(
       <Router>
         <AppContainer>
           <ThemeProvider theme={theme}>

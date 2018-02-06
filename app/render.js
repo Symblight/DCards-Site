@@ -12,7 +12,7 @@ export default function serverRenderer() {
     const sheet = new ServerStyleSheet();
     const context = {};
     const markup = ReactDOMServer.renderToString(
-      <StaticRouter location={req.url} context={context}>
+      <StaticRouter location={req.path} context={context}>
         <App />
       </StaticRouter>
     );

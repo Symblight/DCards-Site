@@ -11,7 +11,9 @@ class Header extends Component {
     return (
       <Wrapper>
         <Content>
-            <div>Logo component</div>
+            <div>
+              <Link to="/main">Logo component </Link>
+            </div>
             <UserNav>
               <li>
                 <Link to="/login">

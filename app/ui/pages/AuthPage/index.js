@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Wrapper, FormContainer, DiscriptionContainer } from './index.styled';
 import { Link } from 'react-router-dom'
+import { Container, Header } from 'semantic-ui-react'
 
 import Block from 'ui/atoms/Block';
 
@@ -14,7 +15,7 @@ class AuthPage extends Component {
             <PageTemplate>
                 <Wrapper>
                     <Block>
-                        <DiscriptionContainer>{DISCRIPTION_TEXT}</DiscriptionContainer>
+                    <Container text>{DISCRIPTION_TEXT}</Container>
                     </Block>
                     <Block>
                         <FormContainer>Panel</FormContainer>
