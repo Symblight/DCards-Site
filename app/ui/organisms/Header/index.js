@@ -12,7 +12,7 @@ class Header extends Component {
       <Wrapper>
         <Content>
             <div>
-              <Link to="/main">Logo component </Link>
+              <Link to="/">Logo</Link>
             </div>
             <UserNav>
               <li>
