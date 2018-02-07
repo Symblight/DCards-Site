@@ -17,7 +17,7 @@ const render = (Component) => {
     <Router>
       <AppContainer>
         <ThemeProvider theme={theme}>
-          <Component {...window.__APP_INITIAL_STATE__} />
+          <Component />
         </ThemeProvider>
       </AppContainer>
     </Router>,

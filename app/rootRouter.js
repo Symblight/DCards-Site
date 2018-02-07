@@ -9,6 +9,7 @@ import Auth from './ui/pages/AuthPage';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import Main from './ui/pages/MainPage';
+import NotFound from './ui/pages/404';
 
 class rootRouter extends Component {
   render() {
@@ -19,6 +20,7 @@ class rootRouter extends Component {
         <Route path="/login" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/main" component={Main} />
+        <Route component={NotFound} />
       </Switch>
     );
   }
