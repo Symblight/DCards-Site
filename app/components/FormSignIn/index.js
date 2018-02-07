@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 
-class SignInForm extends PureComponent {
+class SignInForm extends Component {
     constructor(){
         super();
         this.state = {
@@ -9,23 +9,29 @@ class SignInForm extends PureComponent {
         }
     }
 
-    handleSubmitButton = (event) => {
+    componentWillMount(){
+        console.log('DID');
+    }
+
+    handleSubmitButton = () => {
         alert('it works!');
-        event.preventDefault();
+        console.log("2434343")
+       // event.preventDefault();
     };
 
     render(){
+        console.log('I was triggered during render')
         return(
             <Form onSubmit={this.handleSubmitButton}>
                 <Form.Field>
-                    <label>First Name</label>
-                    <input placeholder='First Name' />
+                    <label>Username or email address</label>
+                    <input placeholder='Username or email address' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name</label>
-                    <input placeholder='Last Name' />
+                    <label>Password</label>
+                    <input placeholder='Password' />
                 </Form.Field>
-                <Button type='submit'>Submit</Button>
+                <Form.Button content="Sign in" />
             </Form>
         );
     }

@@ -7,7 +7,7 @@ import Block from 'ui/atoms/Block';
 import PageTemplate from 'ui/templates/PageTemplate';
 import SignInForm from 'components/FormSignIn';
 
-const DISCRIPTION_TEXT = `Дискотные карты. Простое решение для вашего бизнесса. Создавайте и управляйте скидками вашего магазина. Это просто!`;
+const DISCRIPTION_TEXT = ``;
 
 class AuthPage extends Component {
     render() {
@@ -15,7 +15,7 @@ class AuthPage extends Component {
             <PageTemplate>
                 <Wrapper>
                     <Block>
-                        <Container text>{DISCRIPTION_TEXT}</Container>
+                        <DiscriptionContainer>{DISCRIPTION_TEXT}</DiscriptionContainer>
                     </Block>
                     <Block>
                         <FormContainer>
