@@ -8,12 +8,11 @@ import { Wrapper, Content } from './index.styled';
 class PageTemplate extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired,
-    color: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired
   }
 
   render() {
-    const { children, color } = this.props;
+    const { children } = this.props;
 
     return (
       <Wrapper>

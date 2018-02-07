@@ -10,7 +10,6 @@ import Template from './template';
 import App from './components/App';
 
 export default function serverRenderer() {
-  console.log(111);
   return (req, res) => {
     const sheet = new ServerStyleSheet();
     const context = {};
@@ -24,9 +23,9 @@ export default function serverRenderer() {
       </StaticRouter>
     );
     const styleTags = sheet.getStyleTags();
-    res.status(200).send(Template({
-      markup,
-      styles: styleTags
-    }));
+      res.status(200).send(Template({
+        markup,
+        styles: styleTags
+      }));
   };
 }
