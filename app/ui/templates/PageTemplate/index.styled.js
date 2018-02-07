@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     box-sizing: border-box;
 
     @media screen and (max-width: 640px) {
-        padding-top: 3.25rem;
+        
     }
 `;
 

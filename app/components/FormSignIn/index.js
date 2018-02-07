@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Redirect } from 'react-router-dom'
 
 class SignInForm extends Component {
     constructor(){
@@ -10,7 +12,7 @@ class SignInForm extends Component {
     }
 
     handleSubmitButton = () => {
-        console.log("2434343")
+        console.log(this.props);
     };
 
     render(){
