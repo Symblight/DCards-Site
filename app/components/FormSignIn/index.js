@@ -9,18 +9,11 @@ class SignInForm extends Component {
         }
     }
 
-    componentWillMount(){
-        console.log('DID');
-    }
-
     handleSubmitButton = () => {
-        alert('it works!');
         console.log("2434343")
-       // event.preventDefault();
     };
 
     render(){
-        console.log('I was triggered during render')
         return(
             <Form onSubmit={this.handleSubmitButton}>
                 <Form.Field>

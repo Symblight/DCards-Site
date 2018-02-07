@@ -24,3 +24,5 @@ const render = (Component) => {
     document.getElementById('root')
   );
 }
+
+render(Component);
