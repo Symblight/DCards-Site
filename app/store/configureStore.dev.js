@@ -12,8 +12,8 @@ import rootReducer from '../rootReducer'
 const middlewares = [logger, thunk];
 
 export default function configureStore (initialState) {
-  const store = createStore(rootReducer, initialState, compose(
-    applyMiddleware(...middlewares),
+  const store = createStore(rootReducer, initialState, applyMiddleware(thunk, logger), compose(
+    
     // Add other middleware on this line...
    // window.devToolsExtension ? window.devToolsExtension() : f => f // add support for Redux dev tools
   )

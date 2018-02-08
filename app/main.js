@@ -8,7 +8,13 @@ import { Provider } from 'react-redux'
 import theme from './ui/themes/custom';
 import configureStore from './store/configureStore';
 
-let store = configureStore();
+// Grab the state from a global variable injected into the server-generated HTML
+const preloadedState = window.__PRELOADED_STATE__
+
+// Allow the passed state to be garbage-collected
+delete window.__PRELOADED_STATE__
+
+let store = configureStore(preloadedState);
 
 const Component = require('./components/App').default;
 
