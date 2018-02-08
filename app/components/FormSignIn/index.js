@@ -1,9 +1,21 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-import { Redirect } from 'react-router-dom'
+import { Button, Checkbox, Form } from 'semantic-ui-react';
+import { Redirect } from 'react-router-dom';
+import { fetchLoginUser } from '../reducerUser/actions';
+import { connect } from 'react-redux';
 
-class SignInForm extends Component {
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoginRequest: (user)=> dispatch(fetchLoginUser(user))
+    }
+};
+
+@connect(
+    null,
+    mapDispatchToProps
+)
+class SignInForm extends PureComponent {
     constructor(){
         super();
         this.state = {
@@ -12,7 +24,8 @@ class SignInForm extends Component {
     }
 
     handleSubmitButton = () => {
-        console.log(this.props);
+        this.props.onLoginRequest({data:{username:"lol"}});
+       // console.log(this.props);
     };
 
     render(){
