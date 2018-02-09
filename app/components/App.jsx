@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './App.scss';
 
 import RootRouter from '../rootRouter';
-import { ThemeProvider } from 'styled-components';
 import theme from '../ui/themes/custom';
+import { ThemeProvider } from 'styled-components';
+
+import './App.scss';
 
 class App extends Component {
   render() {

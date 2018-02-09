@@ -11,7 +11,8 @@ let initialState = {
         password: ''
     },
 	didInvalid: false,
-	isFetching: false,
+    isFetching: false,
+    Authentication: false,
 };
 
 const reducerLogin = (state = initialState, action) => {
@@ -29,6 +30,7 @@ const reducerLogin = (state = initialState, action) => {
                 user: action.payload,
                 didInvalid: false,
                 isFetching: false,
+                Authentication: true
             }
         }
         case USER_INVALID_AUTH: {

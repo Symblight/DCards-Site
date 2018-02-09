@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 import Test from './ui/pages/TestPage';
-import Auth from './ui/pages/AuthPage';
+import Auth from './components/Auth';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import Main from './ui/pages/MainPage';

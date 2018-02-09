@@ -6,13 +6,14 @@ import { LabelStyled } from './index.styled';
 class Label extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    color: PropTypes.string
   }
 
   render() {
-    const { children } = this.props;
+    const { children, color } = this.props;
     return (
-      <LabelStyled>
+      <LabelStyled color={color}>
         {children}
       </LabelStyled>
     );
