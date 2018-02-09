@@ -18,9 +18,9 @@ class AuthTemplate extends PureComponent {
       <Wrapper>
         <Header />
         <Container>
-        <Content>
-          {children}
-        </Content>
+          <Content>
+            {children}
+          </Content>
         </Container>
         <Footer />
       </Wrapper>

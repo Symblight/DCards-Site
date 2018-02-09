@@ -11,4 +11,5 @@ export const Content = styled.div`
   justify-content: space-around;
   font-weight: 600;
   margin: 0 auto;
+  max-width: 1012px;
 `;

@@ -19,6 +19,7 @@ export const Content = styled.div`
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 70vw;
-    padding-bottom: 2rem;
+    padding-top: 20px;
+    max-width: 1012px;
+    padding-bottom: 20px;
 `;

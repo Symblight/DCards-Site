@@ -5,7 +5,6 @@ import Label from 'ui/atoms/Label';
 import { Redirect } from 'react-router-dom';
 import { fetchLoginUser } from '../reducerUser/actions';
 import { connect } from 'react-redux';
-
 const mapDispatchToProps = (dispatch) => {
     return {
         onLoginRequest: (user)=> dispatch(fetchLoginUser(user))
@@ -45,11 +44,11 @@ class FormSignIn extends PureComponent {
         return(
             <Form onSubmit={this.handleSubmitButton}>
                 <Form.Field>
-                    <Label color = 'white'>Username or email address</Label>
+                    <Label>Username or email address</Label>
                     <input onChange = {this.handleChangeUsernameOrEmail} value = {UsernameOrEmail} placeholder='Username or email address' />
                 </Form.Field>
                 <Form.Field>
-                    <Label color = 'white'>Password</Label>
+                    <Label>Password</Label>
                     <input onChange = {this.handleChangePassword} value = {Password} placeholder='Password' />
                 </Form.Field>
                 <Form.Button positive content="Sign in" />
