@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 
 import PageTemplate from 'ui/templates/PageTemplate';
+import SignUpForm from 'components/FormSignUp';
+import { Wrapper } from './index.styled';
 
 class SignUpPage extends Component {
   render() {
     return (
       <PageTemplate>
-        <div>Sign Up</div>
-        <div><Link to="/test">Demo components</Link></div>
+        <Wrapper>
+          <SignUpForm />
+        </Wrapper>
       </PageTemplate>
     );
   }

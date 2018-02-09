@@ -11,11 +11,15 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Content = styled.main`
+export const Container = styled.main`
+    background-color: ${props => props.theme.MainTheme.grey[0]};
+`;
+
+export const Content = styled.div`
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 70vw;
-    padding-bottom: 2rem;
-    background-color: ${props => props.theme.MainTheme.white[0]};
+    padding-top: 20px;
+    max-width: 1012px;
+    padding-bottom: 20px;
 `;

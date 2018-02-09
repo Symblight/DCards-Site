@@ -1,33 +1,60 @@
-import React, { Component } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import React, { PureComponent } from 'react';
 
-class SignInForm extends Component {
+import { Button, Checkbox, Form } from 'semantic-ui-react';
+import Label from 'ui/atoms/Label';
+import { Redirect } from 'react-router-dom';
+import { fetchLoginUser } from '../reducerUser/actions';
+import { connect } from 'react-redux';
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoginRequest: (user)=> dispatch(fetchLoginUser(user))
+    }
+  };
+  
+@connect(
+    null,
+    mapDispatchToProps
+  )
+class FormSignIn extends PureComponent {
     constructor(){
         super();
         this.state = {
-
+            UsernameOrEmail: '',
+            Password: ''
         }
     }
 
     handleSubmitButton = () => {
-        console.log("2434343")
+        this.props.onLoginRequest({data:{...this.state}});
+    };
+
+    handleChangeUsernameOrEmail = (event) => {
+        const { onChange } = this.props;
+
+        this.setState({ UsernameOrEmail: event.target.value });
+    };
+
+    handleChangePassword = (event) => {
+        this.setState({ Password: event.target.value });
     };
 
     render(){
+        const { UsernameOrEmail, Password } = this.state;
+    
         return(
             <Form onSubmit={this.handleSubmitButton}>
                 <Form.Field>
-                    <label>Username or email address</label>
-                    <input placeholder='Username or email address' />
+                    <Label>Username or email address</Label>
+                    <input onChange = {this.handleChangeUsernameOrEmail} value = {UsernameOrEmail} placeholder='Username or email address' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Password</label>
-                    <input placeholder='Password' />
+                    <Label>Password</Label>
+                    <input onChange = {this.handleChangePassword} value = {Password} placeholder='Password' />
                 </Form.Field>
-                <Form.Button content="Sign in" />
+                <Form.Button positive content="Sign in" />
             </Form>
         );
     }
 }
 
-export default SignInForm;
+export default FormSignIn;

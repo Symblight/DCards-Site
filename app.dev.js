@@ -7,6 +7,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackHotServerMiddleware from 'webpack-hot-server-middleware';
 import webpack from 'webpack';
 import webpackConf from './webpack.config';
+import pg from 'pg';
 
 const app = express();
 const compiler = webpack(webpackConf);
