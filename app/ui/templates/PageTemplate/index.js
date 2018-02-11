@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Footer from 'ui/organisms/Footer';
 import Header from 'ui/organisms/Header';
-import { Wrapper, Content } from './index.styled';
+import { Wrapper, Content, Container } from './index.styled';
 
 class PageTemplate extends PureComponent {
 
@@ -17,9 +17,11 @@ class PageTemplate extends PureComponent {
     return (
       <Wrapper>
         <Header auth = { auth } />
-        <Content>
-          {children}
-        </Content>
+          <Container>
+            <Content>
+              {children}
+            </Content>
+          </Container>
         <Footer />
       </Wrapper>
     );
