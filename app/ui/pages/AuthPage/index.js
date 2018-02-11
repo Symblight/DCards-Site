@@ -10,8 +10,10 @@ const DISCRIPTION_TEXT = `DISCRIPTION`;
 
 class AuthPage extends PureComponent {
     render() {
+        const { onSignIn, onSignUp } = this.props;
+
         return (
-            <PageTemplate>
+            <PageTemplate auth = {false} >
                 <Wrapper>
                     <Block>
                         <DiscriptionContainer>{DISCRIPTION_TEXT}</DiscriptionContainer>

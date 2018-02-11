@@ -8,15 +8,16 @@ import { Wrapper, Content, Container } from './index.styled';
 class AuthTemplate extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
-  }
+    children: PropTypes.node.isRequired,
+    auth: PropTypes.bool
+  };
 
   render() {
-    const { children } = this.props;
+    const { children, auth } = this.props;
 
     return (
       <Wrapper>
-        <Header />
+        <Header auth = {auth} />
         <Container>
           <Content>
             {children}

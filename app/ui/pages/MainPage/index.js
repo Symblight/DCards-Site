@@ -5,7 +5,7 @@ import PageTemplate from 'ui/templates/PageTemplate';
 class MainPage extends Component {
   render() {
     return (
-      <PageTemplate>
+      <PageTemplate auth = { true } >
         <div>Main</div>
       </PageTemplate>
     );

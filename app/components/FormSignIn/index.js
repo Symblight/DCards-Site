@@ -5,6 +5,7 @@ import Label from 'ui/atoms/Label';
 import { Redirect } from 'react-router-dom';
 import { fetchLoginUser } from '../reducerUser/actions';
 import { connect } from 'react-redux';
+
 const mapDispatchToProps = (dispatch) => {
     return {
         onLoginRequest: (user)=> dispatch(fetchLoginUser(user))

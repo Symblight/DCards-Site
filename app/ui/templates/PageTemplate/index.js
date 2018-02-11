@@ -12,11 +12,11 @@ class PageTemplate extends PureComponent {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, auth } = this.props;
 
     return (
       <Wrapper>
-        <Header />
+        <Header auth = { auth } />
         <Content>
           {children}
         </Content>
