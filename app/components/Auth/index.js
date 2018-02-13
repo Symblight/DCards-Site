@@ -5,8 +5,8 @@ import { Redirect }  from 'react-router-dom';
 import { fetchLoginUser } from '../reducerUser/actions';
 import AuthPage from 'ui/pages/AuthPage';
 import MainPage from '../Main';
-import FormSignIn from '../FormSignIn';
-import FormSignUp from '../FormSignUp';
+import FormSignIn from '../SignIn';
+import FormSignUp from '../SignUp';
 
 const mapDispatchToProps = (dispatch) => {
     return {

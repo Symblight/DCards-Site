@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import SignUpForm from 'components/FormSignUp';
+import SignUpForm from 'components/SignUp';
 import { Wrapper } from './index.styled';
 import Container from 'ui/molecules/Container';
 import Grid from 'ui/molecules/Grid';

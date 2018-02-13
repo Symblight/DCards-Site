@@ -7,6 +7,8 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackHotServerMiddleware from 'webpack-hot-server-middleware';
 import webpack from 'webpack';
 import webpackConf from './webpack.config';
+import favicon from 'serve-favicon';
+import path from 'path';
 import pg from 'pg';
 
 const app = express();
@@ -18,6 +20,7 @@ app.disable('x-powered-by');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(favicon(path.join(__dirname, './server/favicon.ico')))
 app.use(morgan('dev'));
 
 app.use(webpackDevMiddleware(compiler, {

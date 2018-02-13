@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch) => {
     null,
     mapDispatchToProps
   )
-class FormSignIn extends PureComponent {
+class SignIn extends PureComponent {
     constructor(){
         super();
         this.state = {
@@ -58,4 +58,4 @@ class FormSignIn extends PureComponent {
     }
 }
 
-export default FormSignIn;
+export default SignIn;
