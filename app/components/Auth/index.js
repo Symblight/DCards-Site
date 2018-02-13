@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { Redirect }  from 'react-router-dom';
 
 import { fetchLoginUser } from '../reducerUser/actions';
 import AuthPage from 'ui/pages/AuthPage';
-import MainPage from 'ui/pages/MainPage';
+import MainPage from '../Main';
 import FormSignIn from '../FormSignIn';
 import FormSignUp from '../FormSignUp';
 
@@ -36,10 +37,10 @@ class Authentication extends PureComponent {
 
     renderMainPage() {
         const { userReducer } = this.props;
+        const { from } = this.props.location.state || { from: { pathname: "/main" } };
     
         return (
-            <MainPage 
-            />
+            <Redirect to={from} />
         );
     };
 

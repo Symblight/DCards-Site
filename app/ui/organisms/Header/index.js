@@ -14,10 +14,6 @@ class Header extends Component {
     auth: PropTypes.bool
   };
 
-  componentWillMount() {
-    console.log(this.props.auth);
-  }
-
   renderUserMenu() {
     return (
       <Content>
