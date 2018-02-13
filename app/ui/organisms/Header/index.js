@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Wrapper, Content,  UserNav } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import Button from 'ui/atoms/Button';
+import Logo from 'ui/atoms/Logo';
 
 const AUTHENTICATION = false;
 
@@ -18,7 +19,7 @@ class Header extends Component {
     return (
       <Content>
         <div>
-          <Link to="/">Logo</Link>
+          <Link to="/"><Logo /></Link>
         </div>
         <UserNav>
           <li>
@@ -40,7 +41,7 @@ class Header extends Component {
     return (
       <Content>
         <div>
-          <Link to="/">Logo</Link>
+          <Link to="/"><Logo /></Link>
         </div>
         <UserNav>
           <li>
