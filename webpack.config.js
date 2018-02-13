@@ -103,6 +103,17 @@ module.exports = [{
         },
       },
       {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "react-svg-loader",
+            options: {
+              name: 'assets/images/[hash].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.(woff|woff2|eot|ttf)(\?.*$|$)$/,
           loader: 'file-loader',
           options: {
