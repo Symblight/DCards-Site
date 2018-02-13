@@ -27,8 +27,8 @@ class Header extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/settings">
-              <Button inverted>Settings</Button>
+            <Link to="/">
+              <Button inverted>Sign out</Button>
             </Link>
           </li>
         </UserNav>

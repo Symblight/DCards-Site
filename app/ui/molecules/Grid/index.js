@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import Block from 'ui/atoms/Block';
 import { Wrapper } from './index.styled';
 
-class Container extends PureComponent {
+class Grid extends PureComponent {
 
   static propTypes = {
     children: PropTypes.node.isRequired
   }
 
   render() {
-    const { children } = this.props;
+    const { children, title } = this.props;
 
     return (
         <Wrapper>
@@ -23,4 +23,4 @@ class Container extends PureComponent {
   }
 }
 
-export default Container;
+export default Grid;

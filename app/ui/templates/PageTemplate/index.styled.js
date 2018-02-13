@@ -21,4 +21,5 @@ export const Content = styled.main`
     margin: 0 auto;
     max-width: 70vw;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 `;

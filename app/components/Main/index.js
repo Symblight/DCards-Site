@@ -16,6 +16,10 @@ const mapStateToProps = (state) => {
 )
 class Main extends PureComponent {
 
+    handleSignOut = () => {
+        console.log('Sign out');
+    }
+
     renderRederict() {
         const { from } = this.props.location.state || { from: { pathname: "/login" } };
     
