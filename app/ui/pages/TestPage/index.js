@@ -11,6 +11,7 @@ import WayBlock from 'ui/molecules/WayBlock';
 import BlockBorder from 'ui/molecules/BlockBorder';
 import TextFieldButton from 'ui/molecules/TextFieldButton';
 import PageTemplates from 'ui/templates/PageTemplate';
+import Container from 'ui/molecules/Container';
 
 const COLUMNS = [
   {
@@ -54,6 +55,9 @@ class TestPage extends Component {
         </Block>
         <Block title="Icon">
           <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+        </Block>
+        <Block title="Container">
+          <h3><Container> Where is it? I dont see it! </Container></h3>
         </Block>
         <Block title="Input mail">
           <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>

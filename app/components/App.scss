@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
@@ -14,9 +14,16 @@
          url('../assets/fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
          url('../assets/fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
          url('../assets/fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../assets/fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
   }
 
-body{
+body {
     font-family: 'Asap', sans-serif;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }

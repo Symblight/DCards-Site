@@ -1,40 +1,47 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { Wrapper, Content,  UserNav } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import Button from 'ui/atoms/Button';
+import Logo from 'ui/atoms/Logo';
 
 const AUTHENTICATION = false;
 
 class Header extends Component {
 
+  static propTypes = {
+    auth: PropTypes.bool
+  };
+
   renderUserMenu() {
-    return(
+    return (
       <Content>
-      <div>
-        <Link to="/">Logo</Link>
-      </div>
-      <UserNav>
-        <li>
-          <Link to="/account">
-            <Button >Account</Button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/settings">
-            <Button inverted>Settings</Button>
-          </Link>
-        </li>
-      </UserNav>
-    </Content>);
+        <div>
+          <Link to="/"><Logo /></Link>
+        </div>
+        <UserNav>
+          <li>
+            <Link to="/account">
+              <Button >Account</Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <Button inverted>Sign out</Button>
+            </Link>
+          </li>
+        </UserNav>
+      </Content>
+    );
   };
 
   renderGuestMenu() {
-    return(
+    return (
       <Content>
         <div>
-          <Link to="/">Logo</Link>
+          <Link to="/"><Logo /></Link>
         </div>
         <UserNav>
           <li>
@@ -52,10 +59,12 @@ class Header extends Component {
   };
 
   render() {
+    const { auth } = this.props;
+
     return (
       <Wrapper>
         {
-          AUTHENTICATION ? this.renderUserMenu() : this.renderGuestMenu()
+          auth ? this.renderUserMenu() : this.renderGuestMenu()
         }
       </Wrapper>
     );

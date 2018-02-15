@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react';
 
 import { Button, Checkbox, Form } from 'semantic-ui-react';
 import Label from 'ui/atoms/Label';
+import withGuest from '../proxy-props/withGuest';
 
+@withGuest
 class FormSignUp extends PureComponent {
     render() {
         return (

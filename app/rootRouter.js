@@ -5,11 +5,12 @@ import {
 } from 'react-router-dom';
 
 import Test from './ui/pages/TestPage';
-import Auth from './components/Auth';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
-import Main from './ui/pages/MainPage';
 import NotFound from './ui/pages/404';
+import Account from './components/Account';
+import Auth from './components/Auth';
+import Main from './components/Main';
 
 class rootRouter extends Component {
   render() {
@@ -20,6 +21,7 @@ class rootRouter extends Component {
         <Route path="/login" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/main" component={Main} />
+        <Route path="/account" component={Account} />
         <Route component={NotFound} />
       </Switch>
     );
