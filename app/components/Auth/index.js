@@ -8,23 +8,6 @@ import MainPage from '../Main';
 import FormSignIn from '../SignIn';
 import FormSignUp from '../SignUp';
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onLoginRequest: (user)=> dispatch(fetchLoginUser(user))
-    }
-};
-
-const mapStateToProps = (state) => {
-    return {
-        userReducer: state.reducerLogin
-    }
-};
-  
-@connect(
-    mapStateToProps,
-    mapDispatchToProps
-)
-
 class Authentication extends PureComponent {
 
     handleSignIn = () => {
@@ -35,39 +18,13 @@ class Authentication extends PureComponent {
         console.log('SIGN UP');
     };
 
-    renderMainPage() {
-        const { userReducer } = this.props;
-        const { from } = this.props.location.state || { from: { pathname: "/main" } };
-    
-        return (
-            <Redirect to={from} />
-        );
-    };
-
-    renderAuthPage() {
-        const { userReducer } = this.props;
+    render() {
 
         return (
             <AuthPage 
                 onSignIn = {this.handleSignIn}
                 onSignUp = {this.handleSignUp}
             />
-        );
-    };
-
-    render() {
-        const { userReducer } = this.props;
-
-        return (
-            <div>
-                {
-                !userReducer.Authentication
-                    ?
-                        this.renderAuthPage() 
-                    :
-                        this.renderMainPage()
-                }
-            </div>
         );
     }
 }

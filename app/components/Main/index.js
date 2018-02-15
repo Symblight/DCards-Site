@@ -1,47 +1,19 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { Redirect }  from 'react-router-dom';
 
 import MainPage from 'ui/pages/MainPage';
+import withAuthenticated from '../proxy-props/withAuthenticated';
 
-const mapStateToProps = (state) => {
-    return {
-        userReducer: state.reducerLogin
-    }
-};
-  
-@connect(
-    mapStateToProps,
-    null
-)
+@withAuthenticated
 class Main extends PureComponent {
 
     handleSignOut = () => {
         console.log('Sign out');
     }
-
-    renderRederict() {
-        const { from } = this.props.location.state || { from: { pathname: "/login" } };
-    
-        return (
-            <Redirect to={from} />
-        );
-    };
-
     render() {
-        const { userReducer } = this.props;
-
         return (
-            <div>
-                {
-                    !userReducer.Authentication
-                        ?
-                            this.renderRederict() 
-                        :
-                        <MainPage 
-                            />
-                }
-            </div>
+            <MainPage 
+            />
         );
     }
 }
