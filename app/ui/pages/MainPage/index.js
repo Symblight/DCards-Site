@@ -8,7 +8,7 @@ import { Wrapper } from './index.styled';
 class MainPage extends PureComponent {
   render() {
     return (
-      <PageTemplate auth = { true } >
+      <PageTemplate>
         <Wrapper>
           <Container>
             <Grid>Account info</Grid>
