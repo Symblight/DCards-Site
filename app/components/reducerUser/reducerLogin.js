@@ -13,7 +13,7 @@ let initialState = {
     },
 	didInvalid: false,
     isFetching: false,
-    Authentication: false,
+    Authentication: true,
 };
 
 const reducerLogin = (state = initialState, action) => {
