@@ -1,7 +1,8 @@
 import { 
     USER_SUCCESS_AUTH,
     USER_REQUEST_AUTH,
-    USER_INVALID_AUTH
+    USER_INVALID_AUTH,
+    SIGN_OUT_USER
 } from '../../constants';
 
 let initialState = {
@@ -12,7 +13,7 @@ let initialState = {
     },
 	didInvalid: false,
     isFetching: false,
-    Authentication: false,
+    Authentication: true,
 };
 
 const reducerLogin = (state = initialState, action) => {
@@ -38,6 +39,12 @@ const reducerLogin = (state = initialState, action) => {
                 ...state,
                 didInvalid: true,
                 isFetching: false,
+            }
+        }
+        case SIGN_OUT_USER: {
+            return {
+                ...state,
+                Authentication: false
             }
         }
         default: {

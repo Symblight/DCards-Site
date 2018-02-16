@@ -1,21 +1,31 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { Wrapper, Content,  UserNav } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import Button from 'ui/atoms/Button';
 import Logo from 'ui/atoms/Logo';
+import { signOut } from 'components/reducerUser/actions';
 
-const AUTHENTICATION = false;
+const mapStateToProps = (state) => {
+  return {
+      userReducer: state.reducerLogin
+  }
+};
 
-class Header extends Component {
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSignOut: () => dispatch(signOut())
+  }
+};
 
-  static propTypes = {
-    auth: PropTypes.bool
-  };
-
+@connect(mapStateToProps, mapDispatchToProps)
+class Header extends PureComponent {
   renderUserMenu() {
+    const { onSignOut } = this.props;
+
     return (
       <Content>
         <div>
@@ -28,9 +38,7 @@ class Header extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/">
-              <Button inverted>Sign out</Button>
-            </Link>
+              <Button inverted onClick = { onSignOut }>Sign out</Button>
           </li>
         </UserNav>
       </Content>
@@ -59,12 +67,12 @@ class Header extends Component {
   };
 
   render() {
-    const { auth } = this.props;
+    const { userReducer } = this.props;
 
     return (
       <Wrapper>
         {
-          auth ? this.renderUserMenu() : this.renderGuestMenu()
+          userReducer.Authentication ? this.renderUserMenu() : this.renderGuestMenu()
         }
       </Wrapper>
     );

@@ -1,7 +1,8 @@
 import { 
     USER_SUCCESS_AUTH,
     USER_REQUEST_AUTH,
-    USER_INVALID_AUTH
+	USER_INVALID_AUTH,
+	SIGN_OUT_USER
 } from '../../constants';
 
 const requestLogin = () => {
@@ -21,6 +22,12 @@ const invalidLogin = (json) => {
 	return {
 		type: USER_INVALID_AUTH,
 		payload: json
+	}
+};
+
+export const signOut = () => {
+	return {
+		type: SIGN_OUT_USER
 	}
 };
 

@@ -13,7 +13,7 @@ class AuthPage extends PureComponent {
         const { onSignIn, onSignUp } = this.props;
 
         return (
-            <PageTemplate auth = {false} >
+            <PageTemplate>
                 <Wrapper>
                     <Block>
                         <DiscriptionContainer>{DISCRIPTION_TEXT}</DiscriptionContainer>

@@ -11,13 +11,11 @@ class Grid extends PureComponent {
   }
 
   render() {
-    const { children, title } = this.props;
+    const { className, children, title } = this.props;
 
     return (
-        <Wrapper>
-            <Block>
-                {children}
-            </Block>
+        <Wrapper className={className}>
+            {children}
         </Wrapper>
     );
   }
