@@ -1,10 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Button } from 'semantic-ui-react'
 import PropTypes from 'prop-types';
 
-//import { Button } from './index.styled';
-
-const type = "inverted";
+import { Button } from './index.styled';
 
 class FlatButton extends PureComponent {
 
@@ -14,7 +11,7 @@ class FlatButton extends PureComponent {
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
     return (
       <Button {...this.props}>{children}</Button>
     );

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { Wrapper, Content,  UserNav } from './index.styled';
 import { Menu } from 'semantic-ui-react'
-import Button from 'ui/atoms/Button';
+import { Button } from 'semantic-ui-react'
 import Logo from 'ui/atoms/Logo';
 import { signOut } from 'components/reducerUser/actions';
 
@@ -34,7 +34,7 @@ class Header extends PureComponent {
         <UserNav>
           <li>
             <Link to="/account">
-              <Button >Account</Button>
+              <Button>Account</Button>
             </Link>
           </li>
           <li>
