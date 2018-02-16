@@ -15,9 +15,7 @@ class Grid extends PureComponent {
 
     return (
         <Wrapper>
-            <Block>
-                {children}
-            </Block>
+            {children}
         </Wrapper>
     );
   }

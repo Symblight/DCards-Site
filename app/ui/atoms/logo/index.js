@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { Wrapper } from './index.styled';
-import LogoSVG from 'assets/images/logo.svg';
+import LogoSVG from 'assets/images/react.svg';
 
-class Logo extends Component {
+class Logo extends PureComponent {
     static propTypes = {
 
     };

@@ -3,6 +3,8 @@ import React, { PureComponent } from 'react';
 import withDiscountCards from 'components/proxy-props/withDiscountCards';
 import Grid from 'ui/molecules/Grid';
 
+import { Wrapper } from './index.styled';
+
 @withDiscountCards
 class ListMain extends PureComponent {
 
@@ -10,9 +12,11 @@ class ListMain extends PureComponent {
         const { data } = this.props;
 
         return (
-            <Grid>
-                Список карточек && Список магазинов
-            </Grid>
+            <Wrapper>
+                <Grid>
+                    Список карточек && Список магазинов
+                </Grid>
+            </Wrapper>
         );
     }
 }

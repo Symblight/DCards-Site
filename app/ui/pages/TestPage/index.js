@@ -32,45 +32,47 @@ class TestPage extends Component {
   render() {
     return (
       <PageTemplates>
-        <Block title="Primary button">
-          <PrimaryButton>Primary button</PrimaryButton>
-        </Block>
-        <Block title="Label">
-          <Label>Label</Label>
-        </Block>
-        <Block title="Way Block">
-          <WayBlock title="My way">Well, My name is Alexey and I am Web developer. I finished college in 2016 </WayBlock>
-        </Block>
-        <Block title="Block Border">
-          <BlockBorder>Block border</BlockBorder>
-        </Block>
-        <Block title="Link">
-          <Link>Link!</Link>
-        </Block>
-        <Block title="Text field button">
-          <TextFieldButton button="send" placeholder="" />
-        </Block>
-        <Block title="Dropdown">
-          <Dropdown columns={COLUMNS} />
-        </Block>
-        <Block title="Icon">
-          <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
-        </Block>
-        <Block title="Container">
-          <h3><Container> Where is it? I dont see it! </Container></h3>
-        </Block>
-        <Block title="Input mail">
-          <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
-        </Block>
-        <Block title="TextArea">
-          <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
-        </Block>
-        <Block title="Panel color theme">
-          <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
-        </Block>
-        <Block title="Photo">
-          <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
-        </Block>
+        <Container>
+          <Block title="Primary button">
+            <PrimaryButton>Primary button</PrimaryButton>
+          </Block>
+          <Block title="Label">
+            <Label>Label</Label>
+          </Block>
+          <Block title="Way Block">
+            <WayBlock title="My way">Well, My name is Alexey and I am Web developer. I finished college in 2016 </WayBlock>
+          </Block>
+          <Block title="Block Border">
+            <BlockBorder>Block border</BlockBorder>
+          </Block>
+          <Block title="Link">
+            <Link>Link!</Link>
+          </Block>
+          <Block title="Text field button">
+            <TextFieldButton button="send" placeholder="" />
+          </Block>
+          <Block title="Dropdown">
+            <Dropdown columns={COLUMNS} />
+          </Block>
+          <Block title="Icon">
+            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          </Block>
+          <Block title="Container">
+            <h3><Container> Where is it? I dont see it! </Container></h3>
+          </Block>
+          <Block title="Input mail">
+            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          </Block>
+          <Block title="TextArea">
+            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          </Block>
+          <Block title="Panel color theme">
+            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          </Block>
+          <Block title="Photo">
+            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          </Block>
+        </Container>
       </PageTemplates>
     );
   }

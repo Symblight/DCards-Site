@@ -1,7 +1,10 @@
 import React, { PureComponent } from 'react';
 
 import Grid from 'ui/molecules/Grid';
+import Photo from 'ui/atoms/Photo';
 import withAccountInfo from 'components/proxy-props/withAccountInfo';
+
+import { Wrapper, PanelWrap, InfoWrap } from './index.styled';
 
 @withAccountInfo
 class InfoPanel extends PureComponent {
@@ -10,13 +13,16 @@ class InfoPanel extends PureComponent {
 
         return (
             <Grid>
-                Photo
-                <ul>
-                    <li>{ data.firstname }</li>
-                    <li>{ data.lastname }</li>
-                    <li>{ data.count }</li>
-                </ul>
-                Cards,Invites
+                <Wrapper>
+                    <div><Photo /></div>
+                    <PanelWrap>
+                        <InfoWrap>
+                            <div>{ data.firstname }</div>
+                            <div>{ data.lastname }</div>
+                        </InfoWrap>
+                        <div>Cards,Invites</div>
+                    </PanelWrap>
+                </Wrapper>
             </Grid>
         );
     }

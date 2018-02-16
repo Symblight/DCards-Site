@@ -15,9 +15,7 @@ class Container extends PureComponent {
 
     return (
         <Wrapper>
-            <Block>
-                {children}
-            </Block>
+            {children}
         </Wrapper>
     );
   }
