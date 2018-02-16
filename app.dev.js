@@ -11,6 +11,8 @@ import favicon from 'serve-favicon';
 import path from 'path';
 import pg from 'pg';
 
+import apiServer from './server/api';
+
 const app = express();
 const compiler = webpack(webpackConf);
 
@@ -38,6 +40,9 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 app.use(webpackHotMiddleware(compiler.compilers.find(comp => comp.name === 'client')));
 app.use(webpackHotServerMiddleware(compiler));
+
+/* APP API */
+app.use('/', apiServer);
 
 const server = http.createServer(app).listen(port, () => {
   console.info(`server is up on port: ${port}`);

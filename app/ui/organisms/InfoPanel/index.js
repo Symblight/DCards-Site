@@ -4,7 +4,7 @@ import Grid from 'ui/molecules/Grid';
 import Photo from 'ui/atoms/Photo';
 import withAccountInfo from 'components/proxy-props/withAccountInfo';
 
-import { Wrapper, PanelWrap, InfoWrap } from './index.styled';
+import { Wrapper, PanelWrap, InfoWrap, GridWrap } from './index.styled';
 
 @withAccountInfo
 class InfoPanel extends PureComponent {
@@ -12,18 +12,17 @@ class InfoPanel extends PureComponent {
         const { data } = this.props;
 
         return (
-            <Grid>
+            <GridWrap>
                 <Wrapper>
                     <div><Photo /></div>
                     <PanelWrap>
                         <InfoWrap>
-                            <div>{ data.firstname }</div>
-                            <div>{ data.lastname }</div>
+                            {`${data.firstname}  ${data.lastname}`}
                         </InfoWrap>
                         <div>Cards,Invites</div>
                     </PanelWrap>
                 </Wrapper>
-            </Grid>
+            </GridWrap>
         );
     }
 }

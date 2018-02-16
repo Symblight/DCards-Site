@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Grid from 'ui/molecules/Grid';
+
 export const Wrapper = styled.div`
     display: flex;
 `;
@@ -18,5 +20,9 @@ export const InfoWrap = styled.div`
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 24px;
+    
 `;
 
+export const GridWrap = styled(Grid)`
+    border-bottom: 1px solid #BDBDBD;
+`;
