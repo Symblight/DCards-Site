@@ -4,6 +4,7 @@ import Grid from 'ui/molecules/Grid';
 
 export const Wrapper = styled.div`
     display: flex;
+    height: 160px;
 `;
 
 export const PanelWrap = styled.div`

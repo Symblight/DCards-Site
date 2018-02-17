@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 
-import Img from 'assets/images/person.png';
-
 import { ImageWrap } from './index.styled';
 
 class Photo extends PureComponent {
     render() {
+        const { className, src } = this.props;
+
         return (
-            <ImageWrap src={Img} />
+            <ImageWrap src={src} />
         );
     }
 }

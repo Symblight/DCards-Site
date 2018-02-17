@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from 'ui/molecules/PrimaryButton';
 
-import {  } from './index.styled';
+import { Wrapper } from './index.styled';
 
 class Article extends PureComponent {
     static propTypes = {
@@ -14,11 +14,11 @@ class Article extends PureComponent {
         const { id, shop, discription } = this.props;
 
         return (
-            <div>
+            <Wrapper>
                 <div>image</div>
                 <div>{shop}</div>
                 <Button>Show id</Button>
-            </div>
+            </Wrapper>
         );
     }
 }
