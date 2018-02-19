@@ -4,7 +4,7 @@ import withDiscountCards from 'components/proxy-props/withDiscountCards';
 import Grid from 'ui/molecules/Grid';
 import Article from 'ui/organisms/Article';
 
-import { Wrapper } from './index.styled';
+import { Wrapper, ListWrap } from './index.styled';
 
 @withDiscountCards
 class ListMain extends PureComponent {
@@ -14,16 +14,18 @@ class ListMain extends PureComponent {
 
         return (
             <Grid>
-                {
-                    data.map((el, id) => 
-                        <Article 
-                            key = { id }
-                            id = { el.id }
-                            shop = { el.shop } 
-                            discription = { el.discription } 
-                        />
-                    )
-                }
+                <ListWrap>
+                    {
+                        data.map((el, id) => 
+                            <Article 
+                                key = { id }
+                                id = { el.id }
+                                shop = { el.shop } 
+                                discription = { el.discription } 
+                            />
+                        )
+                    }
+                </ListWrap>
             </Grid>
          );
     };

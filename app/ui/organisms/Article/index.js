@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import { Link } from 'react-router-dom';
 import Button from 'ui/molecules/PrimaryButton';
 
 import { Wrapper } from './index.styled';
@@ -17,7 +18,7 @@ class Article extends PureComponent {
             <Wrapper>
                 <div>image</div>
                 <div>{shop}</div>
-                <Button>Show id</Button>
+                <Link to = {`/card/id=${id}`} ><Button>Show id</Button></Link>
             </Wrapper>
         );
     }
