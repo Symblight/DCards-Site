@@ -16,7 +16,7 @@ const LIST_DICSOUNTS = [
     {
         id: "2",
         shop: "parikmacher master",
-        discription: "30 procent for barber",
+        discription: "30 procent for barber fgfgfgfgfgfgfgf",
         procent: "30"
     },
 ];

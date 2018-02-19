@@ -4,6 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux'
+import _ from 'lodash';
 
 import theme from './ui/themes/custom';
 import configureStore from './store/configureStore';

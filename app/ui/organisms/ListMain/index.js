@@ -19,9 +19,7 @@ class ListMain extends PureComponent {
                         data.map((el, id) => 
                             <Article 
                                 key = { id }
-                                id = { el.id }
-                                shop = { el.shop } 
-                                discription = { el.discription } 
+                                data = { el }
                             />
                         )
                     }

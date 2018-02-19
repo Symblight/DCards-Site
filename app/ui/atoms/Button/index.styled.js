@@ -11,4 +11,7 @@ export const Button = styled.div`
     text-decoration: none !important;
     white-space: nowrap;
     cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 `;

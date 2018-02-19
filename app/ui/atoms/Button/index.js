@@ -13,7 +13,7 @@ class FlatButton extends PureComponent {
   render() {
     const { className, children } = this.props;
     return (
-      <Button {...this.props}>{children}</Button>
+      <Button {...this.props} className={className}>{children}</Button>
     );
   }
 }
