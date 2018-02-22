@@ -1,4 +1,7 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+
+import { fetchCardsUser } from 'components/Main/actions';
 
 const LIST_DICSOUNTS = [
     {
@@ -51,11 +54,35 @@ const LIST_DICSOUNTS = [
     },
 ];
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onGetCards: (data) => dispatch(fetchCardsUser(data))
+    }
+};
+
+const mapStateToProps = (state) => {
+    return {
+        cards: state.reducerMain.cards
+    }
+};
+
 const withDiscountCards = (Component) => {
+    @connect(mapStateToProps, mapDispatchToProps)
     class DiscountCards extends PureComponent {
+
+        componentWillMount = () => {
+            const { onGetCards, cards } = this.props;
+
+            if(onGetCards) {
+                !cards.length > 0 ? onGetCards(LIST_DICSOUNTS) : null;
+            }
+        }
+
         render() {
+            const { cards } = this.props;
+
             return (
-                <Component data = {LIST_DICSOUNTS} {...this.props} />
+                <Component data = {cards} {...this.props} />
             );
         }
     }
