@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 import Grid from 'ui/molecules/Grid';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.nav`
     display: flex;
+    height: 160px;
 `;
 
 export const PanelWrap = styled.div`

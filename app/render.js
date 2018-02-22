@@ -5,6 +5,7 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux'
+import _ from 'lodash';
 
 import configureStore from './store/configureStore';
 import theme from './ui/themes/custom';

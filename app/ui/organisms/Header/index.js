@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Content,  UserNav } from './index.styled';
+import { Wrapper, Content,  UserNav, LogoWrap } from './index.styled';
 import { Menu } from 'semantic-ui-react'
-import Button from 'ui/atoms/Button';
+import { Button } from 'semantic-ui-react'
 import Logo from 'ui/atoms/Logo';
 import { signOut } from 'components/reducerUser/actions';
 
@@ -28,13 +28,15 @@ class Header extends PureComponent {
 
     return (
       <Content>
-        <div>
+        <LogoWrap>
           <Link to="/"><Logo /></Link>
-        </div>
+          alpha
+        </LogoWrap>
+        {/*<span>Shops</span>*/}
         <UserNav>
           <li>
             <Link to="/account">
-              <Button >Account</Button>
+              <Button>Account</Button>
             </Link>
           </li>
           <li>

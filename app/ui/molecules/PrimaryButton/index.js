@@ -12,11 +12,11 @@ class PrimaryButton extends PureComponent {
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
 
     return (
       <PrimaryButtonWrap>
-        <Button>{children}</Button>
+        <Button className={className}>{children}</Button>
       </PrimaryButtonWrap>
     );
   }

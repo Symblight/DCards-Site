@@ -24,3 +24,9 @@ export const UserNav = styled.ul`
     display: flex;
     list-style: none !important;
 `;
+
+export const LogoWrap = styled.div`
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+`;
