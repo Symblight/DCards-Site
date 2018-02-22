@@ -23,18 +23,27 @@ const mapDispatchToProps = (dispatch) => {
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Header extends PureComponent {
-  renderUserMenu() {
-    const { onSignOut } = this.props;
 
+  renderLogoWrap() {
     return (
-      <Content>
-        <LogoWrap>
+      <LogoWrap>
           <Link to="/"><LogoSVG width={50} height={50} /></Link>
           <HeaderText>
             <span>alpha</span>
             <TextName>DiCards</TextName>
           </HeaderText>
         </LogoWrap>
+    );
+  };
+
+  renderUserMenu() {
+    const { onSignOut } = this.props;
+
+    return (
+      <Content>
+        {
+          this.renderLogoWrap()
+        }
         {/*<span>Shops</span>*/}
         <UserNav>
           <li>
@@ -53,9 +62,9 @@ class Header extends PureComponent {
   renderGuestMenu() {
     return (
       <Content>
-        <div>
-          <Link to="/"><Logo /></Link>
-        </div>
+        {
+          this.renderLogoWrap()
+        }
         <UserNav>
           <li>
             <Link to="/login">
