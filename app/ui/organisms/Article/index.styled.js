@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import Button from 'ui/molecules/PrimaryButton';
 
 export const Wrapper = styled.article`
-    border: 1px solid #BDBDBD;
-    margin-top: 14px;
-    margin-right: 14px;
-    padding: 10px;
+    margin-right: 24px;
     width: 300px;
     height: 300px;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
 
     &:last-child { 
         margin-right: 0px;
@@ -18,7 +17,9 @@ export const Wrapper = styled.article`
 
 export const ImageWrap = styled.div`
     display: flex;
-    height: 100px;
+    margin-top: 24px;
+    flex-grow: 2;
+    justify-content: center;
 `;
 
 export const NameCardWrap = styled.span`
@@ -28,6 +29,7 @@ export const NameCardWrap = styled.span`
 
 export const PanelWrap = styled.section`
     text-align: center;
+    height: 100px;
 `;
 
 export const ButtonWrap = styled(Button)`
@@ -41,4 +43,6 @@ export const DiscriptionWrap = styled.span`
     overflow: hidden;
     text-overflow: ellipsis;
     padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
 `;

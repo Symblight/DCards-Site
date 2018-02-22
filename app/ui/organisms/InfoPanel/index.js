@@ -13,7 +13,6 @@ class InfoPanel extends PureComponent {
         const { data } = this.props;
 
         return (
-            <GridWrap>
                 <Wrapper>
                     <div><Photo src = {Img} /></div>
                     <PanelWrap>
@@ -23,7 +22,6 @@ class InfoPanel extends PureComponent {
                         <div>Cards,Invites</div>
                     </PanelWrap>
                 </Wrapper>
-            </GridWrap>
         );
     }
 }

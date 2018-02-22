@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Content,  UserNav, LogoWrap } from './index.styled';
+import { Wrapper, Content,  UserNav, LogoWrap, HeaderText, TextName } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
-import Logo from 'ui/atoms/Logo';
+import LogoSVG from 'assets/images/react.svg';
 import { signOut } from 'components/reducerUser/actions';
 
 const mapStateToProps = (state) => {
@@ -23,15 +23,27 @@ const mapDispatchToProps = (dispatch) => {
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Header extends PureComponent {
+
+  renderLogoWrap() {
+    return (
+      <LogoWrap>
+          <Link to="/"><LogoSVG width={50} height={50} /></Link>
+          <HeaderText>
+            <span>alpha</span>
+            <TextName>DiCards</TextName>
+          </HeaderText>
+        </LogoWrap>
+    );
+  };
+
   renderUserMenu() {
     const { onSignOut } = this.props;
 
     return (
       <Content>
-        <LogoWrap>
-          <Link to="/"><Logo /></Link>
-          alpha
-        </LogoWrap>
+        {
+          this.renderLogoWrap()
+        }
         {/*<span>Shops</span>*/}
         <UserNav>
           <li>
@@ -50,9 +62,9 @@ class Header extends PureComponent {
   renderGuestMenu() {
     return (
       <Content>
-        <div>
-          <Link to="/"><Logo /></Link>
-        </div>
+        {
+          this.renderLogoWrap()
+        }
         <UserNav>
           <li>
             <Link to="/login">
