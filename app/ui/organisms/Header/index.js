@@ -32,6 +32,7 @@ class Header extends PureComponent {
           <Link to="/"><Logo /></Link>
           alpha
         </LogoWrap>
+        {/*<span>Shops</span>*/}
         <UserNav>
           <li>
             <Link to="/account">

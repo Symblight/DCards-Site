@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-    height: 58vh;
     min-height: 25vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    margin-bottom: 24px;
 `;
 
 export const ListWrap = styled.div`
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
+    flex-direction: column;
+`;
+
+export const RowWrap = styled.div`
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
+    width: 924px;
 `;
