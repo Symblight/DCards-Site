@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Content,  UserNav, LogoWrap } from './index.styled';
+import { Wrapper, Content,  UserNav, LogoWrap, HeaderText, TextName } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
 import LogoSVG from 'assets/images/react.svg';
@@ -30,7 +30,10 @@ class Header extends PureComponent {
       <Content>
         <LogoWrap>
           <Link to="/"><LogoSVG width={50} height={50} /></Link>
-          <span>alpha</span>
+          <HeaderText>
+            <span>alpha</span>
+            <TextName>DiCards</TextName>
+          </HeaderText>
         </LogoWrap>
         {/*<span>Shops</span>*/}
         <UserNav>

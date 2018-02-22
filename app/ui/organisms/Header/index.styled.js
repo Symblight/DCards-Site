@@ -28,16 +28,28 @@ export const Content = styled.div`
 export const UserNav = styled.ul`
     display: flex;
     list-style: none !important;
+    width: 200px;
+    justify-content: space-between;
 `;
 
 export const LogoWrap = styled.div`
     display: flex;
     height: 100%;
+`;
+
+export const HeaderText = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6px;
+    margin-bottom: 10px;
 
     span {
-        font-size: 12px;
-        font-weight: 700;
-        padding-top: 10px;
-        margin-left: 6px;
-    }
+            font-size: 12px;
+            font-weight: 700;
+        }
+`;
+
+export const TextName = styled.h4`
+     margin-top: 0;
 `;
