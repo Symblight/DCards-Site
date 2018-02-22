@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Wrapper, Content,  UserNav, LogoWrap } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
-import Logo from 'ui/atoms/Logo';
+import LogoSVG from 'assets/images/react.svg';
 import { signOut } from 'components/reducerUser/actions';
 
 const mapStateToProps = (state) => {
@@ -29,8 +29,8 @@ class Header extends PureComponent {
     return (
       <Content>
         <LogoWrap>
-          <Link to="/"><Logo /></Link>
-          alpha
+          <Link to="/"><LogoSVG width={50} height={50} /></Link>
+          <span>alpha</span>
         </LogoWrap>
         {/*<span>Shops</span>*/}
         <UserNav>

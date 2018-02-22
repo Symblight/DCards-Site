@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import Button from 'ui/molecules/PrimaryButton';
 
 export const Wrapper = styled.article`
-    border: 1px solid #BDBDBD;
-    margin-top: 14px;
-    margin-right: 14px;
-    padding: 10px;
+  //  border: 1px solid ${props => props.theme.MainTheme.grey[8]};
+    margin-right: 24px;
     width: 300px;
     height: 300px;
-    border-radius: 5px;
+ //   border-radius: 5px;
+    display: flex;
+    flex-direction: column;
 
     &:last-child { 
         margin-right: 0px;
@@ -18,7 +18,9 @@ export const Wrapper = styled.article`
 
 export const ImageWrap = styled.div`
     display: flex;
-    height: 100px;
+    margin-top: 24px;
+    flex-grow: 2;
+    justify-content: center;
 `;
 
 export const NameCardWrap = styled.span`
@@ -28,6 +30,7 @@ export const NameCardWrap = styled.span`
 
 export const PanelWrap = styled.section`
     text-align: center;
+    height: 100px;
 `;
 
 export const ButtonWrap = styled(Button)`

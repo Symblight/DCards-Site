@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-    background-color: ${props => props.theme.MainTheme.grey[7]};
+    background-color: ${props => props.theme.MainTheme.white[0]};
 `;
 
 export const Content = styled.main`

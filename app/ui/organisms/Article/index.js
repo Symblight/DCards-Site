@@ -25,7 +25,7 @@ class Article extends PureComponent {
         return (
             <Wrapper>
                 <ImageWrap>
-                    <CardSVG height={75} width={165} />
+                    <CardSVG height={115} width={215} />
                 </ImageWrap>
                 <PanelWrap>
                     <NameCardWrap>

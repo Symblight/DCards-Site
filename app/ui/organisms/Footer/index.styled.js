@@ -7,9 +7,12 @@ export const Wrapper = styled.footer`
 
 export const Content = styled.div`
   color: ${props => props.theme.MainTheme.grey[1]};
+  border-top: 1px solid ${props => props.theme.MainTheme.grey[8]};
+  padding-top: 24px;
   display: flex;
   justify-content: space-around;
   font-weight: 600;
   margin: 0 auto;
   max-width: 1012px;
+  height: 60px;
 `;

@@ -4,7 +4,11 @@ import Grid from 'ui/molecules/Grid';
 
 export const Wrapper = styled.nav`
     display: flex;
-    height: 160px;
+    height: 180px;
+    border-bottom: 1px solid ${props => props.theme.MainTheme.grey[8]};
+    margin: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 `;
 
 export const PanelWrap = styled.div`

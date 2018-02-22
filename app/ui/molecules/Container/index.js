@@ -11,10 +11,10 @@ class Container extends PureComponent {
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
 
     return (
-        <Wrapper>
+        <Wrapper className = {className}>
             {children}
         </Wrapper>
     );
