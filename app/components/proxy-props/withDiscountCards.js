@@ -74,7 +74,7 @@ const withDiscountCards = (Component) => {
             const { onGetCards, cards } = this.props;
 
             if(onGetCards) {
-                !cards.length > 0 ? onGetCards(LIST_DICSOUNTS) : null;
+                onGetCards(LIST_DICSOUNTS);
             }
         }
 
