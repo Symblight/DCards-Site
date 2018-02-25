@@ -14,6 +14,7 @@
     "clean": "rmdir /Q /S dist"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
     "eslint-brunch": "^3.12.0",
@@ -29,6 +30,7 @@
     "react-redux": "^5.0.6",
     "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.2.2",
+    "react-waypoint": "^8.0.0",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
