@@ -6,12 +6,12 @@ import LogoSVG from 'assets/images/react.svg';
 
 class Logo extends PureComponent {
     static propTypes = {
-
+        className: PropTypes.string
     };
 
     render() {
         return (
-            <Wrapper>
+            <Wrapper className = {className}>
                 { 
                    <LogoSVG width={50} height={50} />
                 }

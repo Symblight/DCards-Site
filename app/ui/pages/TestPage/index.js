@@ -12,6 +12,9 @@ import BlockBorder from 'ui/molecules/BlockBorder';
 import TextFieldButton from 'ui/molecules/TextFieldButton';
 import PageTemplates from 'ui/templates/PageTemplate';
 import Container from 'ui/molecules/Container';
+import LogoSVG from 'assets/images/react.svg';
+import Spinner from 'ui/atoms/Spinner';
+import AddButton from 'ui/molecules/AddButton';
 
 const COLUMNS = [
   {
@@ -55,13 +58,16 @@ class TestPage extends Component {
             <Dropdown columns={COLUMNS} />
           </Block>
           <Block title="Icon">
-            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+            <h3><LogoSVG width={50} height={50} /></h3>
           </Block>
-          <Block title="Container">
-            <h3><Container> Where is it? I dont see it! </Container></h3>
+          <Block title="High light text">
+            <h3><HighLightText> High light text </HighLightText></h3>
           </Block>
-          <Block title="Input mail">
-            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          <Block title="Spinner">
+            <h3><Spinner /></h3>
+          </Block>
+          <Block title="Add Button">
+              <AddButton>Add Button</AddButton>
           </Block>
           <Block title="TextArea">
             <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>

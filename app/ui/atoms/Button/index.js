@@ -7,7 +7,8 @@ class FlatButton extends PureComponent {
 
   static propTypes = {
     children: PropTypes.node.isRequired,
-    typeButton: PropTypes.string
+    typeButton: PropTypes.string,
+    className: PropTypes.string
   }
 
   render() {

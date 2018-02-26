@@ -6,13 +6,16 @@ import { WrapCircle } from './index.styled';
 class Circle extends PureComponent {
 
   static propTypes = {
-    now: PropTypes.bool
+    now: PropTypes.bool,
+    className: PropTypes.string
   }
 
   render() {
+    const { className } = this.props;
+  
     return (
       <div>
-        <WrapCircle />
+        <WrapCircle className = {className}/>
       </div>
     );
   }

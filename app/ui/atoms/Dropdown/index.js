@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 class Dropdown extends PureComponent {
 
   static propTypes = {
-    columns: PropTypes.arrayOf(PropTypes.object).isRequired
+    columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+    className: PropTypes.string
   }
 
   render() {
-    const { columns } = this.props;
+    const { className, columns } = this.props;
 
     return (
-      <div>
+      <div className={className}>
         <select>
           {
             columns.map((col) =>

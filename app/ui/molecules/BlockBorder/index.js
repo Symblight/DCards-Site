@@ -8,14 +8,15 @@ import { Border } from './index.styled';
 class BlockBorder extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
 
     return (
-      <Border>
+      <Border className = {className}>
         <Block>{children}</Block>
       </Border>
     );

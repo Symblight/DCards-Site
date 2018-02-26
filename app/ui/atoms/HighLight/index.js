@@ -6,14 +6,15 @@ import { HighlightWrap } from './index.styled';
 class HighLight extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
 
     return (
-      <HighlightWrap>{children}</HighlightWrap>
+      <HighlightWrap className={className}>{children}</HighlightWrap>
     );
   }
 }
