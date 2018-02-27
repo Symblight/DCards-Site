@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Headroom from 'react-headroom';
 
 import { Wrapper, Content,  UserNav, LogoWrap, HeaderText, TextName } from './index.styled';
 import { Menu } from 'semantic-ui-react'
@@ -84,11 +85,13 @@ class Header extends PureComponent {
     const { userReducer } = this.props;
 
     return (
+      <Headroom>
       <Wrapper>
         {
           userReducer.Authentication ? this.renderUserMenu() : this.renderGuestMenu()
         }
       </Wrapper>
+      </Headroom>
     );
   }
 }

@@ -17,7 +17,7 @@ const theme = {
     primary: Pink,
     white: ['#FFFFFF', '#F5F5F5', '#EEEEEE', '#E0E0E0'],
     grey: ['#212121', '#424242', '#616161', '#757575', '#9E9E9E', '#BDBDBD', '#E0E0E0', '#EEEEEE', '#ddd'],
-    black: ['#000000']
+    black: ['#000000', '#1b1920']
   }
 };
 

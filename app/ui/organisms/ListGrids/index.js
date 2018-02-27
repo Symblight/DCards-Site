@@ -32,10 +32,6 @@ class ListGrids extends PureComponent {
         return elements;
     }
 
-    handleWaypointEnter({ previousPosition }) {
-        console.log('begin');
-    }
-
     handleWaypointLeave({ previousPosition }) {
         if(previousPosition === Waypoint.inside) {
            this.setState({

@@ -8,13 +8,23 @@ class FlatButton extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     typeButton: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
+    onClick: PropTypes.func
+  }
+
+  onClick = () => {
+    const { onClick } = this.props;
+
+    if(onClick) {
+      onClick();
+    }
   }
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, onClick } = this.props;
+    
     return (
-      <Button {...this.props} className={className}>{children}</Button>
+      <Button className={className} onClick = {onClick}>{children}</Button>
     );
   }
 }

@@ -10,7 +10,8 @@ export const ContentWrap = styled.div`
     flex-direction: column;
 `;
 
-export const FieldWrap = styled.div`
-    margin-top: 12px;
-    margin-bottom: 12px;
+export const ButtonWrap = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 24px;
 `;

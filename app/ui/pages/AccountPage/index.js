@@ -4,21 +4,44 @@ import PageTemplate from 'ui/templates/PageTemplate';
 import Container from 'ui/molecules/Container';
 import Button from 'ui/molecules/PrimaryButton';
 import Grid from 'ui/molecules/Grid';
+import FieldText from 'ui/molecules/FieldText';
+import FieldPassword from 'ui/molecules/FieldPassword';
 
-import { Wrapper, ContentWrap, FieldWrap } from './index.styled';
+import { Wrapper, ContentWrap, ButtonWrap } from './index.styled';
 
 class AccountPage extends PureComponent {
+
+  handleClick = () => {
+      console.log(111111);
+  }
 
   renderContent() {
     return (
       <Wrapper>
         <ContentWrap>
-          <FieldWrap>First Name: Alexey</FieldWrap>
-          <FieldWrap>Last Name: Tkachenko</FieldWrap>
-          <FieldWrap>Email: symblight@gmail.com</FieldWrap>
-          <FieldWrap> Password: <Button>Change Password</Button></FieldWrap>
+          <FieldText 
+            title = 'First Name:'
+            value = 'Alexey'
+          />
+          <FieldText 
+            title = 'Last Name:'
+            value = 'Tkachenko'
+          />
+          <FieldText 
+            title = 'Email:'
+            value = 'symblight@gmail.com'
+          />
+         { 
+           <FieldPassword 
+            title = 'Password:'
+            value = '123456789'
+            onClick = {this.handleClick}
+          />
+         }
         </ContentWrap>
-        <Button>Edit Profile</Button>
+        <ButtonWrap>
+          <Button>Edit Profile</Button>
+        </ButtonWrap>
       </Wrapper>
     );
   }
