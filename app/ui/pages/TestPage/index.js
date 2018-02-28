@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import Label from 'ui/atoms/Label';
 import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
-import Dropdown from 'ui/atoms/Dropdown';
 
+import Dropdown from 'ui/molecules/Dropdown';
+import DropdownItem from 'ui/molecules/DropdownItem';
 import TextButton from 'ui/molecules/TextButton';
 import PrimaryButton from 'ui/molecules/PrimaryButton';
 import Block from 'ui/molecules/BlockComponent';
@@ -56,7 +57,18 @@ class TestPage extends Component {
             <TextFieldButton button="send" placeholder="" />
           </Block>
           <Block title="Dropdown">
-            <Dropdown columns={COLUMNS} />
+            <Dropdown title= 'Alexey'>
+              <DropdownItem>
+                Profile
+              </DropdownItem>
+              <DropdownItem>
+                Settings
+              </DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>
+                Sign Out
+              </DropdownItem>
+          </Dropdown>
           </Block>
           <Block title="Icon">
             <h3><LogoSVG width={50} height={50} /></h3>

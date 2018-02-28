@@ -7,7 +7,8 @@ import Headroom from 'react-headroom';
 import { Menu } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
 import LogoSVG from 'assets/images/react.svg';
-import TextButton from 'ui/molecules/TextButton';
+import Dropdown from 'ui/molecules/Dropdown';
+import DropdownItem from 'ui/molecules/DropdownItem';
 import ItemNavButton from 'ui/molecules/ItemNavButton';
 import { signOut } from 'components/reducerUser/actions';
 
@@ -20,6 +21,21 @@ import {
   TextName, 
   ButtonsContent 
 } from './index.styled';
+
+const DROPDOWN_ITEMS = [
+  {
+    value: 'profile' 
+  },
+  {
+    value: 'settings' 
+  },
+  {
+    value: 'create shop' 
+  },
+  {
+    value: 'sign out' 
+  }
+];
 
 const mapStateToProps = (state) => {
   return {
@@ -69,9 +85,20 @@ class Header extends PureComponent {
         {
           this.renderMenuItems()
         }
-        <Link to="/account">
-          <Button>Alexey</Button>
-        </Link>
+          <Dropdown title= 'Alexey'>
+            <Link to='/account'>
+              <DropdownItem>
+                Profile
+              </DropdownItem>
+            </Link>
+            <DropdownItem>
+              Settings
+            </DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem onClick = { onSignOut }>
+              Sign Out
+            </DropdownItem>
+          </Dropdown>
       </Content>
     );
   };
