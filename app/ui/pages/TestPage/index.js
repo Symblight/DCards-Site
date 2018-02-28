@@ -5,6 +5,7 @@ import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
 import Dropdown from 'ui/atoms/Dropdown';
 
+import TextButton from 'ui/molecules/TextButton';
 import PrimaryButton from 'ui/molecules/PrimaryButton';
 import Block from 'ui/molecules/BlockComponent';
 import WayBlock from 'ui/molecules/WayBlock';
@@ -68,6 +69,9 @@ class TestPage extends Component {
           </Block>
           <Block title="Add Button">
               <AddButton>Add Button</AddButton>
+          </Block>
+          <Block title="text button">
+            <TextButton>text button</TextButton>
           </Block>
           <Block title="TextArea">
             <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
