@@ -7,13 +7,15 @@ class Label extends PureComponent {
 
   static propTypes = {
     children: PropTypes.node.isRequired,
-    color: PropTypes.string
+    color: PropTypes.string,
+    className: PropTypes.string
   }
 
   render() {
-    const { children, color } = this.props;
+    const { className, children, color } = this.props;
+
     return (
-      <LabelStyled color={color}>
+      <LabelStyled color={color} className = {className}>
         {children}
       </LabelStyled>
     );

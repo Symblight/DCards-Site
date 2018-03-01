@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 
 import { fetchUserInfo } from 'components/Main/actions';
 
@@ -30,7 +29,7 @@ const withAccountInfo = (Component) => {
             const { onUserInfo, user } = this.props;
 
             if(onUserInfo) {
-               _.isEmpty(user) ? onUserInfo(USER_INFO) : null;
+               onUserInfo(USER_INFO);
             }
         }
 

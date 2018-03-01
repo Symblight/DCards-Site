@@ -5,54 +5,71 @@ import { fetchCardsUser } from 'components/Main/actions';
 
 const LIST_DICSOUNTS = [
     {
-        id: "0",
-        shop: "parikmacher",
-        discription: "10 procent",
-        procent: "10"
-    },
-    {
-        id: "1",
-        shop: "plastyline",
-        discription: "10 procent",
-        procent: "10"
-    },
-    {
-        id: "2",
-        shop: "parikmacher master",
-        discription: "30 procent for barber fgfgfgfgfgfgfgf",
+        id: "21",
+        shop: "OZ",
+        discription: "Книжный",
         procent: "30"
-    },
-    {
-        id: "3",
-        shop: "test",
-        discription: "Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от",
-        procent: "10"
-    },
-    {
-        id: "4",
-        shop: "galaxy master",
+    },    {
+        id: "22",
+        shop: "Bufet",
         discription: "There is not great talent without great will power.",
         procent: "30"
     },
     {
-        id: "5",
-        shop: "parikmacher master",
+        id: "23",
+        shop: "Suchi",
         discription: "30 procent for barber fgfgfgfgfgfgfgf",
         procent: "30"
     },
     {
-        id: "6",
-        shop: "test",
+        id: "24",
+        shop: "Pizza",
         discription: "Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от",
         procent: "10"
     },
     {
-        id: "7",
-        shop: "galaxy master",
+        id: "25",
+        shop: "Megogo",
+        discription: "Книжный",
+        procent: "30"
+    },
+    {
+        id: "26",
+        shop: "yes",
+        discription: "30 procent for barber fgfgfgfgfgfgfgf",
+        procent: "30"
+    },
+    {
+        id: "27",
+        shop: "xiaomi",
+        discription: "Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от",
+        procent: "10"
+    },
+    {
+        id: "28",
+        shop: "apple",
         discription: "There is not great talent without great will power.",
         procent: "30"
     },
-];
+    {
+        id: "29",
+        shop: "Bar",
+        discription: "30 procent for barber fgfgfgfgfgfgfgf",
+        procent: "30"
+    },
+    {
+        id: "30",
+        shop: "Kino",
+        discription: "Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от",
+        procent: "10"
+    },
+    {
+        id: "31",
+        shop: "OZ",
+        discription: "Книжный",
+        procent: "30"
+    }
+]
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -74,7 +91,7 @@ const withDiscountCards = (Component) => {
             const { onGetCards, cards } = this.props;
 
             if(onGetCards) {
-                !cards.length > 0 ? onGetCards(LIST_DICSOUNTS) : null;
+                onGetCards(LIST_DICSOUNTS);
             }
         }
 

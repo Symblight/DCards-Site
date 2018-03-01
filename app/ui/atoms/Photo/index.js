@@ -7,7 +7,7 @@ class Photo extends PureComponent {
         const { className, src } = this.props;
 
         return (
-            <ImageWrap src={src} />
+            <ImageWrap className = {className} src={src} />
         );
     }
 }

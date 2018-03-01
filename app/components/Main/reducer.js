@@ -4,12 +4,14 @@ import {
 	CARDS_USER_INVALID,
     USER_REQUEST_INFO,
     USER_SUCCESS_INFO,
-    USER_INVALID_INFO
+    USER_INVALID_INFO,
+    CARD_INFO
 } from '../../constants';
 
 let initialState = {
     user:{},
     cards: [],
+    card:{},
     didInvalid: false,
     isFetching: false,
 };
@@ -58,6 +60,12 @@ const reducerMain = (state = initialState, action) => {
                 ...state,
                 didInvalid: true,
                 isFetching: false,
+            }
+        }
+        case CARD_INFO: {
+            return {
+                ...state,
+                card: state.cards[0]
             }
         }
         default: {

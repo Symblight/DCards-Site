@@ -8,15 +8,16 @@ import { PrimaryButtonWrap } from './index.styled';
 class PrimaryButton extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func
   }
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, onClick } = this.props;
 
     return (
       <PrimaryButtonWrap>
-        <Button className={className}>{children}</Button>
+        <Button className={className} onClick = {onClick}>{children}</Button>
       </PrimaryButtonWrap>
     );
   }

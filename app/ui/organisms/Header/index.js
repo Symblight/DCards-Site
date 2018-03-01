@@ -2,12 +2,40 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Headroom from 'react-headroom';
 
-import { Wrapper, Content,  UserNav, LogoWrap, HeaderText, TextName } from './index.styled';
 import { Menu } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
 import LogoSVG from 'assets/images/react.svg';
+import Dropdown from 'ui/molecules/Dropdown';
+import DropdownItem from 'ui/molecules/DropdownItem';
+import ItemNavButton from 'ui/molecules/ItemNavButton';
 import { signOut } from 'components/reducerUser/actions';
+
+import { 
+  Wrapper, 
+  Content,  
+  UserNav, 
+  LogoWrap, 
+  HeaderText, 
+  TextName, 
+  ButtonsContent 
+} from './index.styled';
+
+const DROPDOWN_ITEMS = [
+  {
+    value: 'profile' 
+  },
+  {
+    value: 'settings' 
+  },
+  {
+    value: 'create shop' 
+  },
+  {
+    value: 'sign out' 
+  }
+];
 
 const mapStateToProps = (state) => {
   return {
@@ -23,6 +51,16 @@ const mapDispatchToProps = (dispatch) => {
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Header extends PureComponent {
+
+  renderMenuItems() {
+    return(
+      <ButtonsContent>
+        <Link to="/shops">
+          <ItemNavButton>Shops</ItemNavButton>
+        </Link>
+      </ButtonsContent>
+    );
+  }
 
   renderLogoWrap() {
     return (
@@ -44,17 +82,23 @@ class Header extends PureComponent {
         {
           this.renderLogoWrap()
         }
-        {/*<span>Shops</span>*/}
-        <UserNav>
-          <li>
-            <Link to="/account">
-              <Button>Account</Button>
+        {
+          this.renderMenuItems()
+        }
+          <Dropdown title= 'Alexey'>
+            <Link to='/account'>
+              <DropdownItem>
+                Profile
+              </DropdownItem>
             </Link>
-          </li>
-          <li>
-              <Button inverted onClick = { onSignOut }>Sign out</Button>
-          </li>
-        </UserNav>
+            <DropdownItem>
+              Settings
+            </DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem onClick = { onSignOut }>
+              Sign Out
+            </DropdownItem>
+          </Dropdown>
       </Content>
     );
   };
@@ -68,12 +112,12 @@ class Header extends PureComponent {
         <UserNav>
           <li>
             <Link to="/login">
-              <Button color='blue'>Sign In</Button>
+              <ItemNavButton type='login'>Sign In</ItemNavButton>
             </Link>
           </li>
           <li>
             <Link to="/signup">
-              <Button inverted>Sign Up</Button>
+              <ItemNavButton>Sign up</ItemNavButton>
             </Link>
           </li>
         </UserNav>
@@ -84,11 +128,13 @@ class Header extends PureComponent {
     const { userReducer } = this.props;
 
     return (
-      <Wrapper>
-        {
-          userReducer.Authentication ? this.renderUserMenu() : this.renderGuestMenu()
-        }
-      </Wrapper>
+      <Headroom>
+        <Wrapper>
+          {
+            userReducer.Authentication ? this.renderUserMenu() : this.renderGuestMenu()
+          }
+        </Wrapper>
+      </Headroom>
     );
   }
 }

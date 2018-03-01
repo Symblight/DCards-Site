@@ -8,7 +8,9 @@ import Test from './ui/pages/TestPage';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import NotFound from './ui/pages/404';
-import Card from './ui/pages/CardPage';
+import ShopsPage from './ui/pages/ShopsPage';
+
+import Card from './components/Card';
 import Account from './components/Account';
 import Auth from './components/Auth';
 import Main from './components/Main';
@@ -23,6 +25,7 @@ class rootRouter extends Component {
         <Route path="/signup" component={SignUp} />
         <Route path="/main" component={Main} />
         <Route path="/account" component={Account} />
+        <Route path="/shops" component={ShopsPage} />
         <Route path="/card/id=:idcard" component={Card} />
         <Route component={NotFound} />
       </Switch>

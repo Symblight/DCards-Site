@@ -6,14 +6,15 @@ import { HighlightLink } from './index.styled';
 class Link extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string
   }
 
   render() {
-    const { children } = this.props;
+    const { className, children } = this.props;
     
     return (
-      <span>
+      <span className={className}>
         <HighlightLink href="#" >{children}</HighlightLink>
       </span>
     );

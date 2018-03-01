@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color:${props => props.theme.MainTheme.grey[1]};
+    background-color:${props => props.theme.MainTheme.black[1]};
 `;
 
 export const Content = styled.div`
@@ -17,7 +17,7 @@ export const Content = styled.div`
     max-width: 1012px;
     margin: 0 auto;
     height: 100%;
-    color:${props => props.theme.MainTheme.white[1]};
+    color:${props => props.theme.MainTheme.white[3]};
 
      a {
         display: flex;
@@ -30,6 +30,9 @@ export const UserNav = styled.ul`
     list-style: none !important;
     width: 200px;
     justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100%;
 `;
 
 export const LogoWrap = styled.div`
@@ -43,13 +46,23 @@ export const HeaderText = styled.div`
     justify-content: center;
     margin-left: 6px;
     margin-bottom: 10px;
+    color:${props => props.theme.MainTheme.white[0]};
 
     span {
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 800;
         }
 `;
 
-export const TextName = styled.h4`
+export const TextName = styled.h3`
      margin-top: 0;
+`;
+
+export const ButtonsContent = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 70%;
 `;
