@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-    display: flex;
-    justify-content: space-between;
+
 `;
 
 export const FormContainer = styled.div`
-    background-color: white;
-    padding: 24px;
-    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
 `;
 
 export const DiscriptionContainer = styled.div`

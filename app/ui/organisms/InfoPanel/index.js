@@ -14,12 +14,11 @@ class InfoPanel extends PureComponent {
 
         return (
                 <Wrapper>
-                    <div><Photo src = {Img} /></div>
+                    <Photo src = {Img} />
                     <PanelWrap>
                         <InfoWrap>
                             {`${data.firstname}  ${data.lastname}`}
                         </InfoWrap>
-                        <div>Cards,Invites</div>
                     </PanelWrap>
                 </Wrapper>
         );
