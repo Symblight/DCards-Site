@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import Menu from 'ui/molecules/Menu';
+import Button from 'ui/molecules/PrimaryButton';
+
 import { Wrapper } from './index.styled.js'
 
 class MenuCards extends PureComponent {
@@ -11,14 +14,15 @@ class MenuCards extends PureComponent {
 
     render() {
         return (
-            <Wrapper>
-                <ul>
-                    <li>Title</li>
-                    <li>Count cards</li>
-                    <li>Filters</li>
-                    <li>Button create</li>
-                </ul>
-            </Wrapper>
+            <Menu title='Title'>
+                <Wrapper>
+                    <ul>
+                        <li>Count cards</li>
+                        <li>Filters</li>
+                    </ul>
+                </Wrapper>
+                <Button>ADD NEW CARD</Button>
+            </Menu>
         );
     }
 }
