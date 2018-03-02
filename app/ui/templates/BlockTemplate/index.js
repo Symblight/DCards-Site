@@ -1,27 +1,32 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Footer from 'ui/organisms/Footer';
-import Header from 'ui/organisms/Header';
-import { Wrapper, Content, Container, HeroWrap } from './index.styled';
+import { Wrapper, Content, Container, HeroWrap, Wrap } from './index.styled';
 
 class BlockTemplate extends PureComponent {
 
   static propTypes = {
     children: PropTypes.node.isRequired,
     header: PropTypes.node,
-    auth: PropTypes.bool
+    nav : PropTypes.node,
+    footer : PropTypes.node
   };
 
   render() {
-    const { header, children } = this.props;
+    const { nav, footer, header, children } = this.props;
 
     return (
       <Wrapper>
-        <Header />
-        <HeroWrap>{header}</HeroWrap>
-        <Content>{children}</Content>
-        <Footer />
+        {header}
+        <HeroWrap>
+          <Wrap>
+            {nav}
+          </Wrap>
+        </HeroWrap>
+        <Content>
+          <Wrap>{children}</Wrap>
+        </Content>
+        {footer}
       </Wrapper>
     );
   }

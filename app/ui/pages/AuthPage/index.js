@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import { Container, Header } from 'semantic-ui-react'
 
-import Block from 'ui/atoms/Block';
 import PageTemplate from 'ui/templates/BlockTemplate';
+import Footer from 'ui/organisms/Footer';
+import Header from 'ui/organisms/Header';
 import SignInForm from 'components/SignIn';
 
 import { Wrapper, FormContainer, DiscriptionContainer } from './index.styled';
@@ -24,7 +24,11 @@ class AuthPage extends PureComponent {
         const { onSignIn, onSignUp } = this.props;
 
         return (
-            <PageTemplate header={this.renderHero()}>
+            <PageTemplate 
+                header={<Header />}
+                footer={<Footer />}
+                nav={this.renderHero()}
+            >
                 <Wrapper>
                 </Wrapper>
             </PageTemplate>

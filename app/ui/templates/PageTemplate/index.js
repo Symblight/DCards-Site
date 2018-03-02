@@ -1,28 +1,28 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Footer from 'ui/organisms/Footer';
-import Header from 'ui/organisms/Header';
 import { Wrapper, Content, Container } from './index.styled';
 
 class PageTemplate extends PureComponent {
 
   static propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    header: PropTypes.node,
+    footer : PropTypes.node
   }
 
   render() {
-    const { children, auth } = this.props;
+    const { header, footer, children } = this.props;
 
     return (
       <Wrapper>
-        <Header auth = { auth } />
+          {header}
           <Container>
             <Content>
               {children}
             </Content>
           </Container>
-        <Footer />
+        {footer}
       </Wrapper>
     );
   }

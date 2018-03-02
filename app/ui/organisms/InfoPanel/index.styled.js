@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 import Grid from 'ui/molecules/Grid';
 
-export const Wrapper = styled.nav`
-    display: flex;
+export const Wrapper = styled.div`
     padding-top: 12px;
     padding-bottom: 12px;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 `;
 
 export const PanelWrap = styled.div`

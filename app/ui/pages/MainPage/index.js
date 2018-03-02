@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/BlockTemplate';
+import Footer from 'ui/organisms/Footer';
+import Header from 'ui/organisms/Header';
 import Container from 'ui/molecules/Container';
 import Button from 'ui/molecules/AddButton';
 import Grid from 'ui/molecules/Grid';
@@ -16,7 +18,9 @@ class MainPage extends PureComponent {
   render() {
     return (
       <PageTemplate
-        header={<InfoPanelAccount />}  
+        nav={<InfoPanelAccount />}  
+        header={<Header />}
+        footer={<Footer />}
       >
       <ContentWrap>
         <ListMain />

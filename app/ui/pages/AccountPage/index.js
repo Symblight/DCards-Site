@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
+import Header from 'ui/organisms/Header';
 import Container from 'ui/molecules/Container';
 import Button from 'ui/molecules/PrimaryButton';
 import Grid from 'ui/molecules/Grid';
@@ -48,7 +49,9 @@ class AccountPage extends PureComponent {
 
   render() {
     return (
-      <PageTemplate>
+      <PageTemplate
+        header={<Header />}
+      >
         <Container>
           <Grid>
             {
