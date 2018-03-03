@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Header from 'ui/organisms/Header';
 import Label from 'ui/atoms/Label';
 import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
@@ -36,7 +37,9 @@ const COLUMNS = [
 class TestPage extends Component {
   render() {
     return (
-      <PageTemplates>
+      <PageTemplates
+        header={<Header />}
+      >
         <Container>
           <Block title="Primary button">
             <PrimaryButton>Primary button</PrimaryButton>
