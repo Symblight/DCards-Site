@@ -6,26 +6,17 @@ import Button from 'ui/molecules/PrimaryButton';
 
 import { Wrapper } from './index.styled.js'
 
-class MenuCards extends PureComponent {
-
-    static propTypes = {
-
-    };
-
+class MenuFilters extends PureComponent {
     render() {
         return (
-            <Menu title='Menu'>
+            <Menu title='Filters'>
                 <Wrapper>
-                    <ul>
-                        <li>Count cards</li>
-                        <li>Filters</li>
-                    </ul>
+                    Filters
                 </Wrapper>
-                <Button>ADD NEW CARD</Button>
+                <Button>ok</Button>
             </Menu>
         );
     }
 }
 
-
-export default MenuCards;
+export default MenuFilters;

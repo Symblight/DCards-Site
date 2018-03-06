@@ -15,4 +15,6 @@ export const MenuWrap = styled.div`
     min-height: 100%;
     width: 250px;
     margin-left: 12px;
+    display: flex;
+    flex-direction: column;
 `;

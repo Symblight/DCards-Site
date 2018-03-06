@@ -32,5 +32,5 @@ export const HeroWrap = styled.nav`
 `;
 
 export const Wrap = styled.div`
-    max-width: 1124px;
+    width: 1124px;
 `;

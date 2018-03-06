@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 export const PanelWrap = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 `;
 
 export const InfoWrap = styled.div`

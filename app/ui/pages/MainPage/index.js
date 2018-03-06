@@ -9,6 +9,9 @@ import Grid from 'ui/molecules/Grid';
 import InfoPanelAccount from 'ui/organisms/InfoPanel';
 import ListMain from 'ui/organisms/ListMain';
 import MenuCards from 'ui/organisms/MenuCards';
+import MenuFilters from 'ui/organisms/MenuFilters';
+import Tabs from 'ui/molecules/Tabs';
+import TabItem from 'ui/molecules/TabItem';
 
 import { Wrapper, ContentWrap, MenuWrap } from './index.styled';
 
@@ -22,12 +25,25 @@ class MainPage extends PureComponent {
         header={<Header />}
         footer={<Footer />}
       >
-      <ContentWrap>
-        <ListMain />
-        <MenuWrap>
-          <MenuCards />
-        </MenuWrap>
-      </ContentWrap>
+      <Tabs selected={this.props.firstSelect || 0}>
+        <TabItem label='Cards'>
+          <ContentWrap>
+            <ListMain />
+            <MenuWrap>
+              <MenuCards />
+              <MenuFilters />
+            </MenuWrap>
+          </ContentWrap>
+        </TabItem>
+        <TabItem label='Shops'>
+          <ContentWrap>
+            <MenuWrap>
+              <MenuCards />
+              <MenuFilters />
+            </MenuWrap>
+          </ContentWrap>
+        </TabItem>
+      </Tabs>
       </PageTemplate>
     );
   }
