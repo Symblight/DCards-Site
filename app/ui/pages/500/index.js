@@ -7,19 +7,16 @@ import Img from 'assets/images/error.png';
 
 import { Wrapper, Image } from './index.styled';
 
-class NotFoundPage extends PureComponent {
+class BrokenPage extends PureComponent {
   render() {
     return (
-      <PageTemplate
-        header={<Header />}
-      >
+      <PageTemplate>
         <Wrapper>
-          <Image src={Img} />
-          <h2>Not Found Page {this.props.location.pathname}</h2>
+          <h2>500 Something has broken. {this.props.location.pathname}</h2>
         </Wrapper>
       </PageTemplate>
     );
   }
 }
 
-export default NotFoundPage;
+export default BrokenPage;

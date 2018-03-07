@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
     min-height: 25vh;
-    margin-bottom: 24px;
+    width: 890px;
     display: flex;
     justify-content: center;
-    margin-top: 24px;
+    align-items: center;
+    flex-direction: column;
 `;

@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
+import Footer from 'ui/organisms/Footer';
+import Header from 'ui/organisms/Header';
 import SignUpForm from 'components/SignUp';
-import { Wrapper } from './index.styled';
 import Container from 'ui/molecules/Container';
 import Grid from 'ui/molecules/Grid';
+
+import { Wrapper } from './index.styled';
 
 class SignUpPage extends Component {
   render() {
     return (
-      <PageTemplate>
+      <PageTemplate
+        header={<Header />}
+      >
         <Wrapper>
           <Container>
             <Grid>

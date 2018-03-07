@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Header from 'ui/organisms/Header';
 import Label from 'ui/atoms/Label';
 import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
@@ -17,26 +18,27 @@ import Container from 'ui/molecules/Container';
 import LogoSVG from 'assets/images/react.svg';
 import Spinner from 'ui/atoms/Spinner';
 import AddButton from 'ui/molecules/AddButton';
+import Tabs from 'ui/molecules/Tabs';
+import TabItem from 'ui/molecules/TabItem';
 
-const COLUMNS = [
-  {
-    id: 0,
-    value: 'column_1'
-  },
-  {
-    id: 1,
-    value: 'column_2'
-  },
-  {
-    id: 2,
-    value: 'column_2'
-  }
-];
+const TABS = [{
+  name: 'Tab 1',
+  content: 'Content for 1'
+}, {
+  name: 'Tab 2',
+  content: 'Content for 2'
+
+}, {
+  name: 'Tab 3',
+  content: 'Content for 3'
+}];
 
 class TestPage extends Component {
   render() {
     return (
-      <PageTemplates>
+      <PageTemplates
+        header={<Header />}
+      >
         <Container>
           <Block title="Primary button">
             <PrimaryButton>Primary button</PrimaryButton>
@@ -91,8 +93,19 @@ class TestPage extends Component {
           <Block title="Panel color theme">
             <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
           </Block>
-          <Block title="Photo">
-            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          <Block title="Tabs">
+
+            <Tabs selected={this.props.firstSelect || 0}>
+              <TabItem label='Cards'>
+                <HighLightText> Cards </HighLightText>
+                <WayBlock title="My way">Well, My name is Alexey and I am Web developer. I finished college in 2016 </WayBlock>
+              </TabItem>
+              <TabItem label='Shops'>
+                <HighLightText> Shops </HighLightText>
+                <PrimaryButton>Primary button</PrimaryButton>
+              </TabItem>
+            </Tabs>
+            
           </Block>
         </Container>
       </PageTemplates>

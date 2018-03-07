@@ -58,6 +58,9 @@ class Header extends PureComponent {
         <Link to="/shops">
           <ItemNavButton>Shops</ItemNavButton>
         </Link>
+        <Link to="/main">
+          <ItemNavButton>Home</ItemNavButton>
+        </Link>
       </ButtonsContent>
     );
   }

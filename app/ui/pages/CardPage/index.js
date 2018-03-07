@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
+import Header from 'ui/organisms/Header';
 import Container from 'ui/molecules/Container';
 import Grid from 'ui/molecules/Grid';
 import WrapGrid from 'ui/organisms/WrapGrid';
@@ -15,7 +16,9 @@ class CardPage extends PureComponent {
         console.log(data);
 
         return (
-            <PageTemplate>
+            <PageTemplate
+                header={<Header />}
+            >
                 <Container>
                     <Grid>
                         <WrapGrid 

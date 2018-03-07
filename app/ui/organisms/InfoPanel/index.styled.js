@@ -2,21 +2,17 @@ import styled from 'styled-components';
 
 import Grid from 'ui/molecules/Grid';
 
-export const Wrapper = styled.nav`
-    display: flex;
-    height: 180px;
-    border-bottom: 1px solid ${props => props.theme.MainTheme.grey[8]};
-    margin-right: 24px;
-    margin-left: 24px;
+export const Wrapper = styled.div`
     padding-top: 12px;
     padding-bottom: 12px;
+    flex-direction: column;
+    text-align: center;
 `;
 
 export const PanelWrap = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
-    margin-left: 24px;
+    align-items: center;
 `;
 
 export const InfoWrap = styled.div`
@@ -26,6 +22,7 @@ export const InfoWrap = styled.div`
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 24px;
+    margin-top: 24px;
 `;
 
 export const GridWrap = styled(Grid)`
