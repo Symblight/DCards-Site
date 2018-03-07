@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from 'ui/molecules/PrimaryButton';
 import Field from 'ui/atoms/Field';
 
-import { FieldTitle, ContentWrap } from './index.styled';
+import { FieldTitle, ContentWrap, DotsWrap } from './index.styled';
 
 class FieldPassword extends PureComponent {
     static propTypes = {
@@ -34,7 +34,7 @@ class FieldPassword extends PureComponent {
                     this.renderTitle()
                 }
                 <ContentWrap>
-                    <input type='password' value = {value} disabled/>
+                    <DotsWrap>••••••••••</DotsWrap>
                     <Button onClick = {onClick}>Change Password</Button>
                 </ContentWrap>
             </Field>

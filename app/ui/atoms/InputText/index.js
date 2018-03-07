@@ -18,10 +18,10 @@ class InputText extends PureComponent {
     };
 
     render() {
-        const { onChange } = this.props;
+        const { onChange, placeholder } = this.props;
 
         return (
-            <Input type='text' onChange={this.onChange}/>
+            <Input type='text' onChange={this.onChange} placeholder={placeholder}/>
         );
     }
 }
