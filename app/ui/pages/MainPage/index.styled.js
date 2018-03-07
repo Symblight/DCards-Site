@@ -13,7 +13,7 @@ export const ContentWrap = styled.section`
 
 export const MenuWrap = styled.div`
     min-height: 100%;
-    width: 250px;
+    width: 220px;
     margin-left: 12px;
     display: flex;
     flex-direction: column;

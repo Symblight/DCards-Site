@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from 'ui/molecules/PrimaryButton';
 import InputText from 'ui/atoms/InputText';
 
-import { Wrapper , ContentWrap} from './index.styled';
+import { Wrapper , ContentWrap, ContainerWrap } from './index.styled';
 
 class SearchShops extends PureComponent {
     static propTypes = {
@@ -17,7 +17,6 @@ class SearchShops extends PureComponent {
         console.log(e);
     }
 
-
     handleClick = () => {
         console.log('Click');
     }
@@ -27,8 +26,10 @@ class SearchShops extends PureComponent {
     
         return(
             <Wrapper>
-              <h2>Shops search</h2>
-              <ContentWrap><InputText onChange={this.handleChange}/><Button onClick={this.handleClick}> search </Button></ContentWrap>
+                <ContainerWrap>
+                    <h2>Shops search</h2>
+                    <ContentWrap><InputText onChange={this.handleChange}/><Button onClick={this.handleClick}> search </Button></ContentWrap>
+                </ContainerWrap>
             </Wrapper>
           );
     }

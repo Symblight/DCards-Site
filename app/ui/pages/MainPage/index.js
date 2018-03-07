@@ -7,7 +7,8 @@ import Container from 'ui/molecules/Container';
 import Button from 'ui/molecules/AddButton';
 import Grid from 'ui/molecules/Grid';
 import InfoPanelAccount from 'ui/organisms/InfoPanel';
-import ListMain from 'ui/organisms/ListMain';
+import ListCards from 'ui/organisms/ListCards';
+import ListShops from 'ui/organisms/ListShops';
 import MenuCards from 'ui/organisms/MenuCards';
 import MenuFilters from 'ui/organisms/MenuFilters';
 import Tabs from 'ui/molecules/Tabs';
@@ -28,7 +29,7 @@ class MainPage extends PureComponent {
       <Tabs selected={this.props.firstSelect || 0}>
         <TabItem label='Cards'>
           <ContentWrap>
-            <ListMain />
+            <ListCards />
             <MenuWrap>
               <MenuCards />
               <MenuFilters />
@@ -37,6 +38,7 @@ class MainPage extends PureComponent {
         </TabItem>
         <TabItem label='Shops'>
           <ContentWrap>
+            <ListShops />
             <MenuWrap>
               <MenuCards />
               <MenuFilters />

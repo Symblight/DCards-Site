@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import withDiscountCards from 'components/proxy-props/withDiscountCards';
 import Grid from 'ui/molecules/Grid';
@@ -13,6 +14,11 @@ const COUNT_ITEMS_ROW = 3;
 
 @withDiscountCards
 class ListMain extends PureComponent {
+    static displayName = 'ListMain';
+
+    static propTypes = {
+        data: PropTypes.arrayOf(Object)
+    };
 
     renderButton() {
         return(
