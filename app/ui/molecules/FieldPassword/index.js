@@ -8,37 +8,34 @@ import { FieldTitle, ContentWrap, DotsWrap } from './index.styled';
 
 class FieldPassword extends PureComponent {
     static propTypes = {
-        className: PropTypes.string,
-        title: PropTypes.string,
-        value: PropTypes.string,
-        onChange: PropTypes.func,
-        onClick : PropTypes.func
+      title: PropTypes.string,
+      onClick: PropTypes.func
     };
 
     renderTitle() {
-        const { title } = this.props;
+      const { title } = this.props;
 
-        return (
-            <FieldTitle>
-                { title }
-            </FieldTitle>
-        );
+      return (
+        <FieldTitle>
+          { title }
+        </FieldTitle>
+      );
     }
 
     render() {
-        const { value, onClick, onChange } = this.props;
+      const { onClick } = this.props;
 
-        return (
-            <Field>               
-                {
+      return (
+        <Field>
+          {
                     this.renderTitle()
                 }
-                <ContentWrap>
-                    <DotsWrap>••••••••••</DotsWrap>
-                    <Button onClick = {onClick}>Change Password</Button>
-                </ContentWrap>
-            </Field>
-        );
+          <ContentWrap>
+            <DotsWrap>••••••••••</DotsWrap>
+            <Button onClick={onClick}>Change Password</Button>
+          </ContentWrap>
+        </Field>
+      );
     }
 }
 

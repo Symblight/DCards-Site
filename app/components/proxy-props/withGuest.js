@@ -1,43 +1,41 @@
 import React, { PureComponent } from 'react';
-import { Redirect }  from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const MAIN_PAGE = '/main';
 
-const mapStateToProps = (state) => {
-    return {
-        userReducer: state.reducerLogin
-    }
-};
+const mapStateToProps = (state) => ({
+  userReducer: state.reducerLogin
+});
 
 const withGuest = (Component) => {
     @connect(mapStateToProps, null)
-    class GuestComponent extends PureComponent {
+  class GuestComponent extends PureComponent {
 
-        renderRederict() {
-            const { location } = this.props;
+      renderRederict() {
+        const { location } = this.props;
 
-            const { from } = location && location.state || { from: { pathname: MAIN_PAGE } };
-        
-            return (
-                <Redirect to={from} />
-            );
-        };
+        const { from } = location && location.state || { from: { pathname: MAIN_PAGE } };
 
-        renderComponent() {
-            return (
-                <Component {...this.props}/>
-            );
-        };
+        return (
+          <Redirect to={from} />
+        );
+      }
 
-        render() {
-            const { Authentication } = this.props.userReducer;
+      renderComponent() {
+        return (
+          <Component {...this.props} />
+        );
+      }
 
-            return Authentication ? this.renderRederict() : this.renderComponent();
-        }
+      render() {
+        const { Authentication } = this.props.userReducer;
+
+        return Authentication ? this.renderRederict() : this.renderComponent();
+      }
     }
 
     return GuestComponent;
-}
+};
 
 export default withGuest;

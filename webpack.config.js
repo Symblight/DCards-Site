@@ -73,6 +73,9 @@ module.exports = [{
             options: {
               plugins: ['react-hot-loader/babel']
             }
+          },
+          {
+            loader: 'eslint-loader'
           }
         ]
       },
@@ -106,7 +109,7 @@ module.exports = [{
         test: /\.svg$/,
         use: [
           {
-            loader: "react-svg-loader",
+            loader: 'react-svg-loader',
             options: {
               name: 'assets/images/[hash].[ext]'
             }
@@ -115,11 +118,11 @@ module.exports = [{
       },
       {
         test: /\.(woff|woff2|eot|ttf)(\?.*$|$)$/,
-          loader: 'file-loader',
-          options: {
-            name: 'assets/fonts/[name]-[hash].[ext]'
-          },
+        loader: 'file-loader',
+        options: {
+          name: 'assets/fonts/[name]-[hash].[ext]'
         },
+      },
     ],
   }
 }

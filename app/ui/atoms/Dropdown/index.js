@@ -16,8 +16,7 @@ class Dropdown extends PureComponent {
         <select>
           {
             columns.map((col) =>
-              <option key={col.id} value={col.value}>{col.value}</option>
-          )
+              <option key={col.id} value={col.value}>{col.value}</option>)
           }
         </select>
       </div>

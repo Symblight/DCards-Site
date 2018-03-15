@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import { Wrapper, Content, Container } from './index.styled';
 
 class PageTemplate extends PureComponent {
-
   static propTypes = {
     children: PropTypes.node.isRequired,
     header: PropTypes.node,
-    footer : PropTypes.node
+    footer: PropTypes.node
   }
 
   render() {
@@ -16,12 +15,12 @@ class PageTemplate extends PureComponent {
 
     return (
       <Wrapper>
-          {header}
-          <Container>
-            <Content>
-              {children}
-            </Content>
-          </Container>
+        {header}
+        <Container>
+          <Content>
+            {children}
+          </Content>
+        </Container>
         {footer}
       </Wrapper>
     );

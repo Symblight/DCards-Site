@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Route,
-    Switch,
+  Route,
+  Switch,
 } from 'react-router-dom';
 
 import Test from './ui/pages/TestPage';

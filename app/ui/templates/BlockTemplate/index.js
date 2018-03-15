@@ -1,19 +1,21 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Content, Container, HeroWrap, Wrap } from './index.styled';
+import { Wrapper, Content, HeroWrap, Wrap } from './index.styled';
 
 class BlockTemplate extends PureComponent {
 
   static propTypes = {
     children: PropTypes.node.isRequired,
     header: PropTypes.node,
-    nav : PropTypes.node,
-    footer : PropTypes.node
+    nav: PropTypes.node,
+    footer: PropTypes.node
   };
 
   render() {
-    const { nav, footer, header, children } = this.props;
+    const {
+      nav, footer, header, children
+    } = this.props;
 
     return (
       <Wrapper>

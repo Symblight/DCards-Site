@@ -13,31 +13,31 @@ import { Wrapper, ContentWrap, ButtonWrap } from './index.styled';
 class AccountPage extends PureComponent {
 
   handleClick = () => {
-      console.log(111111);
+    console.log(111111);
   }
 
   renderContent() {
     return (
       <Wrapper>
         <ContentWrap>
-          <FieldText 
-            title = 'First Name:'
-            value = 'Alexey'
+          <FieldText
+            title="First Name:"
+            value="Alexey"
           />
-          <FieldText 
-            title = 'Last Name:'
-            value = 'Tkachenko'
+          <FieldText
+            title="Last Name:"
+            value="Tkachenko"
           />
-          <FieldText 
-            title = 'Email:'
-            value = 'symblight@gmail.com'
+          <FieldText
+            title="Email:"
+            value="symblight@gmail.com"
           />
-         { 
-           <FieldPassword 
-            title = 'Password:'
-            value = '123456789'
-            onClick = {this.handleClick}
-          />
+          {
+            <FieldPassword
+              title="Password:"
+              value="123456789"
+              onClick={this.handleClick}
+            />
          }
         </ContentWrap>
         <ButtonWrap>

@@ -6,8 +6,8 @@ import reducerCard from './components/Card/reducer';
 import reducerShops from './components/Shops/reducer';
 
 export default combineReducers({
-    reducerLogin,
-    reducerMain,
-    reducerCard,
-    reducerShops
+  reducerLogin,
+  reducerMain,
+  reducerCard,
+  reducerShops
 });

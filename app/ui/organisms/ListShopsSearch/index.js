@@ -12,21 +12,21 @@ const COUNT_ITEMS_ROW = 3;
 @withSearchShops
 class ListSearchShops extends PureComponent {
     static propTypes = {
-
+      data: PropTypes.arrayOf(Array)
     };
 
     render() {
-        const { data } = this.props;
+      const { data } = this.props;
 
-        return (
-            <Wrapper>
-                <ListGrids 
-                    items = {data}
-                    countRow = {COUNT_ITEMS_ROW}
-                    Item = {Article}
-                />
-            </Wrapper>
-        );
+      return (
+        <Wrapper>
+          <ListGrids
+            items={data}
+            countRow={COUNT_ITEMS_ROW}
+            Item={Article}
+          />
+        </Wrapper>
+      );
     }
 }
 

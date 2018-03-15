@@ -4,7 +4,7 @@ import Button from 'ui/atoms/Button';
 export const ButtonWrap = styled(Button)`
     padding-left: 6px;
     padding-right: 12px;
-`
+`;
 
 export const AddButtonWrap = styled.div`
     display: flex;
@@ -22,4 +22,4 @@ export const AddButtonWrap = styled.div`
 
 export const IconWrap = styled.div`
     padding-left: 12px;
-`
+`;

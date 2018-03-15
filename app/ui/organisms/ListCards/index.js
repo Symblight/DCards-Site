@@ -13,36 +13,36 @@ import { Wrapper, ListWrap, RowWrap, ButtonWrap } from './index.styled';
 const COUNT_ITEMS_ROW = 3;
 
 @withDiscountCards
-class ListMain extends PureComponent {
-    static displayName = 'ListMain';
+class ListCards extends PureComponent {
+    static displayName = 'ListCards';
 
     static propTypes = {
-        data: PropTypes.arrayOf(Object)
+      data: PropTypes.arrayOf(Array)
     };
 
     renderButton() {
-        return(
-              <ButtonWrap>
-                <Button>Add new card</Button>
-              </ButtonWrap>
-        );
-      }
+      return (
+        <ButtonWrap>
+          <Button>Add new card</Button>
+        </ButtonWrap>
+      );
+    }
 
     render() {
-        const { data } = this.props;
+      const { data } = this.props;
 
-        return (
-            <Wrapper>
-                <ListGrids 
-                    items = {data}
-                    countRow = {COUNT_ITEMS_ROW}
-                    Item = {Article}
-                />
-                {this.renderButton()}
-            </Wrapper>
-        );
+      return (
+        <Wrapper>
+          <ListGrids
+            items={data}
+            countRow={COUNT_ITEMS_ROW}
+            Item={Article}
+          />
+          {this.renderButton()}
+        </Wrapper>
+      );
     }
 }
-    
-export default ListMain;
-    
+
+export default ListCards;
+

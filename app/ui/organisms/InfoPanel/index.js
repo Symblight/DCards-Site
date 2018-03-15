@@ -9,21 +9,21 @@ import { Wrapper, PanelWrap, InfoWrap, GridWrap } from './index.styled';
 
 @withAccountInfo
 class InfoPanel extends PureComponent {
-    render() {
-        const { data } = this.props;
+  render() {
+    const { data } = this.props;
 
-        return (
-                <Wrapper>
-                    <Photo src = {Img} />
-                    <PanelWrap>
-                        <InfoWrap>
-                            {`${data.firstname}  ${data.lastname}`}
-                        </InfoWrap>
-                    </PanelWrap>
-                </Wrapper>
-        );
-    }
+    return (
+      <Wrapper>
+        <Photo src={Img} />
+        <PanelWrap>
+          <InfoWrap>
+            {`${data.firstname}  ${data.lastname}`}
+          </InfoWrap>
+        </PanelWrap>
+      </Wrapper>
+    );
+  }
 }
-    
+
 export default InfoPanel;
-    
+

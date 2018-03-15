@@ -1,51 +1,49 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from 'ui/atoms/Button';
-
 import { ButtonWrap, ItemTextWrap, ItemLoginWrap } from './index.styled';
 
 class ItemNavButton extends PureComponent {
 
     static propTypes = {
-        children: PropTypes.node.isRequired,
-        type: PropTypes.string
+      children: PropTypes.node.isRequired,
+      type: PropTypes.string
     };
 
     static defaultPropTypes = {
-        type: 'text'
+      type: 'text'
     };
 
-    renderItemText(){
-        const { children } = this.props;
+    renderItemText() {
+      const { children } = this.props;
 
-        return(
-            <ItemTextWrap>
-                {children}
-            </ItemTextWrap>
-        );
+      return (
+        <ItemTextWrap>
+          {children}
+        </ItemTextWrap>
+      );
     }
-    
-    renderItemLogin(){
-        const { children } = this.props;
 
-        return(
-            <ItemLoginWrap>
-                {children}
-            </ItemLoginWrap>
-        );
+    renderItemLogin() {
+      const { children } = this.props;
+
+      return (
+        <ItemLoginWrap>
+          {children}
+        </ItemLoginWrap>
+      );
     }
 
     render() {
-        const {  type } = this.props;
+      const { type } = this.props;
 
-        return (
-            <ButtonWrap type={type}>
-                {
+      return (
+        <ButtonWrap type={type}>
+          {
                     type === 'login' ? this.renderItemLogin() : this.renderItemText()
                 }
-            </ButtonWrap>
-        );
+        </ButtonWrap>
+      );
     }
 }
 

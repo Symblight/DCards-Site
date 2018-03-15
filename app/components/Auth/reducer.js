@@ -1,13 +1,15 @@
-let initialState = {
+const initialState = {
 
 };
 
 const reducerAuth = (state = initialState, action) => {
-    switch(action.type) {
-        default: {
-            return state;
-        }
+  switch (action.type) {
+
+    default: {
+      return state;
     }
+
+  }
 };
 
 export default reducerAuth;

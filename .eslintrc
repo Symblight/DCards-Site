@@ -2,15 +2,7 @@
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
-    "allowImportExportEverywhere": true,
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "experimentalDecorators": true,
-      "jsx": true
-    }
-  },
-  "compilerOptions": {
-    "experimentalDecorators": true
+    "allowImportExportEverywhere": true
   },
   "extends": "airbnb",
   "env": {
@@ -27,21 +19,37 @@
     "react/sort-comp": ["error", {
       "order": ["type-annotations", "static-methods", "lifecycle", "everything-else", "render"]
     }],
+    "import/prefer-default-export":"off",
+    "no-undef":"off",
+    "no-underscore-dangle":"off",
+    "padded-blocks": ["warn", { "switches": "always" }],
+    "react/require-default-props": [0, {"forbidDefaultForRequired":false}],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+            "components": [ "Link" ],
+            "specialLink": [ "hrefLeft", "hrefRight", "to" ],
+            "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }],
+    "react/prop-types": 0,
     "react/jsx-no-bind": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": "off",
     "react/jsx-indent": "warn",
-    "linebreak-style": 0
+    "react/jsx-closing-tag-location": "off",
+    "no-unused-vars":"off",
+    "no-mixed-operators":"off",
+    "linebreak-style": 0,
+    "class-methods-use-this": "off",
+    "no-console":"off",
+    "react/no-array-index-key":"warn",
+    "react/no-unused-state":"off",
+    "no-unused-expressions":"off",
+    "react/default-props-match-prop-types":"off"
   },
   "plugins": [
     "import",
     "promise",
     "compat",
     "react"
-  ],
-  "linebreak-style": [
-    "warn",
-    "windows"
   ],
   "settings": {
     "import/resolver": {
@@ -50,4 +58,4 @@
       }
     }
   }
-}
+} 
