@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
     padding-bottom: 12px;
     flex-direction: column;
     text-align: center;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 `;
 
 export const PanelWrap = styled.div`

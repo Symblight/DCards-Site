@@ -10,6 +10,7 @@ import MenuCards from 'ui/organisms/MenuCards';
 import MenuFilters from 'ui/organisms/MenuFilters';
 import Tabs from 'ui/molecules/Tabs';
 import TabItem from 'ui/molecules/TabItem';
+import TestImg from 'assets/images/headerMain.jpg';
 
 import { ContentWrap, MenuWrap } from './index.styled';
 
@@ -21,6 +22,7 @@ class MainPage extends PureComponent {
         nav={<InfoPanelAccount />}
         header={<Header />}
         footer={<Footer />}
+        src={TestImg}
       >
         <Tabs selected={this.props.firstSelect || 0}>
           <TabItem label="Cards">

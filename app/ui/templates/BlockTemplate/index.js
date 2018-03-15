@@ -9,18 +9,19 @@ class BlockTemplate extends PureComponent {
     children: PropTypes.node.isRequired,
     header: PropTypes.node,
     nav: PropTypes.node,
-    footer: PropTypes.node
+    footer: PropTypes.node,
+    src: PropTypes.string
   };
 
   render() {
     const {
-      nav, footer, header, children
+      nav, footer, header, children, src
     } = this.props;
 
     return (
       <Wrapper>
         {header}
-        <HeroWrap>
+        <HeroWrap src={src}>
           <Wrap>
             {nav}
           </Wrap>
