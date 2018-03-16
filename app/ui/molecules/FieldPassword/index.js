@@ -32,7 +32,7 @@ class FieldPassword extends PureComponent {
                 }
           <ContentWrap>
             <DotsWrap>••••••••••</DotsWrap>
-            <Button onClick={onClick}>Change Password</Button>
+            <Button onClick={onClick}>Изменить пароль</Button>
           </ContentWrap>
         </Field>
       );

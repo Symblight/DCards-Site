@@ -26,7 +26,7 @@ class SearchShops extends PureComponent {
       return (
         <Wrapper>
           <ContainerWrap>
-            <h2>Shops search</h2>
+            <h2>Поиск магазинов</h2>
             <ContentWrap>
               <InputSearch onChange={this.handleChange} onClick={this.handleClick} />
             </ContentWrap>

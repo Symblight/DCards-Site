@@ -25,7 +25,7 @@ class MainPage extends PureComponent {
         src={TestImg}
       >
         <Tabs selected={this.props.firstSelect || 0}>
-          <TabItem label="Cards">
+          <TabItem label="Карты">
             <ContentWrap>
               <ListCards />
               <MenuWrap>
@@ -34,7 +34,7 @@ class MainPage extends PureComponent {
               </MenuWrap>
             </ContentWrap>
           </TabItem>
-          <TabItem label="Shops">
+          <TabItem label="Магазины">
             <ContentWrap>
               <ListShops />
               <MenuWrap>

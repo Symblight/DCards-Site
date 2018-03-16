@@ -15,7 +15,7 @@ class MenuCards extends PureComponent {
             <li>Filters</li>
           </ul>
         </Wrapper>
-        <Button>ADD NEW CARD</Button>
+        <Button>Добавить карту</Button>
       </Menu>
     );
   }

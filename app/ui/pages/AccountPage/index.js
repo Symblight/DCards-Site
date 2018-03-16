@@ -21,11 +21,11 @@ class AccountPage extends PureComponent {
       <Wrapper>
         <ContentWrap>
           <FieldText
-            title="First Name:"
+            title="Имя:"
             value="Alexey"
           />
           <FieldText
-            title="Last Name:"
+            title="Фамилия:"
             value="Tkachenko"
           />
           <FieldText
@@ -34,14 +34,14 @@ class AccountPage extends PureComponent {
           />
           {
             <FieldPassword
-              title="Password:"
+              title="Пароль:"
               value="123456789"
               onClick={this.handleClick}
             />
          }
         </ContentWrap>
         <ButtonWrap>
-          <Button>Edit Profile</Button>
+          <Button>Изменить профиль</Button>
         </ButtonWrap>
       </Wrapper>
     );

@@ -23,7 +23,7 @@ class ListCards extends PureComponent {
     renderButton() {
       return (
         <ButtonWrap>
-          <Button>Add new card</Button>
+          <Button>Добавить карту</Button>
         </ButtonWrap>
       );
     }

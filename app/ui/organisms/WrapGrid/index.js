@@ -14,8 +14,8 @@ class WrapGrid extends PureComponent {
         <PanelWrap>
           <CardSVG height={180} width={360} />
           <InfoWrap>
-            <DiscriptionWrap>Discription</DiscriptionWrap>
-            <CreateWrap>Create by</CreateWrap>
+            <DiscriptionWrap>Описание</DiscriptionWrap>
+            <CreateWrap>Автор</CreateWrap>
           </InfoWrap>
         </PanelWrap>
       </Wrapper>

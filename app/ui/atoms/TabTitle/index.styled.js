@@ -8,7 +8,7 @@ const colorActive = props => (
 
 export const Wrapper = styled.li`
     height: 38px;
-    width: 60px;
+    width: 80px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;

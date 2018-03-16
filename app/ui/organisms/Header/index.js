@@ -23,16 +23,16 @@ import {
 
 const DROPDOWN_ITEMS = [
   {
-    value: 'profile'
+    value: 'Профиль'
   },
   {
-    value: 'settings'
+    value: 'Настройки'
   },
   {
-    value: 'create shop'
+    value: 'Создать магазин'
   },
   {
-    value: 'sign out'
+    value: 'Выйти из профиля'
   }
 ];
 
@@ -51,10 +51,10 @@ class Header extends PureComponent {
     return (
       <ButtonsContent>
         <Link to="/shops">
-          <ItemNavButton>Shops</ItemNavButton>
+          <ItemNavButton>Магазины</ItemNavButton>
         </Link>
         <Link to="/main">
-          <ItemNavButton>Home</ItemNavButton>
+          <ItemNavButton>Главная</ItemNavButton>
         </Link>
       </ButtonsContent>
     );
@@ -86,15 +86,15 @@ class Header extends PureComponent {
         <Dropdown title="Alexey">
           <Link to="/account">
             <DropdownItem>
-                Profile
+                Профиль
             </DropdownItem>
           </Link>
           <DropdownItem>
-              Settings
+              Настройки
           </DropdownItem>
           <DropdownItem divider />
           <DropdownItem onClick={onSignOut}>
-              Sign Out
+              Выйти из профиля
           </DropdownItem>
         </Dropdown>
       </Content>
