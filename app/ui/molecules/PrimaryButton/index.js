@@ -16,8 +16,8 @@ class PrimaryButton extends PureComponent {
     const { className, children, onClick } = this.props;
 
     return (
-      <PrimaryButtonWrap>
-        <Button className={className} onClick={onClick}>{children}</Button>
+      <PrimaryButtonWrap className={className}>
+        <Button onClick={onClick}>{children}</Button>
       </PrimaryButtonWrap>
     );
   }

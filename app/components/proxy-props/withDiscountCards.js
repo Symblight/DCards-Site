@@ -80,7 +80,7 @@ const mapStateToProps = (state) => ({
 });
 
 const withDiscountCards = (Component) => {
-    @connect(mapStateToProps, mapDispatchToProps)
+  @connect(mapStateToProps, mapDispatchToProps)
   class DiscountCards extends PureComponent {
 
         componentWillMount = () => {
@@ -98,9 +98,9 @@ const withDiscountCards = (Component) => {
             <Component data={cards} {...this.props} />
           );
         }
-    }
+  }
 
-    return DiscountCards;
+  return DiscountCards;
 };
 
 export default withDiscountCards;
