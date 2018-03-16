@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import Footer from 'ui/organisms/Footer';
 import Header from 'ui/organisms/Header';
 import SignInForm from 'components/SignIn';
 import Container from 'ui/molecules/Container';
@@ -15,13 +14,13 @@ class SignInPage extends PureComponent {
       <PageTemplate
         header={<Header />}
       >
-          <Wrapper>
-            <Container>
-              <Grid>
-                <SignInForm />
-              </Grid>
-            </Container>
-          </Wrapper>
+        <Wrapper>
+          <Container>
+            <Grid>
+              <SignInForm />
+            </Grid>
+          </Container>
+        </Wrapper>
       </PageTemplate>
     );
   }

@@ -5,25 +5,25 @@ import { Wrapper, Divider } from './index.styled';
 
 class DropdownItem extends PureComponent {
     static propTypes = {
-        children: PropTypes.string,
-        onClick: PropTypes.func,
-        divider : PropTypes.bool
+      children: PropTypes.string,
+      onClick: PropTypes.func,
+      divider: PropTypes.bool
     };
 
     render() {
-        const { onClick, children, divider } = this.props;
+      const { onClick, children, divider } = this.props;
 
-        if(divider) {
-            return (
-                <Divider/>
-            );
-        }
-
+      if (divider) {
         return (
-            <Wrapper onClick = {onClick} custom>
-                {children}
-            </Wrapper>
+          <Divider />
         );
+      }
+
+      return (
+        <Wrapper onClick={onClick} custom>
+          {children}
+        </Wrapper>
+      );
     }
 }
 

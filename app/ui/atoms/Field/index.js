@@ -6,19 +6,19 @@ import { FieldWrap } from './index.styled';
 class Field extends PureComponent {
 
    static propTypes = {
-        children: PropTypes.node.isRequired,
-        className: PropTypes.string
-    };
+     children: PropTypes.node.isRequired,
+     className: PropTypes.string
+   };
 
-    render() {
-        const { className, children } = this.props;
+   render() {
+     const { className, children } = this.props;
 
-        return (
-            <FieldWrap className = {className}>
-                {children}
-            </FieldWrap>
-        );
-    }
+     return (
+       <FieldWrap className={className}>
+         {children}
+       </FieldWrap>
+     );
+   }
 }
 
 

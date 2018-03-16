@@ -1,30 +1,26 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 
 import Menu from 'ui/molecules/Menu';
-import Button from 'ui/molecules/PrimaryButton';
+import withFilterUserCards from 'components/proxy-props/withFilterUserCards';
 
-import { Wrapper } from './index.styled.js'
+import { Wrapper, ButtonWrap } from './index.styled';
 
+@withFilterUserCards
 class MenuCards extends PureComponent {
+  render() {
+    const { cards } = this.props;
 
-    static propTypes = {
-
-    };
-
-    render() {
-        return (
-            <Menu title='Menu'>
-                <Wrapper>
-                    <ul>
-                        <li>Count cards</li>
-                        <li>Filters</li>
-                    </ul>
-                </Wrapper>
-                <Button>ADD NEW CARD</Button>
-            </Menu>
-        );
-    }
+    return (
+      <Menu title="Меню">
+        <Wrapper>
+          <ul>
+            <li>Количество: {cards.length}</li>
+          </ul>
+        </Wrapper>
+        <ButtonWrap>Добавить карту</ButtonWrap>
+      </Menu>
+    );
+  }
 }
 
 

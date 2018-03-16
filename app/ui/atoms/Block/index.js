@@ -14,7 +14,7 @@ class Block extends PureComponent {
     const { className, children } = this.props;
 
     return (
-      <Wrapper className = {className}>{children}</Wrapper>
+      <Wrapper className={className}>{children}</Wrapper>
     );
   }
 }

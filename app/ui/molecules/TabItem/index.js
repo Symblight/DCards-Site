@@ -1,21 +1,21 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper, TitleWrap } from './index.styled';
+import { Wrapper } from './index.styled';
 
 class TabItem extends PureComponent {
     static propTypes = {
-        children: PropTypes.node.isRequired
+      children: PropTypes.node.isRequired
     };
 
     render() {
-        const { children } = this.props;
+      const { children } = this.props;
 
-        return (
-            <Wrapper>
-                {children}
-            </Wrapper>
-        );
+      return (
+        <Wrapper>
+          {children}
+        </Wrapper>
+      );
     }
 }
 

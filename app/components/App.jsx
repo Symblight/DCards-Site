@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { ThemeProvider } from 'styled-components';
 
 import RootRouter from '../rootRouter';
 import theme from '../ui/themes/custom';
-import { ThemeProvider } from 'styled-components';
 
 import './App.scss';
 

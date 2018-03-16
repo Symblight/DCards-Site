@@ -1,65 +1,60 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Menu, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import Headroom from 'react-headroom';
 
-import { Menu } from 'semantic-ui-react'
-import { Button } from 'semantic-ui-react'
 import LogoSVG from 'assets/images/react.svg';
 import Dropdown from 'ui/molecules/Dropdown';
 import DropdownItem from 'ui/molecules/DropdownItem';
 import ItemNavButton from 'ui/molecules/ItemNavButton';
 import { signOut } from 'components/reducerUser/actions';
 
-import { 
-  Wrapper, 
-  Content,  
-  UserNav, 
-  LogoWrap, 
-  HeaderText, 
-  TextName, 
-  ButtonsContent 
+import {
+  Wrapper,
+  Content,
+  UserNav,
+  LogoWrap,
+  HeaderText,
+  TextName,
+  ButtonsContent
 } from './index.styled';
 
 const DROPDOWN_ITEMS = [
   {
-    value: 'profile' 
+    value: 'Профиль'
   },
   {
-    value: 'settings' 
+    value: 'Настройки'
   },
   {
-    value: 'create shop' 
+    value: 'Создать магазин'
   },
   {
-    value: 'sign out' 
+    value: 'Выйти из профиля'
   }
 ];
 
-const mapStateToProps = (state) => {
-  return {
-      userReducer: state.reducerLogin
-  }
-};
+const mapStateToProps = (state) => ({
+  userReducer: state.reducerLogin
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onSignOut: () => dispatch(signOut())
-  }
-};
+const mapDispatchToProps = (dispatch) => ({
+  onSignOut: () => dispatch(signOut())
+});
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Header extends PureComponent {
 
   renderMenuItems() {
-    return(
+    return (
       <ButtonsContent>
         <Link to="/shops">
-          <ItemNavButton>Shops</ItemNavButton>
+          <ItemNavButton>Магазины</ItemNavButton>
         </Link>
         <Link to="/main">
-          <ItemNavButton>Home</ItemNavButton>
+          <ItemNavButton>Главная</ItemNavButton>
         </Link>
       </ButtonsContent>
     );
@@ -68,14 +63,14 @@ class Header extends PureComponent {
   renderLogoWrap() {
     return (
       <LogoWrap>
-          <Link to="/"><LogoSVG width={50} height={50} /></Link>
-          <HeaderText>
-            <span>alpha</span>
-            <TextName>DiCards</TextName>
-          </HeaderText>
-        </LogoWrap>
+        <Link to="/"><LogoSVG width={50} height={50} /></Link>
+        <HeaderText>
+          <span>alpha</span>
+          <TextName>DiCards</TextName>
+        </HeaderText>
+      </LogoWrap>
     );
-  };
+  }
 
   renderUserMenu() {
     const { onSignOut } = this.props;
@@ -88,23 +83,23 @@ class Header extends PureComponent {
         {
           this.renderMenuItems()
         }
-          <Dropdown title= 'Alexey'>
-            <Link to='/account'>
-              <DropdownItem>
-                Profile
-              </DropdownItem>
-            </Link>
+        <Dropdown title="Alexey">
+          <Link to="/account">
             <DropdownItem>
-              Settings
+                Профиль
             </DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem onClick = { onSignOut }>
-              Sign Out
-            </DropdownItem>
-          </Dropdown>
+          </Link>
+          <DropdownItem>
+              Настройки
+          </DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem onClick={onSignOut}>
+              Выйти из профиля
+          </DropdownItem>
+        </Dropdown>
       </Content>
     );
-  };
+  }
 
   renderGuestMenu() {
     return (
@@ -115,7 +110,7 @@ class Header extends PureComponent {
         <UserNav>
           <li>
             <Link to="/login">
-              <ItemNavButton type='login'>Sign In</ItemNavButton>
+              <ItemNavButton type="login">Sign In</ItemNavButton>
             </Link>
           </li>
           <li>
@@ -125,7 +120,7 @@ class Header extends PureComponent {
           </li>
         </UserNav>
       </Content>);
-  };
+  }
 
   render() {
     const { userReducer } = this.props;

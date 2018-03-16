@@ -1,8 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from 'ui/atoms/Button';
-
 import { AddButtonWrap, IconWrap, ButtonWrap } from './index.styled';
 
 class AddButton extends PureComponent {
@@ -17,7 +15,7 @@ class AddButton extends PureComponent {
     return (
       <AddButtonWrap>
         <IconWrap>
-            <i className="add icon"></i>
+          <i className="add icon" />
         </IconWrap>
         <ButtonWrap className={className}>{children}</ButtonWrap>
       </AddButtonWrap>

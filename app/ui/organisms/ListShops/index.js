@@ -9,19 +9,19 @@ class ListShops extends PureComponent {
     static displayName = 'ListShops';
 
     static propTypes = {
-        data: PropTypes.arrayOf(Object)
+      data: PropTypes.arrayOf(Array)
     };
 
     render() {
-        const { data } = this.props;
+      const { data } = this.props;
 
-        return (
-            <Wrapper>
-            {
-                data ? <ListGrids /> : `Nothing`
-            }
-            </Wrapper>
-        );
+      return (
+        <Wrapper>
+          {
+                data ? <ListGrids /> : 'Nothing'
+          }
+        </Wrapper>
+      );
     }
 }
 export default ListShops;

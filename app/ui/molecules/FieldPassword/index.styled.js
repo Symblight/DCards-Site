@@ -14,3 +14,9 @@ export const ContentWrap = styled.div`
     justify-content: space-between;
     width: 75%;
 `;
+
+export const DotsWrap = styled.span`
+    font-size: 18px;
+    font-weight: 700;
+    color: ${props => props.theme.MainTheme.grey[1]};
+`;

@@ -8,17 +8,17 @@ export const ButtonWrap = styled(Button)`
     height: 100%;
 `;
 
-export const ItemLoginWrap= styled.div`
+export const ItemLoginWrap = styled.div`
     color:${props => props.theme.MainTheme.green[1]};
     transition: background .2s,color .2s;
 
     &:hover {
-        color:${props =>props.theme.MainTheme.green[0]};
+        color:${props => props.theme.MainTheme.green[0]};
         cursor: pointer;
     }
 `;
 
-export const ItemTextWrap  = styled.div`
+export const ItemTextWrap = styled.div`
     color:${props => props.theme.MainTheme.white[3]};
     transition: background .2s,color .2s;
         

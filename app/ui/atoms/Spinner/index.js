@@ -7,17 +7,17 @@ class Spinner extends PureComponent {
     static displayName='Spinner';
 
     static propTypes = {
-        className: PropTypes.string
+      className: PropTypes.string
     };
 
     render() {
-        const { className } = this.props;
-    
-        return (
-            <SpinnerWrap>
-                <div className="ui active centered inline loader"></div>
-            </SpinnerWrap>
-        );
+      const { className } = this.props;
+
+      return (
+        <SpinnerWrap className={className}>
+          <div className="ui active centered inline loader" />
+        </SpinnerWrap>
+      );
     }
 }
 

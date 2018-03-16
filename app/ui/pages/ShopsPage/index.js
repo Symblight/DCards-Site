@@ -3,11 +3,10 @@ import React, { PureComponent } from 'react';
 import PageTemplate from 'ui/templates/BlockTemplate';
 import Footer from 'ui/organisms/Footer';
 import Header from 'ui/organisms/Header';
-import Container from 'ui/molecules/Container';
-import Grid from 'ui/molecules/Grid';
 import SearchShops from 'ui/organisms/SearchShops';
+import ListShops from 'ui/organisms/ListShopsSearch';
 
-import {  } from './index.styled';
+import headerShop from 'assets/images/headerShop.jpg';
 
 class ShopsPage extends PureComponent {
 
@@ -17,8 +16,9 @@ class ShopsPage extends PureComponent {
         nav={<SearchShops />}
         header={<Header />}
         footer={<Footer />}
+        src={headerShop}
       >
-        Shops page
+        <ListShops />
       </PageTemplate>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Header from 'ui/organisms/Header';
 import Label from 'ui/atoms/Label';
-import Link from 'ui/atoms/Link';
+// import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
 
 import Dropdown from 'ui/molecules/Dropdown';
@@ -20,18 +20,6 @@ import Spinner from 'ui/atoms/Spinner';
 import AddButton from 'ui/molecules/AddButton';
 import Tabs from 'ui/molecules/Tabs';
 import TabItem from 'ui/molecules/TabItem';
-
-const TABS = [{
-  name: 'Tab 1',
-  content: 'Content for 1'
-}, {
-  name: 'Tab 2',
-  content: 'Content for 2'
-
-}, {
-  name: 'Tab 3',
-  content: 'Content for 3'
-}];
 
 class TestPage extends Component {
   render() {
@@ -53,13 +41,13 @@ class TestPage extends Component {
             <BlockBorder>Block border</BlockBorder>
           </Block>
           <Block title="Link">
-            <Link>Link!</Link>
+            Link!
           </Block>
           <Block title="Text field button">
             <TextFieldButton button="send" placeholder="" />
           </Block>
           <Block title="Dropdown">
-            <Dropdown title= 'Alexey'>
+            <Dropdown title="Alexey">
               <DropdownItem>
                 Profile
               </DropdownItem>
@@ -70,7 +58,7 @@ class TestPage extends Component {
               <DropdownItem>
                 Sign Out
               </DropdownItem>
-          </Dropdown>
+            </Dropdown>
           </Block>
           <Block title="Icon">
             <h3><LogoSVG width={50} height={50} /></h3>
@@ -82,7 +70,7 @@ class TestPage extends Component {
             <h3><Spinner /></h3>
           </Block>
           <Block title="Add Button">
-              <AddButton>Add Button</AddButton>
+            <AddButton>Add Button</AddButton>
           </Block>
           <Block title="text button">
             <TextButton>text button</TextButton>
@@ -96,16 +84,16 @@ class TestPage extends Component {
           <Block title="Tabs">
 
             <Tabs selected={this.props.firstSelect || 0}>
-              <TabItem label='Cards'>
+              <TabItem label="Cards">
                 <HighLightText> Cards </HighLightText>
                 <WayBlock title="My way">Well, My name is Alexey and I am Web developer. I finished college in 2016 </WayBlock>
               </TabItem>
-              <TabItem label='Shops'>
+              <TabItem label="Shops">
                 <HighLightText> Shops </HighLightText>
                 <PrimaryButton>Primary button</PrimaryButton>
               </TabItem>
             </Tabs>
-            
+
           </Block>
         </Container>
       </PageTemplates>

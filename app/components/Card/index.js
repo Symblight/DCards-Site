@@ -7,11 +7,11 @@ import Card from 'ui/pages/CardPage';
 @withAuthenticated
 @withCard
 class CardContainer extends PureComponent {
-    render() {
-        return (
-            <Card />
-        );
-    }
+  render() {
+    return (
+      <Card />
+    );
+  }
 }
 
 export default CardContainer;

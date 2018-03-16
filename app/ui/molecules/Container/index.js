@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Block from 'ui/atoms/Block';
 import { Wrapper } from './index.styled';
 
 class Container extends PureComponent {
@@ -14,9 +13,9 @@ class Container extends PureComponent {
     const { className, children } = this.props;
 
     return (
-        <Wrapper className = {className}>
-            {children}
-        </Wrapper>
+      <Wrapper className={className}>
+        {children}
+      </Wrapper>
     );
   }
 }

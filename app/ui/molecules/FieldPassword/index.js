@@ -4,41 +4,38 @@ import PropTypes from 'prop-types';
 import Button from 'ui/molecules/PrimaryButton';
 import Field from 'ui/atoms/Field';
 
-import { FieldTitle, ContentWrap } from './index.styled';
+import { FieldTitle, ContentWrap, DotsWrap } from './index.styled';
 
 class FieldPassword extends PureComponent {
     static propTypes = {
-        className: PropTypes.string,
-        title: PropTypes.string,
-        value: PropTypes.string,
-        onChange: PropTypes.func,
-        onClick : PropTypes.func
+      title: PropTypes.string,
+      onClick: PropTypes.func
     };
 
     renderTitle() {
-        const { title } = this.props;
+      const { title } = this.props;
 
-        return (
-            <FieldTitle>
-                { title }
-            </FieldTitle>
-        );
+      return (
+        <FieldTitle>
+          { title }
+        </FieldTitle>
+      );
     }
 
     render() {
-        const { value, onClick, onChange } = this.props;
+      const { onClick } = this.props;
 
-        return (
-            <Field>               
-                {
+      return (
+        <Field>
+          {
                     this.renderTitle()
-                }
-                <ContentWrap>
-                    <input type='password' value = {value} disabled/>
-                    <Button onClick = {onClick}>Change Password</Button>
-                </ContentWrap>
-            </Field>
-        );
+          }
+          <ContentWrap>
+            <DotsWrap>••••••••••</DotsWrap>
+            <Button onClick={onClick}>Изменить пароль</Button>
+          </ContentWrap>
+        </Field>
+      );
     }
 }
 

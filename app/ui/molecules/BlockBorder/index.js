@@ -16,7 +16,7 @@ class BlockBorder extends PureComponent {
     const { className, children } = this.props;
 
     return (
-      <Border className = {className}>
+      <Border className={className}>
         <Block>{children}</Block>
       </Border>
     );

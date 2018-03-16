@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import Footer from 'ui/organisms/Footer';
 import Header from 'ui/organisms/Header';
 import SignUpForm from 'components/SignUp';
 import Container from 'ui/molecules/Container';

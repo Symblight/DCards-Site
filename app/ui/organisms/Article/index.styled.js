@@ -33,7 +33,6 @@ export const PanelWrap = styled.section`
 `;
 
 export const ButtonWrap = styled(Button)`
-    height: 35px;
     width: 220px;
 `;
 

@@ -8,18 +8,18 @@ import { ButtonWrap } from './index.styled';
 class TextButton extends PureComponent {
 
     static propTypes = {
-        children: PropTypes.node.isRequired
+      children: PropTypes.node.isRequired
     }
 
     render() {
-        const { children } = this.props;
+      const { children } = this.props;
 
-        return (<ButtonWrap>
-            <Button>
-                {children}
-            </Button>
-            </ButtonWrap>
-        );
+      return (<ButtonWrap>
+        <Button>
+          {children}
+        </Button>
+      </ButtonWrap>
+      );
     }
 }
 

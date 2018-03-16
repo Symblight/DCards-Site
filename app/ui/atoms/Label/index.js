@@ -15,7 +15,7 @@ class Label extends PureComponent {
     const { className, children, color } = this.props;
 
     return (
-      <LabelStyled color={color} className = {className}>
+      <LabelStyled color={color} className={className}>
         {children}
       </LabelStyled>
     );
