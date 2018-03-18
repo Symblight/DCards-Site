@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import withSearchShops from 'components/proxy-props/withSearchShops';
 import ListGrids from 'ui/organisms/ListGrids';
-import Article from 'ui/organisms/Article';
+import Shop from 'ui/organisms/Shop';
 
 import { Wrapper } from './index.styled';
 
@@ -23,7 +23,7 @@ class ListSearchShops extends PureComponent {
           <ListGrids
             items={data}
             countRow={COUNT_ITEMS_ROW}
-            Item={Article}
+            Item={Shop}
           />
         </Wrapper>
       );

@@ -13,7 +13,7 @@ import {
   DiscriptionWrap
 } from './index.styled';
 
-class Article extends PureComponent {
+class CardArticle extends PureComponent {
   render() {
     const { data } = this.props;
 
@@ -38,4 +38,4 @@ class Article extends PureComponent {
   }
 }
 
-export default Article;
+export default CardArticle;

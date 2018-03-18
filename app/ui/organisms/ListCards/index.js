@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import withDiscountCards from 'components/proxy-props/withDiscountCards';
 import Grid from 'ui/molecules/Grid';
-import Article from 'ui/organisms/Article';
+import Card from 'ui/organisms/Card';
 import ListGrids from 'ui/organisms/ListGrids';
 import Button from 'ui/molecules/AddButton';
 import _ from 'lodash';
@@ -36,7 +36,7 @@ class ListCards extends PureComponent {
           <ListGrids
             items={data}
             countRow={COUNT_ITEMS_ROW}
-            Item={Article}
+            Item={Card}
           />
           {this.renderButton()}
         </Wrapper>

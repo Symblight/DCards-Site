@@ -17,9 +17,9 @@ export const LabelLoop = styled.label`
 
 export const WrapInput = styled.div`
     display: flex;
-    border: 1px solid ${props => props.theme.MainTheme.grey[4]};
+    border: 1px solid ${props => props.theme.MainTheme.primary[4]};
     border-radius: 4px;
-    background-color: ${props => props.theme.MainTheme.grey[5]};
+    background-color: ${props => props.theme.MainTheme.primary[0]};
     border-color: transparent;
     transition: all .1s ease-in-out;
 `;
@@ -27,6 +27,6 @@ export const WrapInput = styled.div`
 export const WrapButton = styled(Button)`
 
     &:hover{
-        color: ${props => props.theme.MainTheme.grey[3]};
+        color: ${props => props.theme.MainTheme.white[1]};
     }
 `;

@@ -40,6 +40,8 @@
     "linebreak-style": 0,
     "class-methods-use-this": "off",
     "no-console":"off",
+    "no-trailing-spaces":"warn",
+    "eol-last":"off",
     "react/no-array-index-key":"warn",
     "react/no-unused-state":"off",
     "no-unused-expressions":"off",
