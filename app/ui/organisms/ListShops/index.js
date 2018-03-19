@@ -27,7 +27,7 @@ class ListShops extends PureComponent {
       return (
         <Wrapper>
           {
-                data ? <ListGrids /> : null
+            data ? <ListGrids /> : null
           }
           {this.renderButton()}
         </Wrapper>

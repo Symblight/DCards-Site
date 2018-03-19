@@ -1,62 +1,75 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
+import ImageTEST from 'assets/images/coffe.png';
+
 import { fetchShopsList } from 'components/Shops/actions';
 
 const LIST_SHOPS = [
   {
     id: '21',
-    shop: 'OZ',
+    name: 'OZ',
+    picture: ImageTEST,
     discription: 'Книжный'
   },
   {
     id: '22',
-    shop: 'Bufet',
-    discription: 'There is not great talent without great will power.'
+    name: 'Bufet',
+    picture: ImageTEST,
+    discription: 'Буффет'
   },
   {
     id: '23',
-    shop: 'Suchi',
-    discription: '30 procent for barber fgfgfgfgfgfgfgf'
+    name: 'Suchi',
+    picture: ImageTEST,
+    discription: 'Суши!'
   },
   {
     id: '24',
-    shop: 'Pizza',
-    discription: 'Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от'
+    name: 'Pizza',
+    picture: ImageTEST,
+    discription: 'Пицца!'
   },
   {
     id: '25',
-    shop: 'Megogo',
-    discription: 'Книжный'
+    name: 'Megogo',
+    picture: ImageTEST,
+    discription: 'Фильмы'
   },
   {
     id: '26',
-    shop: 'yes',
-    discription: '30 procent for barber fgfgfgfgfgfgfgf'
+    name: 'yes',
+    picture: ImageTEST,
+    discription: 'Курсы'
   },
   {
     id: '27',
-    shop: 'xiaomi',
-    discription: 'Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от'
+    name: 'xiaomi',
+    picture: ImageTEST,
+    discription: 'Салон'
   },
   {
     id: '28',
-    shop: 'apple',
+    name: 'apple',
+    picture: ImageTEST,
     discription: 'There is not great talent without great will power.'
   },
   {
     id: '29',
-    shop: 'Bar',
-    discription: '30 procent for barber fgfgfgfgfgfgfgf'
+    name: 'Bar',
+    picture: ImageTEST,
+    discription: 'Бар'
   },
   {
     id: '30',
-    shop: 'Kino',
-    discription: 'Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от'
+    name: 'Kino',
+    picture: ImageTEST,
+    discription: 'Фильмы'
   },
   {
     id: '31',
-    shop: 'OZ',
+    name: 'OZ',
+    picture: ImageTEST,
     discription: 'Книжный'
   }
 ];

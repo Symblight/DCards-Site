@@ -5,6 +5,7 @@ import PageTemplate from 'ui/templates/PageTemplate';
 import Container from 'ui/molecules/Container';
 import HeaderGuest from 'ui/organisms/HeaderGuest';
 import HeaderUser from 'ui/organisms/HeaderUser';
+import Footer from 'ui/organisms/Footer';
 import MenuShop from 'ui/organisms/MenuShop';
 import ListCardsShop from 'ui/organisms/ListCardsShop';
 
@@ -20,6 +21,7 @@ class ShopPage extends PureComponent {
       return (
         <PageTemplate
           header={auth ? <HeaderUser /> : <HeaderGuest />}
+          footer={<Footer />}
         >
           <Wrapper>
             <ListCardsShop />

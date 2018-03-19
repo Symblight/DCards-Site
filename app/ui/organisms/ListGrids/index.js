@@ -77,12 +77,12 @@ class ListGrids extends PureComponent {
       return (
         <RowWrap key={key}>
           {
-                    Item ? data.map((el, id) =>
-                      (<Item
-                        key={id}
-                        data={el}
-                      />)) : null
-                }
+            Item ? data.map((el, id) =>
+            (<Item
+              key={id}
+              data={el}
+            />)) : null
+          }
         </RowWrap>
       );
     }
