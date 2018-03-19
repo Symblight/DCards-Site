@@ -19,7 +19,7 @@ export const Content = styled.main`
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1012px;
+    max-width: 1124px;
     padding-bottom: 2rem;
     padding-top: 24px;
 `;

@@ -18,11 +18,9 @@ class CardPage extends PureComponent {
       <PageTemplate
         header={auth ? <HeaderUser /> : <HeaderGuest />}
       >
-        <Container>
-          <Grid>
-            <WrapGrid />
-          </Grid>
-        </Container>
+        <Grid>
+          <WrapGrid />
+        </Grid>
       </PageTemplate>
     );
   }

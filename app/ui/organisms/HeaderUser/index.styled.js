@@ -7,4 +7,5 @@ export const ButtonsContent = styled.div`
     padding-left: 24px;
     padding-right: 24px;
     width: 70%;
+    justify-content: space-around;
 `;

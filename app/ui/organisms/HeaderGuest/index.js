@@ -14,12 +14,12 @@ class HeaderGuest extends PureComponent {
         <UserNav>
           <li>
             <Link to="/login">
-              <ItemNavButton type="login">Sign In</ItemNavButton>
+              <ItemNavButton type="login">Войти</ItemNavButton>
             </Link>
           </li>
           <li>
             <Link to="/signup">
-              <ItemNavButton>Sign up</ItemNavButton>
+              <ItemNavButton>Регистрация</ItemNavButton>
             </Link>
           </li>
         </UserNav>

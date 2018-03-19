@@ -40,8 +40,8 @@ class ItemNavButton extends PureComponent {
       return (
         <ButtonWrap type={type}>
           {
-                    type === 'login' ? this.renderItemLogin() : this.renderItemText()
-                }
+            type === 'login' ? this.renderItemLogin() : this.renderItemText()
+          }
         </ButtonWrap>
       );
     }

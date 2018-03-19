@@ -8,6 +8,7 @@ import Test from './ui/pages/TestPage';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import NotFound from './ui/pages/404';
+import Shop from './ui/pages/ShopPage';
 
 import Shops from './components/Shops';
 import Card from './components/Card';
@@ -25,6 +26,7 @@ class rootRouter extends Component {
         <Route path="/signup" component={SignUp} />
         <Route path="/account" component={Account} />
         <Route path="/shops" component={Shops} />
+        <Route path="/shop/:name" component={Shop} />
         <Route path="/card/id=:idcard" component={Card} />
         <Route component={NotFound} />
       </Switch>

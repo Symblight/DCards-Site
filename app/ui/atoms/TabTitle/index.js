@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper } from './index.styled';
+import { Wrapper, LabelWrap } from './index.styled';
 
 class TabTitle extends PureComponent {
 
@@ -24,7 +24,9 @@ class TabTitle extends PureComponent {
 
       return (
         <Wrapper onClick={this.onClick} key={id} active={selected}>
-          {children}
+          <LabelWrap>
+            {children}
+          </LabelWrap>
         </Wrapper>
       );
     }

@@ -11,21 +11,12 @@ import { Wrapper, ListWrap, RowWrap, ButtonWrap } from './index.styled';
 
 const COUNT_ITEMS_ROW = 3;
 
-@withDiscountCards
-class ListCards extends PureComponent {
-    static displayName = 'ListCards';
+class ListCardsShop extends PureComponent {
+    static displayName = 'ListCardsShop';
 
     static propTypes = {
       data: PropTypes.arrayOf(Array)
     };
-
-    renderButton() {
-      return (
-        <ButtonWrap>
-          <Button>Добавить карту</Button>
-        </ButtonWrap>
-      );
-    }
 
     render() {
       const { data } = this.props;
@@ -37,11 +28,10 @@ class ListCards extends PureComponent {
             countRow={COUNT_ITEMS_ROW}
             Item={Card}
           />
-          {this.renderButton()}
         </Wrapper>
       );
     }
 }
 
-export default ListCards;
+export default ListCardsShop;
 
