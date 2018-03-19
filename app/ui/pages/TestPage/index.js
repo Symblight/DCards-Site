@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from 'ui/organisms/Header';
+import HeaderGuest from 'ui/organisms/HeaderGuest';
+import HeaderUser from 'ui/organisms/HeaderUser';
 import Label from 'ui/atoms/Label';
 // import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
@@ -23,9 +24,11 @@ import TabItem from 'ui/molecules/TabItem';
 
 class TestPage extends Component {
   render() {
+    const { auth } = this.props;
+
     return (
       <PageTemplates
-        header={<Header />}
+        header={auth ? <HeaderUser /> : <HeaderGuest />}
       >
         <Container>
           <Block title="Primary button">

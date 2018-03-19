@@ -37,7 +37,7 @@ class HeaderUser extends PureComponent {
               Настройки
           </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem onClick={onSignOut}>
+          <DropdownItem>
               Выйти из профиля
           </DropdownItem>
         </Dropdown>
@@ -46,4 +46,4 @@ class HeaderUser extends PureComponent {
   }
 }
 
-export default HeaderGuest;
+export default HeaderUser;

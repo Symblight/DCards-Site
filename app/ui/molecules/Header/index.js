@@ -44,11 +44,15 @@ class Header extends PureComponent {
 
     return (
       <Headroom>
-        <Content>
-          {this.renderLogoWrap()}
-          {children}
-        </Content>
+        <Wrapper>
+          <Content>
+            {this.renderLogoWrap()}
+            {children}
+          </Content>
+        </Wrapper>
       </Headroom>
     );
   }
 }
+
+export default Header;

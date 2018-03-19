@@ -1,12 +1,15 @@
 
 const initialState = {
   user: {
-
+    firstName: '',
+    lastName: '',
+    email: ''
   },
   guest: {
 
   },
-  config: {}
+  config: {},
+  auth: false
 };
 
 const reducerConfig = (state = initialState, action) => {

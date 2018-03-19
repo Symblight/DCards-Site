@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import Header from 'ui/organisms/Header';
+import Header from 'ui/organisms/HeaderUser';
 import Container from 'ui/molecules/Container';
 import Button from 'ui/molecules/PrimaryButton';
 import Grid from 'ui/molecules/Grid';
@@ -9,6 +9,12 @@ import FieldText from 'ui/molecules/FieldText';
 import FieldPassword from 'ui/molecules/FieldPassword';
 
 import { Wrapper, ContentWrap, ButtonWrap } from './index.styled';
+
+const TEST_USER = {
+  firstName: 'Alexey',
+  lastName: 'Tkachenko',
+  email: 'symblight@gmail.com'
+};
 
 class AccountPage extends PureComponent {
 
@@ -22,15 +28,15 @@ class AccountPage extends PureComponent {
         <ContentWrap>
           <FieldText
             title="Имя:"
-            value="Alexey"
+            value={TEST_USER.firstName}
           />
           <FieldText
             title="Фамилия:"
-            value="Tkachenko"
+            value={TEST_USER.lastName}
           />
           <FieldText
             title="Email:"
-            value="symblight@gmail.com"
+            value={TEST_USER.email}
           />
           {
             <FieldPassword
