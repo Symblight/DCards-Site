@@ -8,7 +8,7 @@ const colorActive = props => (
 
 export const Wrapper = styled.li`
     height: 38px;
-    width: 80px;
+    padding-right: 12px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
@@ -22,3 +22,4 @@ export const Wrapper = styled.li`
         color: ${props => props.theme.MainTheme.black[0]};
     }
 `;
+

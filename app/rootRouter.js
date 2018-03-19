@@ -19,11 +19,10 @@ class rootRouter extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={Auth} />
+        <Route exact path="/" component={Main} />
         <Route path="/test" component={Test} />
         <Route path="/login" component={SignIn} />
         <Route path="/signup" component={SignUp} />
-        <Route path="/main" component={Main} />
         <Route path="/account" component={Account} />
         <Route path="/shops" component={Shops} />
         <Route path="/card/id=:idcard" component={Card} />
