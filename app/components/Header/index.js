@@ -5,20 +5,31 @@ import PropTypes from 'prop-types';
 import HeaderGuest from 'ui/organisms/HeaderGuest';
 import HeaderUser from 'ui/organisms/HeaderUser';
 
-const mapDispatchToProps = (dispatch) => ({
+import { signOut } from '../reducerUser/actions';
 
+const mapDispatchToProps = (dispatch) => ({
+  onSignOut: () => dispatch(signOut())
 });
 
 const mapStateToProps = (state) => ({
   userReducer: state.reducerLogin
 });
 
-@connect(mapStateToProps, null)
+@connect(mapStateToProps, mapDispatchToProps)
 class Header extends PureComponent {
+
+  handleSignOut = () => {
+    const { onSignOut } = this.props;
+
+    if (onSignOut) {
+      onSignOut();
+    }
+  }
+
   render() {
     const { userReducer } = this.props;
 
-    if (userReducer.Authentication) return <HeaderUser />;
+    if (userReducer.Authentication) return <HeaderUser onSignOut={this.handleSignOut} />;
 
     return <HeaderGuest />;
   }
