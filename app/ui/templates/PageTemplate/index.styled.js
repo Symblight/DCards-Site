@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     min-height: 100vh;
     box-sizing: border-box;
+    background-color:${props => props.theme.MainTheme.black[1]};
     
     @media screen and (max-width: 640px) {
         
@@ -19,7 +20,7 @@ export const Content = styled.main`
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1012px;
+    max-width: 1124px;
     padding-bottom: 2rem;
     padding-top: 24px;
 `;

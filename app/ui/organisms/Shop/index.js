@@ -2,35 +2,29 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
-import CardSVG from 'assets/images/card.svg';
+import Picture from 'ui/atoms/Picture';
+import ShopImage from 'assets/images/shopping-bag.png';
 
-import {
-  Wrapper,
-  ImageWrap,
-  NameCardWrap,
-  PanelWrap,
-  ButtonWrap,
-  DiscriptionWrap
-} from './index.styled';
+import { Wrapper, PanelWrap, ButtonWrap, ImageWrap, DiscriptionWrap, NameCardWrap } from './index.styled';
 
-class Article extends PureComponent {
+class ShopArticle extends PureComponent {
   render() {
     const { data } = this.props;
 
     return (
       <Wrapper>
         <ImageWrap>
-          <CardSVG height={160} width={380} />
+          <Picture src={data.picture} height={150} width={150} />
         </ImageWrap>
         <PanelWrap>
           <NameCardWrap>
-            {data.shop}
+            {data.name}
           </NameCardWrap>
           <DiscriptionWrap>
             {data.discription}
           </DiscriptionWrap>
-          <Link to={`/card/id=${data.id}`}>
-            <ButtonWrap>Показать код</ButtonWrap>
+          <Link to={`/shop/${data.id}`}>
+            <ButtonWrap>Открыть</ButtonWrap>
           </Link>
         </PanelWrap>
       </Wrapper>
@@ -38,4 +32,4 @@ class Article extends PureComponent {
   }
 }
 
-export default Article;
+export default ShopArticle;

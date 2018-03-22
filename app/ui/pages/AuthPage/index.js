@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/BlockTemplate';
 import Footer from 'ui/organisms/Footer';
-import Header from 'ui/organisms/Header';
+import Header from 'ui/organisms/HeaderGuest';
 import SignInForm from 'components/SignIn';
 
 import { Wrapper, FormContainer, DiscriptionContainer } from './index.styled';

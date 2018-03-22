@@ -7,11 +7,8 @@ const colorActive = props => (
 );
 
 export const Wrapper = styled.li`
-    height: 38px;
-    width: 80px;
+    padding-right: 12px;
     text-align: center;
-    font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
     transition: border-bottom .1s, color .1s;
     color: ${props => props.theme.MainTheme.grey[3]};
@@ -22,3 +19,16 @@ export const Wrapper = styled.li`
         color: ${props => props.theme.MainTheme.black[0]};
     }
 `;
+
+export const LabelWrap = styled.span`
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    line-height: 170%;
+    opacity: .75;
+    box-sizing: border-box;
+    height: 50px;
+`;
+

@@ -15,7 +15,7 @@ class Menu extends PureComponent {
 
       return (
         <Wrapper>
-          <HeaderWrap>{title}</HeaderWrap>
+          {title ? <HeaderWrap>{title}</HeaderWrap> : null}
           {children}
         </Wrapper>
       );

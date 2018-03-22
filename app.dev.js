@@ -1,3 +1,6 @@
+import favicon from 'serve-favicon';
+import path from 'path';
+import pg from 'pg';
 import express from 'express';
 import http from 'http';
 import bodyParser from 'body-parser';
@@ -7,9 +10,6 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackHotServerMiddleware from 'webpack-hot-server-middleware';
 import webpack from 'webpack';
 import webpackConf from './webpack.config';
-import favicon from 'serve-favicon';
-import path from 'path';
-import pg from 'pg';
 
 import apiServer from './server/api';
 

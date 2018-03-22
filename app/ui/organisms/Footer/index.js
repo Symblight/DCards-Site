@@ -10,7 +10,7 @@ class Footer extends PureComponent {
       <Wrapper>
         <Content>
           <Label>Бонусные карты</Label>
-          <Label>&copy; 2018 Алекей</Label>
+          <Label>&copy; 2018 Алекcей</Label>
           <Label>
             <Link to="/test">Demo components</Link>
           </Label>

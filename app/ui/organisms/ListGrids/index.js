@@ -77,12 +77,12 @@ class ListGrids extends PureComponent {
       return (
         <RowWrap key={key}>
           {
-                    Item ? data.map((el, id) =>
-                      (<Item
-                        key={id}
-                        data={el}
-                      />)) : null
-                }
+            Item ? data.map((el, id) =>
+            (<Item
+              key={id}
+              data={el}
+            />)) : null
+          }
         </RowWrap>
       );
     }
@@ -93,9 +93,9 @@ class ListGrids extends PureComponent {
       return (
         <div>
           {
-                    currentItems.map((itemsRow, id) =>
-                            this.renderRows(itemsRow, id))
-                }
+            currentItems.map((itemsRow, id) =>
+             this.renderRows(itemsRow, id))
+          }
           <Waypoint onEnter={this.loadMoreItems} />
         </div>
       );
@@ -107,8 +107,8 @@ class ListGrids extends PureComponent {
       return (
         <ListWrap>
           {
-                       items && items.length > 0 ? this.renderList() : <Spinner />
-                    }
+            items && items.length > 0 ? this.renderList() : <Spinner />
+          }
         </ListWrap>
       );
     }

@@ -6,6 +6,7 @@ export const ButtonWrap = styled(Button)`
     align-items: center;
     display: flex;
     height: 100%;
+    padding: 0;
 `;
 
 export const ItemLoginWrap = styled.div`

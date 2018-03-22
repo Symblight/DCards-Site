@@ -57,12 +57,3 @@ export const HeaderText = styled.div`
 export const TextName = styled.h3`
      margin-top: 0;
 `;
-
-export const ButtonsContent = styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    padding-left: 24px;
-    padding-right: 24px;
-    width: 70%;
-`;
