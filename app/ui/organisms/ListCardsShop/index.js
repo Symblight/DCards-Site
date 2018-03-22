@@ -23,11 +23,14 @@ class ListCardsShop extends PureComponent {
 
       return (
         <Wrapper>
-          <ListGrids
-            items={data}
-            countRow={COUNT_ITEMS_ROW}
-            Item={Card}
-          />
+          {
+          data ?
+            <ListGrids
+              items={data}
+              countRow={COUNT_ITEMS_ROW}
+              Item={Card}
+            /> : null
+        }
         </Wrapper>
       );
     }
