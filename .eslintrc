@@ -47,6 +47,7 @@
     "key-spacing":"warn",
     "react/no-array-index-key":"warn",
     "react/no-unused-state":"off",
+    "react/jsx-boolean-value":"off",
     "no-unused-expressions":"off",
     "react/default-props-match-prop-types":"off"
   },

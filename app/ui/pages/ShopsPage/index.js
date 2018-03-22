@@ -2,8 +2,7 @@ import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/BlockTemplate';
 import Footer from 'ui/organisms/Footer';
-import HeaderGuest from 'ui/organisms/HeaderGuest';
-import HeaderUser from 'ui/organisms/HeaderUser';
+import Header from 'components/Header';
 import SearchShops from 'ui/organisms/SearchShops';
 import ListShops from 'ui/organisms/ListShopsSearch';
 
@@ -17,7 +16,7 @@ class ShopsPage extends PureComponent {
     return (
       <PageTemplate
         nav={<SearchShops />}
-        header={auth ? <HeaderUser /> : <HeaderGuest />}
+        header={<Header />}
         footer={<Footer />}
         src={headerShop}
       >

@@ -11,6 +11,9 @@ class Main extends PureComponent {
     }
 
     render() {
+      const { auth } = this.props;
+      console.log(11, auth);
+
       return (
         <MainPage />
       );

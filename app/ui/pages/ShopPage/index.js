@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import PageTemplate from 'ui/templates/PageTemplate';
 import Container from 'ui/molecules/Container';
-import HeaderGuest from 'ui/organisms/HeaderGuest';
-import HeaderUser from 'ui/organisms/HeaderUser';
+import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
 import MenuShop from 'ui/organisms/MenuShop';
 import ListCardsShop from 'ui/organisms/ListCardsShop';
@@ -18,9 +17,10 @@ class ShopPage extends PureComponent {
 
     render() {
       const { auth, children } = this.props;
+
       return (
         <PageTemplate
-          header={auth ? <HeaderUser /> : <HeaderGuest />}
+          header={<Header />}
           footer={<Footer />}
         >
           <Wrapper>

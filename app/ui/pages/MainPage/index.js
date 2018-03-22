@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/BlockTemplate';
 import Footer from 'ui/organisms/Footer';
-import Header from 'ui/organisms/HeaderUser';
+import Header from 'components/Header';
 import InfoPanelAccount from 'ui/organisms/InfoPanel';
 import ListCards from 'ui/organisms/ListCards';
 import ListShops from 'ui/organisms/ListShops';
