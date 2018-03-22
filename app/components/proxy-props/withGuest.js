@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const MAIN_PAGE = '/main';
+const MAIN_PAGE = '/';
 
 const mapStateToProps = (state) => ({
   userReducer: state.reducerLogin

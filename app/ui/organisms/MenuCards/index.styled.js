@@ -10,4 +10,5 @@ export const Wrapper = styled.div`
 
 export const ButtonWrap = styled(Button)`
     display: block;
+    width: 100%;
 `;

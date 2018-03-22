@@ -8,8 +8,8 @@ import Test from './ui/pages/TestPage';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import NotFound from './ui/pages/404';
-import Shop from './ui/pages/ShopPage';
 
+import Shop from './components/Shop';
 import Shops from './components/Shops';
 import Card from './components/Card';
 import Account from './components/Account';
