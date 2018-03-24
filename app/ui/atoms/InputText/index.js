@@ -5,11 +5,32 @@ import { Input } from './index.styled';
 
 class InputText extends PureComponent {
     static propTypes = {
-      onChange: PropTypes.func
+      onChange: PropTypes.func,
+      value: PropTypes.string,
+      type: PropTypes.string,
+      className: PropTypes.string
     };
 
-    onChange=(event) => {
+    static defaultProps = {
+      type: 'text'
+    }
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        value: props.value ? props.value : ''
+      };
+    }
+
+    componentWillReceiveProps(nextProps) {
+      this.setState({ value: nextProps.value });
+    }
+
+    onChange = (event) => {
       const { onChange } = this.props;
+
+      this.setState({ value: event.target.value });
 
       if (onChange) {
         onChange(event.target.value);
@@ -17,10 +38,18 @@ class InputText extends PureComponent {
     };
 
     render() {
-      const { placeholder } = this.props;
+      const {
+        placeholder, value, type, className
+      } = this.props;
 
       return (
-        <Input type="text" onChange={this.onChange} placeholder={placeholder} />
+        <Input
+          className={className}
+          type={type}
+          onChange={this.onChange}
+          value={this.state.value}
+          placeholder={placeholder}
+        />
       );
     }
 }

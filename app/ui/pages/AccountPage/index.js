@@ -1,59 +1,41 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import PageTemplate from 'ui/templates/PageTemplate';
 import Header from 'components/Header';
 import Container from 'ui/molecules/Container';
 import Button from 'ui/molecules/PrimaryButton';
 import Grid from 'ui/molecules/Grid';
-import FieldText from 'ui/molecules/FieldText';
-import FieldPassword from 'ui/molecules/FieldPassword';
+import withAccountInfo from 'components/proxy-props/withAccountInfo';
+import InfoPanel from 'ui/organisms/AccountInfoPanel';
 
 import { Wrapper, ContentWrap, ButtonWrap } from './index.styled';
 
-const TEST_USER = {
-  firstName: 'Alexey',
-  lastName: 'Tkachenko',
-  email: 'symblight@gmail.com'
-};
-
+@withAccountInfo
 class AccountPage extends PureComponent {
+  static propTypes = {
+    data: PropTypes.object
+  };
+
+  constructor() {
+    super();
+
+    this.state = {
+      edit: false
+    };
+  }
 
   handleClick = () => {
-    console.log(111111);
-  }
+    console.log('handle Change Password');
+  };
 
-  renderContent() {
-    return (
-      <Wrapper>
-        <ContentWrap>
-          <FieldText
-            title="Имя:"
-            value={TEST_USER.firstName}
-          />
-          <FieldText
-            title="Фамилия:"
-            value={TEST_USER.lastName}
-          />
-          <FieldText
-            title="Email:"
-            value={TEST_USER.email}
-          />
-          {
-            <FieldPassword
-              title="Пароль:"
-              value="123456789"
-              onClick={this.handleClick}
-            />
-         }
-        </ContentWrap>
-        <ButtonWrap>
-          <Button>Изменить профиль</Button>
-        </ButtonWrap>
-      </Wrapper>
-    );
-  }
+  handleClickEdit = () => {
+    this.setState({ edit: !this.state.edit });
+  };
 
   render() {
+    const { data } = this.props;
+
     return (
       <PageTemplate
         header={<Header />}
@@ -61,7 +43,12 @@ class AccountPage extends PureComponent {
         <Container>
           <Grid>
             {
-              this.renderContent()
+              <InfoPanel
+                data={data}
+                onChangePassword={this.handleClick}
+                onEditClick={this.handleClickEdit}
+                edit={this.state.edit}
+              />
             }
           </Grid>
         </Container>
