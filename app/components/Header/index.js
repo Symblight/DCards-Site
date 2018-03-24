@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import HeaderGuest from 'ui/organisms/HeaderGuest';
 import HeaderUser from 'ui/organisms/HeaderUser';
 
-import { signOut } from '../reducerUser/actions';
+import { signOut } from '../mainReducer/actions';
 
 const mapDispatchToProps = (dispatch) => ({
   onSignOut: () => dispatch(signOut())
 });
 
 const mapStateToProps = (state) => ({
-  userReducer: state.reducerLogin
+  userReducer: state.reducerConfig
 });
 
 @connect(mapStateToProps, mapDispatchToProps)

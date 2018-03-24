@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const LOGIN_PAGE = '/';
 
 const mapStateToProps = (state) => ({
-  userReducer: state.reducerLogin
+  userReducer: state.reducerConfig
 });
 
 const withAuthenticated = (Component) => {
