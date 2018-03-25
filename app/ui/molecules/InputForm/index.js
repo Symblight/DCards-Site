@@ -8,14 +8,20 @@ class InputForm extends PureComponent {
     static propTypes = {
       value: PropTypes.string,
       onChange: PropTypes.func,
-      type: PropTypes.string
+      type: PropTypes.string,
+      name: PropTypes.string
     };
 
     render() {
-      const { value, onChange, type } = this.props;
+      const { 
+        value,
+        onChange,
+        type,
+        name
+      } = this.props;
 
       return (
-        <InputWrap value={value} type={type} onChange={onChange} />
+        <InputWrap value={value} type={type} onChange={onChange} {...this.props} />
       );
     }
 }

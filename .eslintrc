@@ -45,6 +45,7 @@
     "indent":"warn",
     "no-alert":"warn",
     "key-spacing":"warn",
+    "prefer-const":"off",
     "react/no-array-index-key":"warn",
     "react/no-unused-state":"off",
     "react/jsx-boolean-value":"off",

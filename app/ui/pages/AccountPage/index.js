@@ -14,27 +14,12 @@ import { Wrapper, ContentWrap, ButtonWrap } from './index.styled';
 @withAccountInfo
 class AccountPage extends PureComponent {
   static propTypes = {
-    data: PropTypes.object
-  };
-
-  constructor() {
-    super();
-
-    this.state = {
-      edit: false
-    };
-  }
-
-  handleClick = () => {
-    console.log('handle Change Password');
-  };
-
-  handleClickEdit = () => {
-    this.setState({ edit: !this.state.edit });
+    data: PropTypes.object,
+    onSaveInfo: PropTypes.func
   };
 
   render() {
-    const { data } = this.props;
+    const { data, onSaveInfo, onSavePassword } = this.props;
 
     return (
       <PageTemplate
@@ -45,9 +30,7 @@ class AccountPage extends PureComponent {
             {
               <InfoPanel
                 data={data}
-                onChangePassword={this.handleClick}
-                onEditClick={this.handleClickEdit}
-                edit={this.state.edit}
+                onSaveInfo={onSaveInfo}
               />
             }
           </Grid>

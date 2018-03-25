@@ -4,25 +4,40 @@ import PropTypes from 'prop-types';
 import FieldText from 'ui/molecules/FieldText';
 import FieldPassword from 'ui/molecules/FieldPassword';
 import Button from 'ui/molecules/PrimaryButton';
-import ChooseAvatar from 'ui/organisms/ChooseAvatar';
 import Menu from 'ui/molecules/Menu';
+import UserInfoEdit from 'ui/organisms/UserInfoEdit';
+import UserPasswordEdit from 'ui/organisms/UserPasswordEdit';
+import _ from 'lodash';
 
 import { Wrapper, ContentWrap, ButtonWrap, ButtonsMenu } from './index.styled';
 
 class AccountInfoPanel extends PureComponent {
     static propTypes = {
       data: PropTypes.object,
-      onChangePassword: PropTypes.func,
-      onEditClick: PropTypes.func,
-      edit: PropTypes.bool
+      onSaveInfo: PropTypes.func
     };
 
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
 
       this.state = {
+        userInfo: {
+          firstname: props.data ? props.data.firstname : '',
+          lastname: props.data ? props.data.lastname : '',
+          email: props.data ? props.data.email : '',
+          password: props.data ? props.data.password : ''
+        },
+        password: {
+          newPassword: '',
+          confPassword: '',
+          currentPassword: ''
+        },
         mode: 'info'
       };
+    }
+
+    componentWillReceiveProps(nextProps) {
+      this.setState({ userInfo: nextProps.data });
     }
 
     onClickPassword = () => {
@@ -45,78 +60,63 @@ class AccountInfoPanel extends PureComponent {
       this.setState({ mode: 'info' });
     };
 
-    renderEditInfo() {
-      const {
-        data, onChangePassword, onEditClick, edit
-      } = this.props;
+    handleChangeField = (event) => {
+      let user = this.state.userInfo;
 
+      const _userInfo = {
+        ...user,
+        [event.target.name]: event.target.value
+      };
+
+      this.setState({ userInfo: _userInfo });
+    };
+
+    handleChangePasswordField = (event) => {
+      const field = event.target.name;
+      const _password = this.state.password;
+
+      const passwordField = {
+        ..._password,
+        [event.target.name]: event.target.value
+      };
+
+      this.setState({ password: passwordField });
+    };
+
+    handleSaveInfo = () => {
+      const { onSaveInfo } = this.props;
+
+      if (onSaveInfo) {
+        onSaveInfo(this.state);
+      }
+    };
+
+    renderEditInfo() {
       return (
-        <Menu title="Редактировать данные">
-          <ContentWrap>
-            <ChooseAvatar />
-            <FieldText
-              title="Имя:"
-              value={data.firstname}
-              edit={true}
-            />
-            <FieldText
-              title="Фамилия:"
-              value={data.lastname}
-              edit={true}
-            />
-            <FieldText
-              title="Email:"
-              value={data.email}
-              edit={true}
-            />
-            <FieldText
-              title="Текущий пароль:"
-              edit={true}
-              type="Password"
-            />
-          </ContentWrap>
-          <div>
-            Google account
-          </div>
-          {
-            this.renderButtons()
-          }
-        </Menu>
+        <UserInfoEdit
+          data={this.state.userInfo}
+          buttonsMenu={this.renderButtons()}
+          onChange={this.handleChangeField}
+        />
       );
     }
 
     renderPasswordEdit() {
       return (
-        <Menu title="Изменить пароль">
-          <ContentWrap>
-            <FieldText
-              title="Пароль:"
-              edit={true}
-              type="Password"
-            />
-            <FieldText
-              title="Повторите пароль:"
-              edit={true}
-              type="Password"
-            />
-            <FieldText
-              title="Текущий пароль:"
-              edit={true}
-              border={false}
-              type="Password"
-            />
-          </ContentWrap>
-          {
-            this.renderButtons()
-          }
-        </Menu>
+        <UserPasswordEdit
+          buttonsMenu={this.renderButtons()}
+          onChangePassword={this.handleChangePasswordField}
+          onChangePasswordConf={this.handleChangePasswordField}
+          onChangeCurrentPassword={this.handleChangePasswordField}
+          data={this.state.password}
+        />
       );
     }
 
     renderButtons() {
       return (
         <ButtonsMenu>
-          <Button>Сохранить</Button>
+          <Button onClick={this.handleSaveInfo}>Сохранить</Button>
           <Button onClick={this.handleClickCancel}>Отменить</Button>
         </ButtonsMenu>
       );
@@ -124,39 +124,9 @@ class AccountInfoPanel extends PureComponent {
 
     render() {
       const {
-        data, onChangePassword, edit
+        data
       } = this.props;
 
-      if (this.state.mode === 'info') {
-        return (
-          <Wrapper>
-            <Menu>
-              <ContentWrap>
-                <FieldText
-                  title="Имя:"
-                  value={data.firstname}
-                />
-                <FieldText
-                  title="Фамилия:"
-                  value={data.lastname}
-                />
-                <FieldText
-                  title="Email:"
-                  value={data.email}
-                />
-                <FieldPassword
-                  title="Пароль:"
-                  value="123456789"
-                  onClick={this.handleClickEditPassword}
-                />
-              </ContentWrap>
-              <ButtonWrap>
-                <Button onClick={this.handleClickEditInfo}>Изменить профиль</Button>
-              </ButtonWrap>
-            </Menu>
-          </Wrapper>
-        );
-      }
       if (this.state.mode === 'editInfo') {
         return (
           this.renderEditInfo()
@@ -168,6 +138,35 @@ class AccountInfoPanel extends PureComponent {
           this.renderPasswordEdit()
         );
       }
+
+      return (
+        <Wrapper>
+          <Menu>
+            <ContentWrap>
+              <FieldText
+                title="Имя:"
+                value={data.firstname}
+              />
+              <FieldText
+                title="Фамилия:"
+                value={data.lastname}
+              />
+              <FieldText
+                title="Email:"
+                value={data.email}
+              />
+              <FieldPassword
+                title="Пароль:"
+                value="123456789"
+                onClick={this.handleClickEditPassword}
+              />
+            </ContentWrap>
+            <ButtonWrap>
+              <Button onClick={this.handleClickEditInfo}>Изменить профиль</Button>
+            </ButtonWrap>
+          </Menu>
+        </Wrapper>
+      );
     }
 }
 

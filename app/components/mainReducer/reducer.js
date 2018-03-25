@@ -12,7 +12,9 @@ const initialState = {
   user: {
     firstName: undefined,
     lastName: undefined,
-    email: undefined
+    email: undefined,
+    cards: [],
+    shops: []
   },
   guest: {
 

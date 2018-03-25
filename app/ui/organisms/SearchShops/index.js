@@ -13,7 +13,7 @@ class SearchShops extends PureComponent {
     };
 
     handleChange = (e) => {
-      console.log(e);
+      console.log(e.target.value);
     }
 
     handleClick = () => {

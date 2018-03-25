@@ -14,7 +14,8 @@ class FieldText extends PureComponent {
       edit: PropTypes.bool,
       onChange: PropTypes.func,
       border: PropTypes.bool,
-      type: PropTypes.string
+      type: PropTypes.string,
+      name: PropTypes.string
     };
 
     renderTitle() {
@@ -28,10 +29,15 @@ class FieldText extends PureComponent {
     }
 
     renderInput() {
-      const { value, onChange, type } = this.props;
+      const {
+        value,
+        onChange,
+        type,
+        name
+      } = this.props;
 
       return (
-        <InputForm value={value} type={type} onChange={onChange} />
+        <InputForm value={value} type={type} onChange={onChange} {...this.props} />
       );
     }
 

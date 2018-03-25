@@ -8,6 +8,7 @@ class InputText extends PureComponent {
       onChange: PropTypes.func,
       value: PropTypes.string,
       type: PropTypes.string,
+      name: PropTypes.string,
       className: PropTypes.string
     };
 
@@ -19,27 +20,25 @@ class InputText extends PureComponent {
       super(props);
 
       this.state = {
-        value: props.value ? props.value : ''
+        value: props.value
       };
-    }
-
-    componentWillReceiveProps(nextProps) {
-      this.setState({ value: nextProps.value });
     }
 
     onChange = (event) => {
       const { onChange } = this.props;
 
-      this.setState({ value: event.target.value });
-
       if (onChange) {
-        onChange(event.target.value);
+        onChange(event);
       }
     };
 
     render() {
       const {
-        placeholder, value, type, className
+        placeholder,
+        value,
+        type,
+        className,
+        name
       } = this.props;
 
       return (
@@ -47,8 +46,9 @@ class InputText extends PureComponent {
           className={className}
           type={type}
           onChange={this.onChange}
-          value={this.state.value}
+          value={value}
           placeholder={placeholder}
+          {...this.props}
         />
       );
     }
