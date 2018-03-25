@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import Header from 'ui/organisms/HeaderGuest';
+import Header from 'components/Header';
 import SignInForm from 'components/SignIn';
 import Container from 'ui/molecules/Container';
 import Grid from 'ui/molecules/Grid';

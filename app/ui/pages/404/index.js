@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import HeaderGuest from 'ui/organisms/HeaderGuest';
-import HeaderUser from 'ui/organisms/HeaderUser';
+import Header from 'components/Header';
 import Img from 'assets/images/error.png';
 
 import { Wrapper, Image } from './index.styled';
@@ -13,7 +12,7 @@ class NotFoundPage extends PureComponent {
 
     return (
       <PageTemplate
-        header={auth ? <HeaderUser /> : <HeaderGuest />}
+        header={<Header />}
       >
         <Wrapper>
           <Image src={Img} />

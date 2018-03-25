@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const MAIN_PAGE = '/';
 
 const mapStateToProps = (state) => ({
-  userReducer: state.reducerLogin
+  userReducer: state.reducerConfig
 });
 
 const withGuest = (Component) => {

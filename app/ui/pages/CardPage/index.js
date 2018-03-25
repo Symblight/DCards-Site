@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import HeaderGuest from 'ui/organisms/HeaderGuest';
-import HeaderUser from 'ui/organisms/HeaderUser';
+import Header from 'components/Header';
 import Container from 'ui/molecules/Container';
 import Grid from 'ui/molecules/Grid';
 import WrapGrid from 'ui/organisms/WrapGrid';
@@ -16,7 +15,7 @@ class CardPage extends PureComponent {
 
     return (
       <PageTemplate
-        header={auth ? <HeaderUser /> : <HeaderGuest />}
+        header={<Header />}
       >
         <Grid>
           <WrapGrid />

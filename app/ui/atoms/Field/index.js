@@ -7,14 +7,19 @@ class Field extends PureComponent {
 
    static propTypes = {
      children: PropTypes.node.isRequired,
-     className: PropTypes.string
+     className: PropTypes.string,
+     border: PropTypes.bool
+   };
+
+   static defaultProps = {
+     border: true
    };
 
    render() {
-     const { className, children } = this.props;
+     const { className, children, border } = this.props;
 
      return (
-       <FieldWrap className={className}>
+       <FieldWrap className={className} border={border}>
          {children}
        </FieldWrap>
      );

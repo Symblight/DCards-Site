@@ -13,10 +13,10 @@ class HeaderUser extends PureComponent {
   renderMenuItems() {
     return (
       <ButtonsContent>
-        <Link to="/shops">
+        <Link to="/">
           <ItemNavButton>Магазины</ItemNavButton>
         </Link>
-        <Link to="/">
+        <Link to="/main">
           <ItemNavButton>Главная</ItemNavButton>
         </Link>
       </ButtonsContent>
@@ -24,6 +24,8 @@ class HeaderUser extends PureComponent {
   }
 
   render() {
+    const { onSignOut } = this.props;
+
     return (
       <Header>
         {this.renderMenuItems()}
@@ -37,7 +39,7 @@ class HeaderUser extends PureComponent {
               Настройки
           </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>
+          <DropdownItem onClick={onSignOut}>
               Выйти из профиля
           </DropdownItem>
         </Dropdown>

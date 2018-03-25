@@ -6,6 +6,8 @@ import { fetchUserInfo } from 'components/Main/actions';
 const USER_INFO = {
   firstname: 'Alexey',
   lastname: 'Tkachenko',
+  email: 'symblight@gmail.com',
+  password: '123456',
   cards: 3
 };
 

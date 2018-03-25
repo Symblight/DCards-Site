@@ -6,10 +6,16 @@ import withAuthenticated from '../proxy-props/withAuthenticated';
 @withAuthenticated
 class Account extends PureComponent {
 
+  handleSaveInfo = (data) => {
+    console.log(data, 'onSaveInfo');
+  };
+
   render() {
 
     return (
-      <AccountPage />
+      <AccountPage
+        onSaveInfo={this.handleSaveInfo}
+      />
     );
   }
 }
