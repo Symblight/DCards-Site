@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-    width: 280px;
-    height: 406px;
+import Menu from 'ui/molecules/Menu';
+
+export const Wrapper = styled(Menu)`
+    height: 400px;
+    width: 100%;
+    margin-left: 12px;
     padding: 8px;
 `;
 

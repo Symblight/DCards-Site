@@ -27,7 +27,6 @@ const withShopInfo = (Component) => {
       const { onGetShop, match } = this.props;
 
       onGetShop(match.params.name);
-
     }
 
     render() {

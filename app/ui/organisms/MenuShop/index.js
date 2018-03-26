@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Menu from 'ui/molecules/Menu';
 import Picture from 'ui/atoms/Picture';
 import ImageTEST from 'assets/images/coffe.png';
 
@@ -14,7 +13,7 @@ class MenuShop extends PureComponent {
 
     renderHead() {
       const { data } = this.props;
-    
+
       return (
         <HeadWrap>
           <Head>
@@ -28,12 +27,10 @@ class MenuShop extends PureComponent {
 
     render() {
       return (
-        <Menu>
-          <Wrapper>
-            {this.renderHead()}
+        <Wrapper>
+          {this.renderHead()}
             Menu
-          </Wrapper>
-        </Menu>
+        </Wrapper>
       );
     }
 }

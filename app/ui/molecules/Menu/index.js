@@ -7,14 +7,15 @@ class Menu extends PureComponent {
 
     static propTypes = {
       children: PropTypes.node.isRequired,
-      title: PropTypes.string
+      title: PropTypes.string,
+      className: PropTypes.string
     };
 
     render() {
-      const { title, children } = this.props;
+      const { title, children, className } = this.props;
 
       return (
-        <Wrapper>
+        <Wrapper className={className}>
           {title ? <HeaderWrap>{title}</HeaderWrap> : null}
           {children}
         </Wrapper>
