@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import PageTemplate from 'ui/templates/PageTemplate';
-import Container from 'ui/molecules/Container';
 import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
 import MenuShop from 'ui/organisms/MenuShop';

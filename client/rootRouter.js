@@ -8,6 +8,7 @@ import Test from './ui/pages/TestPage';
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import NotFound from './ui/pages/404';
+import CreateShop from './ui/pages/CreateShopPage';
 
 import Shop from './components/Shop';
 import Shops from './components/Shops';
@@ -31,6 +32,7 @@ class rootRouter extends Component {
         <Route path="/account" component={withAuthorization(withAuthenticated(Account))} />
         <Route path="/main" component={withAuthorization(withAuthenticated(Main))} />
         <Route path="/shop/:name" component={withAuthorization(Shop)} />
+        <Route path="/create/shop" component={withAuthorization(withAuthenticated(CreateShop))} />
         <Route path="/card/id=:idcard" component={withAuthorization(Card)} />
         <Route component={withAuthorization(NotFound)} />
       </Switch>

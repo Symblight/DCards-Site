@@ -1,7 +1,8 @@
 export default ({ markup, styles }) => `<!doctype html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+    <meta name="description" content="ID cards"> 
     <base href="/" />
     <title>Discount cards store</title>
     ${styles}

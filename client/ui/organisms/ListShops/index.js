@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import { Link } from 'react-router-dom';
 import ListGrids from 'ui/organisms/ListGrids';
 import Button from 'ui/molecules/AddButton';
 
@@ -16,7 +17,9 @@ class ListShops extends PureComponent {
     renderButton() {
       return (
         <ButtonWrap>
-          <Button>Создать магазин</Button>
+          <Link to="create/shop">
+            <Button>Создать магазин</Button>
+          </Link>
         </ButtonWrap>
       );
     }
