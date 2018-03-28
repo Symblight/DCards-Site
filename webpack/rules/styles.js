@@ -29,7 +29,7 @@ if (define.is_generate_css) {
         'css-loader'
       ]
     }
-    );
+  );
 }
 
 module.exports.config = rules;

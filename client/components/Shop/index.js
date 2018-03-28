@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react';
 
 import ShopPage from 'ui/pages/ShopPage';
-import withAuthenticated from '../proxy-props/withAuthenticated';
 import withShopInfo from '../proxy-props/withShopInfo';
 
 @withShopInfo
 class Shop extends PureComponent {
 
   render() {
-    const { data } = this.props;
+    const { data, config } = this.props;
 
     return (
       <ShopPage
         data={data}
+        authentication={config.Authentication}
       />
     );
   }

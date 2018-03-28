@@ -65,7 +65,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["app"]
+        "paths": ["client"]
       }
     }
   }

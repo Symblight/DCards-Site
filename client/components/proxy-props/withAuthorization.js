@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { fetchInit } from 'components/mainReducer/actions';
+import { requestInit } from 'components/mainReducer/actions';
 
 const mapDispatchToProps = (dispatch) => ({
-  onInit: () => dispatch(fetchInit())
+  onInit: () => dispatch(requestInit())
 });
 
 const mapStateToProps = (state) => ({
@@ -13,8 +13,7 @@ const mapStateToProps = (state) => ({
 });
 
 const withAuthorization = App => {
-  @withRouter
-  @connect(null, mapDispatchToProps)
+  @connect(mapStateToProps, mapDispatchToProps)
   class Authorization extends Component {
     componentWillMount() {
       const { onInit } = this.props;
@@ -26,7 +25,7 @@ const withAuthorization = App => {
     render() {
       const { config } = this.props;
 
-      return <App config={config} />;
+      return <App config={config} {...this.props} />;
     }
   }
   return Authorization;

@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import MainPage from 'ui/pages/MainPage';
-import withAuthenticated from '../proxy-props/withAuthenticated';
 
-@withAuthenticated
 class Main extends PureComponent {
 
     handleSignOut = () => {
@@ -11,8 +9,6 @@ class Main extends PureComponent {
     }
 
     render() {
-      const { auth } = this.props;
-
       return (
         <MainPage />
       );

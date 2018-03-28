@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import Label from 'ui/atoms/Label';
 import { fetchLoginUser } from '../mainReducer/actions';
-import withGuest from '../proxy-props/withGuest';
 
 const mapStateToProps = (state) => ({
   userReducer: state.reducerConfig
@@ -19,7 +18,6 @@ const mapDispatchToProps = (dispatch) => ({
   mapStateToProps,
   mapDispatchToProps
 )
-@withGuest
 class SignIn extends PureComponent {
   constructor() {
     super();
