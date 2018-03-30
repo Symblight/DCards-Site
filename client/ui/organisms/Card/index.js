@@ -18,7 +18,7 @@ class CardArticle extends PureComponent {
     const { data } = this.props;
 
     return (
-      <Wrapper>
+      <Wrapper {...this.props}>
         <ImageWrap>
           <CardSVG height={160} width={380} />
         </ImageWrap>

@@ -20,8 +20,23 @@ import Spinner from 'ui/atoms/Spinner';
 import AddButton from 'ui/molecules/AddButton';
 import Tabs from 'ui/molecules/Tabs';
 import TabItem from 'ui/molecules/TabItem';
+import CardModal from 'ui/organisms/CardModal';
 
 class TestPage extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
   render() {
     const { auth } = this.props;
 
@@ -77,8 +92,10 @@ class TestPage extends Component {
           <Block title="text button">
             <TextButton>text button</TextButton>
           </Block>
-          <Block title="TextArea">
-            <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
+          <Block title="Modal Block">
+
+            <CardModal />
+
           </Block>
           <Block title="Panel color theme">
             <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
