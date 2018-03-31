@@ -21,7 +21,7 @@ const withAuthenticated = (Component) => {
       renderRederict() {
         const { location } = this.props;
 
-        const { from } = location && location.state || { from: { pathname: this.state.pathname } };
+        const { from } = { from: { pathname: LOGIN_PAGE } };
 
         return (
           <Redirect to={from} />

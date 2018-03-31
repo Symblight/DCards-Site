@@ -71,7 +71,7 @@ class ListGrids extends PureComponent {
     };
 
     renderRows(data, key) {
-      const { Item } = this.props;
+      const { Item, link } = this.props;
 
       if (!data) return null;
 
@@ -82,6 +82,7 @@ class ListGrids extends PureComponent {
             (<Item
               key={el.id}
               data={el}
+              link={link || null}
             />)) : null
           }
         </RowWrap>

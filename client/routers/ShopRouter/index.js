@@ -5,15 +5,17 @@ import {
 } from 'react-router-dom';
 
 import ModalCard from 'ui/organisms/ModalCard';
-
 import Main from 'components/Main';
 import Shops from 'components/Shops';
 import Shop from 'components/Shop';
+import Card from 'components/Card';
 
 import withSwitchModal from '../../components/proxy-props/withSwitchModal';
+import withAuthorization from '../../components/proxy-props/withAuthorization';
 
+@withAuthorization
 @withSwitchModal
-class ShopsRouter extends Component {
+class ShopRouter extends Component {
 
   render() {
     const { location, isModal, previousLocation } = this.props;
@@ -21,13 +23,13 @@ class ShopsRouter extends Component {
     return (
       <div>
         <Switch location={isModal ? previousLocation : location}>
-          <Route exact path="/" component={Shops} />
-          <Route path="/shop/:name" component={Shop} />
+          <Route exact path="/shop/:name" component={Shop} />
+          <Route path="/shop/card/:name" component={Card} />
         </Switch>
-        {isModal ? <Route path="/main/card=:idcard" component={ModalCard} /> : null}
+        {isModal ? <Route path="/shop/card/:name" component={ModalCard} /> : null}
       </div>
     );
   }
 }
 
-export default ShopsRouter;
+export default ShopRouter;

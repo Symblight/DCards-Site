@@ -23,7 +23,10 @@ class ShopArticle extends PureComponent {
           <DiscriptionWrap>
             {data.discription}
           </DiscriptionWrap>
-          <Link to={`/shop/${data.id}`}>
+          <Link to={{
+            pathname: `/shop/${data.id}`
+          }}
+          >
             <ButtonWrap>Открыть</ButtonWrap>
           </Link>
         </PanelWrap>

@@ -31,6 +31,7 @@ class ListCardsShop extends PureComponent {
               items={data}
               countRow={COUNT_ITEMS_ROW}
               Item={Card}
+              link="/shop/card"
             /> : null
         }
         </Wrapper>

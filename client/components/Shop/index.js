@@ -11,8 +11,6 @@ class Shop extends PureComponent {
 
     return (
       <ShopPage
-        data={data}
-        authentication={config.Authentication}
       />
     );
   }

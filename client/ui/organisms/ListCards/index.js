@@ -36,6 +36,7 @@ class ListCards extends PureComponent {
             items={data}
             countRow={COUNT_ITEMS_ROW}
             Item={Card}
+            link="/main/card"
           />
           {this.renderButton()}
         </Wrapper>

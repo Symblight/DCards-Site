@@ -10,11 +10,13 @@ import NotFound from './ui/pages/404';
 
 import TestRouter from './routers/TestRouter';
 import MainRouter from './routers/MainRouter';
-import ShopsRouter from './routers/ShopsRouter';
+import ShopRouter from './routers/ShopRouter';
 
+import Shops from './components/Shops';
 import Card from './components/Card';
 import Account from './components/Account';
 import Auth from './components/Auth';
+import Shop from './components/Shop';
 
 import withAuthorization from './components/proxy-props/withAuthorization';
 import withAuthenticated from './components/proxy-props/withAuthenticated';
@@ -24,8 +26,9 @@ class rootRouter extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={withAuthorization(ShopsRouter)} />
-        <Route path="/main" component={withAuthorization(withAuthenticated(MainRouter))} />
+        <Route exact path="/" component={Shops} />
+        <Route path="/shop" component={ShopRouter} />
+        <Route path="/main" component={MainRouter} />
         <Route path="/test" component={TestRouter} />
         <Route path="/login" component={withGuest(SignIn)} />
         <Route path="/signup" component={withGuest(SignUp)} />

@@ -15,7 +15,7 @@ import {
 
 class CardArticle extends PureComponent {
   render() {
-    const { data } = this.props;
+    const { data, location, link } = this.props;
 
     return (
       <Wrapper {...this.props}>
@@ -29,7 +29,12 @@ class CardArticle extends PureComponent {
           <DiscriptionWrap>
             {data.discription}
           </DiscriptionWrap>
-          <Link to={`/main/card/id=${data.id}`}>
+          <Link
+            to={{
+            pathname: `${link}/${data.id}`,
+            state: { modal: true }
+          }}
+          >
             <ButtonWrap>Показать код</ButtonWrap>
           </Link>
         </PanelWrap>

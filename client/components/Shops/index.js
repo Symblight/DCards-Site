@@ -5,7 +5,7 @@ import ShopsPage from 'ui/pages/ShopsPage';
 class ShopsContainer extends PureComponent {
   render() {
     return (
-      <ShopsPage />
+      <ShopsPage {...this.props} />
     );
   }
 }

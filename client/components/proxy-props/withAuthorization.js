@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => ({
 
 const withAuthorization = App => {
   @connect(mapStateToProps, mapDispatchToProps)
-  class Authorization extends Component {
+  class Authorization extends PureComponent {
     componentWillMount() {
       const { onInit } = this.props;
 
