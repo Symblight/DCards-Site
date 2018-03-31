@@ -46,6 +46,7 @@
     "no-alert":"warn",
     "key-spacing":"warn",
     "prefer-const":"off",
+    "no-return-assign":"off",
     "react/no-array-index-key":"warn",
     "react/no-unused-state":"off",
     "react/jsx-boolean-value":"off",
@@ -65,7 +66,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["app"]
+        "paths": ["client"]
       }
     }
   }

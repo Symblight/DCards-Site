@@ -22,7 +22,7 @@ app.disable('x-powered-by');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(favicon(path.join(__dirname, './server/favicon.ico')))
+app.use(favicon(path.join(__dirname, './server/favicon.ico')));
 app.use(morgan('dev'));
 
 app.use(webpackDevMiddleware(compiler, {

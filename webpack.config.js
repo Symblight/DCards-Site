@@ -10,13 +10,13 @@ const developmentConfig = {
   app: [
     'webpack-hot-middleware/client?reload=true',
     'react-hot-loader/patch',
-    path.join(__dirname, 'app/main.js'),
+    path.join(__dirname, 'client/main.js'),
   ]
 };
 
 const productionConfig = {
   app: [
-    path.join(__dirname, 'app/main.js'),
+    path.join(__dirname, 'client/main.js'),
   ]
 };
 
@@ -34,7 +34,7 @@ module.exports = [{
   },
   resolve: {
     modules: [
-      path.resolve('./app'),
+      path.resolve('./client'),
       path.resolve('./node_modules')
     ],
     extensions: ['.js', '.jsx'],
@@ -45,7 +45,7 @@ module.exports = [{
   name: 'server',
   target: 'node',
   entry: [
-    path.join(__dirname, 'app/render.js'),
+    path.join(__dirname, 'client/render.js'),
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -56,7 +56,7 @@ module.exports = [{
   devtool: 'source-map',
   resolve: {
     modules: [
-      path.resolve('./app'),
+      path.resolve('./client'),
       path.resolve('./node_modules')
     ],
     extensions: ['.js', '.jsx']
