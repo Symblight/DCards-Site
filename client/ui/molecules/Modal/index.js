@@ -10,7 +10,8 @@ class Modal extends Component {
     static propTypes = {
       onClose: PropTypes.func.isRequired,
       show: PropTypes.bool,
-      children: PropTypes.node
+      children: PropTypes.node,
+      className: PropTypes.string
     };
 
     componentDidMount() {
@@ -40,7 +41,7 @@ class Modal extends Component {
     };
 
     handleOutsideClick = (event) => {
-      const { show, onClose } = this.props;
+      const { show, onClose, className } = this.props;
 
       if (!_.isNil(this.modal)) {
         if (!this.modal.contains(event.target) && event.target.nodeName !== 'BUTTON') {
@@ -52,11 +53,16 @@ class Modal extends Component {
     };
 
     render() {
-      const { show, children, onClose } = this.props;
+      const {
+        show,
+        children,
+        onClose,
+        className
+      } = this.props;
 
       return (
-        <ModalOverlay>
-          <ModalWrap innerRef={(node) => { this.modal = node; }}>
+        <ModalOverlay >
+          <ModalWrap className={className} innerRef={(node) => { this.modal = node; }}>
             {children}
             <CloseButton onClick={onClose}>
               <CloseSVG height={45} width={45} />

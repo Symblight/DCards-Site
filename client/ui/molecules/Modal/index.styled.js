@@ -8,16 +8,15 @@ export const ModalOverlay = styled.div`
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,0.3);
-    padding: 50px;
     z-index: 99999;
 `;
 
 export const ModalWrap = styled.div`
     background-color: #fff;
     border-radius: 5px;
-    max-width: 500px;
+    max-width: 700px;
     min-height: 300px;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 30px;
 `;
 

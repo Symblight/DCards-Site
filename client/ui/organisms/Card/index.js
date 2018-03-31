@@ -29,7 +29,7 @@ class CardArticle extends PureComponent {
           <DiscriptionWrap>
             {data.discription}
           </DiscriptionWrap>
-          <Link to={`/card/id=${data.id}`}>
+          <Link to={`/main/card/id=${data.id}`}>
             <ButtonWrap>Показать код</ButtonWrap>
           </Link>
         </PanelWrap>

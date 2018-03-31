@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Waypoint from 'react-waypoint';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 import Spinner from 'ui/atoms/Spinner';
 
@@ -79,9 +80,35 @@ class ListGrids extends PureComponent {
           {
             Item ? data.map((el, id) =>
             (<Item
-              key={id}
+              key={el.id}
               data={el}
             />)) : null
+          }
+        </RowWrap>
+      );
+    }
+
+    renderRowsWithLink(data, key) {
+      const { Item } = this.props;
+
+      if (!data) return null;
+
+      return (
+        <RowWrap key={key}>
+          {
+            Item ? data.map((el, id) =>
+            (<Link
+              key={el.id}
+              to={{
+                pathname: `/testcards/${el.id}`,
+                state: { modal: true }
+              }}
+            >
+              <Item
+                key={el.id}
+                data={el}
+              />
+            </Link>)) : null
           }
         </RowWrap>
       );

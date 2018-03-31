@@ -17,7 +17,7 @@ class ListShops extends PureComponent {
     renderButton() {
       return (
         <ButtonWrap>
-          <Link to="create/shop">
+          <Link to="/main/create/shop">
             <Button>Создать магазин</Button>
           </Link>
         </ButtonWrap>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Header from 'components/Header';
 import Label from 'ui/atoms/Label';
+
+import { Link } from 'react-router-dom';
 // import Link from 'ui/atoms/Link';
 import HighLightText from 'ui/atoms/HighLight';
 
@@ -20,23 +22,9 @@ import Spinner from 'ui/atoms/Spinner';
 import AddButton from 'ui/molecules/AddButton';
 import Tabs from 'ui/molecules/Tabs';
 import TabItem from 'ui/molecules/TabItem';
-import CardModal from 'ui/organisms/CardModal';
+import CardModal from 'ui/organisms/ModalLauncher';
 
 class TestPage extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isOpen: false
-    };
-  }
-
-  toggleModal = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
-
   render() {
     const { auth } = this.props;
 
@@ -93,9 +81,14 @@ class TestPage extends Component {
             <TextButton>text button</TextButton>
           </Block>
           <Block title="Modal Block">
-
-            <CardModal />
-
+            <Link
+              to={{
+                  pathname: `/test/testcards/${1}`,
+                  state: { modal: true }
+                }}
+            >
+              Карточка
+            </Link>
           </Block>
           <Block title="Panel color theme">
             <h3><HighLightText> Where is it? I dont see it! </HighLightText></h3>
