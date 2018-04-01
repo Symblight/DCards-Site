@@ -4,8 +4,8 @@ import Button from 'ui/molecules/PrimaryButton';
 
 export const Wrapper = styled.article`
 margin-right: 24px;
-width: 280px;
-height: 280px;
+width: 263px;
+height: 263px;
 display: flex;
 flex-direction: column;
 box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);

@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
 });
 
 const withAuthorization = App => {
+  @withRouter
   @connect(mapStateToProps, mapDispatchToProps)
   class Authorization extends PureComponent {
     componentWillMount() {

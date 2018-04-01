@@ -25,16 +25,12 @@ class AccountPage extends PureComponent {
       <PageTemplate
         header={<Header />}
       >
-        <Container>
-          <Grid>
-            {
-              <InfoPanel
-                data={data}
-                onSaveInfo={onSaveInfo}
-              />
+        {
+          <InfoPanel
+            data={data}
+            onSaveInfo={onSaveInfo}
+          />
             }
-          </Grid>
-        </Container>
       </PageTemplate>
     );
   }

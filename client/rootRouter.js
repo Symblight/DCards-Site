@@ -7,6 +7,7 @@ import {
 import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import NotFound from './ui/pages/404';
+import Admin from './ui/pages/AdminPage';
 
 import TestRouter from './routers/TestRouter';
 import MainRouter from './routers/MainRouter';
@@ -33,6 +34,7 @@ class rootRouter extends Component {
         <Route path="/login" component={withGuest(SignIn)} />
         <Route path="/signup" component={withGuest(SignUp)} />
         <Route path="/account" component={withAuthorization(withAuthenticated(Account))} />
+        <Route path="/admin" component={withAuthorization(withAuthenticated(Admin))} />
         <Route component={withAuthorization(NotFound)} />
       </Switch>
     );

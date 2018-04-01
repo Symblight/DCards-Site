@@ -6,13 +6,14 @@ import { fetchShopInfo } from 'components/Shop/actions';
 
 const INFO = {
   id: 1,
-  name: 'Coffey Shop',
+  name: 'CoffeyShop',
   discription: 'Кофе для людей',
   picture: ImageTEST
 };
 
 const mapStateToProps = (state) => ({
-  shop: state.reducerShop.info
+  shop: state.reducerShop.info,
+  config: state.reducerConfig
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -26,14 +27,16 @@ const withShopInfo = (Component) => {
     componentWillMount() {
       const { onGetShop, match } = this.props;
 
-      onGetShop(match.params.name);
+      // onGetShop(match.params.name);
+
+      onGetShop(INFO);
     }
 
     render() {
-      const { shop } = this.props;
+      const { shop, config } = this.props;
 
       return (
-        <Component {...this.props} data={shop} />
+        <Component data={shop} config={config} {...this.props} />
       );
     }
   }

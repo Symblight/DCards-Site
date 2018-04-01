@@ -4,31 +4,34 @@ import PropTypes from 'prop-types';
 import PageTemplate from 'ui/templates/PageTemplate';
 import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
-import MenuShop from 'ui/organisms/MenuShop';
-import ListCardsShop from 'ui/organisms/ListCardsShop';
 
 import { Wrapper, MenuWrap } from './index.styled';
 
-class ShopPage extends PureComponent {
+class AdminPage extends PureComponent {
     static propTypes = {
       children: PropTypes.node
     }
 
     render() {
-      const { auth, children, data } = this.props;
+      const { auth, children } = this.props;
 
       return (
         <PageTemplate
-          header={<Header />}
           footer={<Footer />}
         >
           <Wrapper>
-            <ListCardsShop />
-            <MenuShop data={data} >Shop</MenuShop>
+            <ul>
+              <li>INFO ABOUT MYSELF</li>
+              <li>MENU IN LEFT (Statistics)</li>
+              <li>TABLE OF USERS (ban, unban)</li>
+              <li>TABLE OF SHOPS (ban, unban, edit)</li>
+              <li>TABLE OF CARDS SHOPS (edit)</li>
+              <li>COLOS SETTING SITE (color panel and get COLORS)</li>
+            </ul>
           </Wrapper>
         </PageTemplate>
       );
     }
 }
 
-export default ShopPage;
+export default AdminPage;

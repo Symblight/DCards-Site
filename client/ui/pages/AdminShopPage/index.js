@@ -4,18 +4,16 @@ import PropTypes from 'prop-types';
 import PageTemplate from 'ui/templates/PageTemplate';
 import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
-import MenuShop from 'ui/organisms/MenuShop';
-import ListCardsShop from 'ui/organisms/ListCardsShop';
 
-import { Wrapper, MenuWrap } from './index.styled';
+import { Wrapper } from './index.styled';
 
-class ShopPage extends PureComponent {
+class AdminShopPage extends PureComponent {
     static propTypes = {
       children: PropTypes.node
     }
 
     render() {
-      const { auth, children, data } = this.props;
+      const { auth, children } = this.props;
 
       return (
         <PageTemplate
@@ -23,12 +21,11 @@ class ShopPage extends PureComponent {
           footer={<Footer />}
         >
           <Wrapper>
-            <ListCardsShop />
-            <MenuShop data={data} >Shop</MenuShop>
+            Admin shop page
           </Wrapper>
         </PageTemplate>
       );
     }
 }
 
-export default ShopPage;
+export default AdminShopPage;

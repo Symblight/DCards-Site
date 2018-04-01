@@ -11,6 +11,8 @@ class Shop extends PureComponent {
 
     return (
       <ShopPage
+        data={data}
+        config={config}
       />
     );
   }

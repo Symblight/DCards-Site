@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
+import { withRouter } from 'react-router';
 
 const withSwitchModal = Component => {
+  @withRouter
   class SwitchModal extends PureComponent {
     componentWillUpdate(nextProps) {
       const { location } = this.props;

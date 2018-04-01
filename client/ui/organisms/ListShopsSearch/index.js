@@ -7,7 +7,7 @@ import Shop from 'ui/organisms/Shop';
 
 import { Wrapper } from './index.styled';
 
-const COUNT_ITEMS_ROW = 3;
+const COUNT_ITEMS_ROW = 4;
 
 @withSearchShops
 class ListSearchShops extends PureComponent {

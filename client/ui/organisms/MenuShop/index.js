@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Picture from 'ui/atoms/Picture';
 import ImageTEST from 'assets/images/coffe.png';
+import Button from 'ui/molecules/PrimaryButton';
 
 import { Wrapper, HeadWrap, Head } from './index.styled';
 
@@ -26,10 +28,14 @@ class MenuShop extends PureComponent {
     }
 
     render() {
+      const { data } = this.props;
+  
       return (
         <Wrapper>
           {this.renderHead()}
-            Menu
+          <Link to={`/shop/admin/${data.name}`}>
+            <Button>Администрирование</Button>
+          </Link>
         </Wrapper>
       );
     }

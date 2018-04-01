@@ -10,6 +10,8 @@ import Shops from 'components/Shops';
 import Shop from 'components/Shop';
 import Card from 'components/Card';
 
+import Admin from 'ui/pages/AdminShopPage';
+
 import withSwitchModal from '../../components/proxy-props/withSwitchModal';
 import withAuthorization from '../../components/proxy-props/withAuthorization';
 
@@ -25,6 +27,7 @@ class ShopRouter extends Component {
         <Switch location={isModal ? previousLocation : location}>
           <Route exact path="/shop/:name" component={Shop} />
           <Route path="/shop/card/:name" component={Card} />
+          <Route path="/shop/admin/:name" component={Admin} />
         </Switch>
         {isModal ? <Route path="/shop/card/:name" component={ModalCard} /> : null}
       </div>
