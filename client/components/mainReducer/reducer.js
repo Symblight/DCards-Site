@@ -20,7 +20,7 @@ const initialState = {
 
   },
   config: {},
-  Authentication: true,
+  Authentication: false,
   didInvalid: false,
   isFetching: false,
 };

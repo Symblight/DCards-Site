@@ -21,7 +21,7 @@ class ListCardsShop extends PureComponent {
     };
 
     render() {
-      const { data } = this.props;
+      const { data, shop } = this.props;
 
       return (
         <Wrapper>
@@ -31,7 +31,7 @@ class ListCardsShop extends PureComponent {
               items={data}
               countRow={COUNT_ITEMS_ROW}
               Item={Card}
-              link="/shop/card"
+              link={`/shop/${shop.name}/card`}
             /> : null
         }
         </Wrapper>

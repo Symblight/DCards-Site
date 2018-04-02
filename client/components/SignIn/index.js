@@ -3,6 +3,8 @@ import { Form } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import SignInPage from 'ui/pages/SignInPage';
+
 import Label from 'ui/atoms/Label';
 import { fetchLoginUser } from '../mainReducer/actions';
 
@@ -43,17 +45,9 @@ class SignIn extends PureComponent {
     renderForm() {
       const { UsernameOrEmail, Password } = this.state;
       return (
-        <Form onSubmit={this.handleSubmitButton}>
-          <Form.Field>
-            <Label>Username or email address</Label>
-            <input onChange={this.handleChangeUsernameOrEmail} value={UsernameOrEmail} placeholder="Username or email address" />
-          </Form.Field>
-          <Form.Field>
-            <Label>Password</Label>
-            <input onChange={this.handleChangePassword} value={Password} placeholder="Password" />
-          </Form.Field>
-          <Form.Button positive content="Sign in" />
-        </Form>
+        <SignInPage
+          onSubmit={this.handleChangeUsernameOrEmail}
+        />
       );
     }
 

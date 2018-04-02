@@ -23,7 +23,7 @@ class ShopPage extends PureComponent {
           footer={<Footer />}
         >
           <Wrapper>
-            <ListCardsShop />
+            <ListCardsShop shop={data} />
             <MenuShop data={data} >Shop</MenuShop>
           </Wrapper>
         </PageTemplate>

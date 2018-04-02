@@ -30,6 +30,7 @@
             "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
     "react/prop-types": 0,
+    "max-len": ["error", { "code": 200 }],
     "react/jsx-no-bind": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": "off",
@@ -47,6 +48,7 @@
     "key-spacing":"warn",
     "prefer-const":"off",
     "no-return-assign":"off",
+    "no-multiple-empty-lines":"warn",
     "react/no-array-index-key":"warn",
     "react/no-unused-state":"off",
     "react/jsx-boolean-value":"off",

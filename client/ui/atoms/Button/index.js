@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Button } from './index.styled';
+import { Button, IconWrap } from './index.styled';
 
 class FlatButton extends PureComponent {
 
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    Icon: PropTypes.any
   }
 
   onClick = () => {
@@ -20,10 +21,25 @@ class FlatButton extends PureComponent {
   }
 
   render() {
-    const { className, children, onClick } = this.props;
+    const {
+      className, children, onClick, Icon
+    } = this.props;
 
     return (
-      <Button className={className} onClick={onClick}>{children}</Button>
+      <Button
+        className={className}
+        onClick={onClick}
+      >
+        {Icon ?
+          <div>
+            <Icon width={20} height={20} />
+            &nbsp;
+          </div>
+          : null
+        }
+        &nbsp;
+        {children}
+      </Button>
     );
   }
 }

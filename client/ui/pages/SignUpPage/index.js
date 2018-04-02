@@ -15,11 +15,9 @@ class SignUpPage extends Component {
         header={<Header />}
       >
         <Wrapper>
-          <Container>
-            <Grid>
-              <SignUpForm />
-            </Grid>
-          </Container>
+          Создать учетную запись
+          <SignUpForm />
+          <div>Уже есть аккаунт? Войти</div>
         </Wrapper>
       </PageTemplate>
     );

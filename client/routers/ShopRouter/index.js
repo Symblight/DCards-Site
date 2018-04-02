@@ -26,10 +26,10 @@ class ShopRouter extends Component {
       <div>
         <Switch location={isModal ? previousLocation : location}>
           <Route exact path="/shop/:name" component={Shop} />
-          <Route path="/shop/card/:name" component={Card} />
+          <Route path="/shop/:shop/card/:name" component={Card} />
           <Route path="/shop/admin/:name" component={Admin} />
         </Switch>
-        {isModal ? <Route path="/shop/card/:name" component={ModalCard} /> : null}
+        {isModal ? <Route path="/shop/:shop/card/:name" component={ModalCard} /> : null}
       </div>
     );
   }

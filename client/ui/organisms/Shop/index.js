@@ -24,7 +24,7 @@ class ShopArticle extends PureComponent {
             {data.discription}
           </DiscriptionWrap>
           <Link to={{
-            pathname: `/shop/${data.id}`
+            pathname: `/shop/${data.name}`
           }}
           >
             <ButtonWrap>Открыть</ButtonWrap>
