@@ -31,6 +31,8 @@ class SignIn extends PureComponent {
 
     handleSubmitButton = () => {
       this.props.onLoginRequest({ data: { ...this.state } });
+
+      console.log(this.state);
     };
 
     handleChangeUsernameOrEmail = (event) => {
@@ -42,34 +44,15 @@ class SignIn extends PureComponent {
       this.setState({ Password: event.target.value });
     };
 
-    renderForm() {
-      const { UsernameOrEmail, Password } = this.state;
-      return (
-        <SignInPage
-          onSubmit={this.handleChangeUsernameOrEmail}
-        />
-      );
-    }
-
-    renderRederict() {
-      const { location } = this.props;
-
-      const { from } = location && location.state || { from: { pathname: '/main' } };
-
-      return (
-        <Redirect to={from} />
-      );
-    }
-
     render() {
       const { Authentication } = this.props.userReducer;
 
       return (
-        <div>
-          {
-                Authentication ? this.renderRederict() : this.renderForm()
-            }
-        </div>
+        <SignInPage
+          onChangeLogin={this.handleChangeUsernameOrEmail}
+          onChangePassword={this.handleChangePassword}
+          onSubmit={this.handleSubmitButton}
+        />
       );
     }
 }

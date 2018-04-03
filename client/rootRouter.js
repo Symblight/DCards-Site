@@ -4,7 +4,6 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import SignIn from './ui/pages/SignInPage';
 import SignUp from './ui/pages/SignUpPage';
 import NotFound from './ui/pages/404';
 import Admin from './ui/pages/AdminPage';
@@ -13,6 +12,7 @@ import TestRouter from './routers/TestRouter';
 import MainRouter from './routers/MainRouter';
 import ShopRouter from './routers/ShopRouter';
 
+import SignIn from './components/SignIn';
 import Shops from './components/Shops';
 import Card from './components/Card';
 import Account from './components/Account';
