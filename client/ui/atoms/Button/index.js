@@ -8,8 +8,8 @@ class FlatButton extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-    onClick: PropTypes.func,
-    Icon: PropTypes.any
+    type: PropTypes.string,
+    onClick: PropTypes.func
   }
 
   onClick = () => {
@@ -22,22 +22,15 @@ class FlatButton extends PureComponent {
 
   render() {
     const {
-      className, children, onClick, Icon
+      className, children, onClick, Icon, type
     } = this.props;
 
     return (
       <Button
         className={className}
         onClick={onClick}
+        type={type}
       >
-        {Icon ?
-          <div>
-            <Icon width={20} height={20} />
-            &nbsp;
-          </div>
-          : null
-        }
-        &nbsp;
         {children}
       </Button>
     );

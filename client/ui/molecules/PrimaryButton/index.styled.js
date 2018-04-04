@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const PrimaryButtonWrap = styled.div`
+import Button from 'ui/atoms/Button';
+
+export const PrimaryButtonWrap = styled(Button)`
     display: inline-block;
     color: ${props => props.theme.MainTheme.white[1]};
     background-color: ${props => props.theme.MainTheme.primary[0]};

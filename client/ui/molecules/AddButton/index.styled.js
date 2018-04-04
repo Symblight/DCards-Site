@@ -4,6 +4,11 @@ import Button from 'ui/atoms/Button';
 export const ButtonWrap = styled(Button)`
     padding-left: 6px;
     padding-right: 12px;
+    color: ${props => props.theme.MainTheme.white[1]};
+    background-color: ${props => props.theme.MainTheme.primary[0]};
+    &:hover {
+        background-color: ${props => props.theme.MainTheme.primary[1]};
+    }
 `;
 
 export const AddButtonWrap = styled.div`

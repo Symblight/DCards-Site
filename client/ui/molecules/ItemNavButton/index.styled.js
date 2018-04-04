@@ -7,6 +7,7 @@ export const ButtonWrap = styled(Button)`
     display: flex;
     height: 100%;
     padding: 0;
+    background-color: inherit
 `;
 
 export const ItemLoginWrap = styled.div`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.div`
+export const Button = styled.button`
     padding: 12px 25px 10px 25px;
     font-weight: 700;
     text-decoration: none !important;
@@ -9,6 +9,7 @@ export const Button = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
+    outline: none;
 `;
 
 export const IconWrap = styled.div`

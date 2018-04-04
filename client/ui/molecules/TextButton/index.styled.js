@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const ButtonWrap = styled.div`
+import Button from 'ui/atoms/Button';
+
+export const ButtonWrap = styled(Button)`
     align-items: center;
     display: flex;
     height: 100%;

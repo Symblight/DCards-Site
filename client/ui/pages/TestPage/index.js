@@ -23,6 +23,12 @@ import AddButton from 'ui/molecules/AddButton';
 import Tabs from 'ui/molecules/Tabs';
 import TabItem from 'ui/molecules/TabItem';
 import CardModal from 'ui/organisms/ModalLauncher';
+import ButtonWith from 'ui/molecules/ButtonWith';
+import Form from 'ui/molecules/Form';
+import FormInput from 'ui/molecules/FormControlInput';
+import Checkbox from 'ui/atoms/Checkbox';
+import FieldForm from 'ui/atoms/FieldForm';
+import FlatButton from 'ui/atoms/FlatButton';
 
 class TestPage extends Component {
   render() {
@@ -33,6 +39,35 @@ class TestPage extends Component {
         header={<Header />}
       >
         <Container>
+          <Block title="Form">
+            <form>
+              <FieldForm>
+                <Label>Standart</Label>
+                <FormInput />
+              </FieldForm>
+              <FieldForm>
+                <Label>Warning</Label>
+                <FormInput />
+              </FieldForm>
+              <FieldForm>
+                <Label>Error</Label>
+                <FormInput type="password" />
+              </FieldForm>
+              <PrimaryButton type="submit">submit</PrimaryButton>
+              <Checkbox value="Error" />
+            </form>
+          </Block>
+          <Block title="Checkbox">
+            <Checkbox value="Checkbox" />
+          </Block>
+          <Block title="Flat button">
+            <FlatButton>Flat button</FlatButton>
+            <FlatButton primary>Flat button primary</FlatButton>
+            <FlatButton standard>Flat button standard</FlatButton>
+          </Block>
+          <Block title="Button with Icon and without">
+            <ButtonWith color="pink">button</ButtonWith>
+          </Block>
           <Block title="Primary button">
             <PrimaryButton>Primary button</PrimaryButton>
           </Block>

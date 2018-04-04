@@ -9,12 +9,13 @@ class Footer extends PureComponent {
     return (
       <Wrapper>
         <Content>
-          <Label>Бонусные карты</Label>
-          <Label>&copy; 2018 Алекcей</Label>
-          <Label>
+          <span>Бонусные карты</span>
+          <span>&copy; 2018 Алекcей</span>
+          <span>
             <Link to="/test">Demo components</Link>
-          </Label>
-          <Label>версия 0.001</Label>
+          </span>
+          <span>lx_tkchnk</span>
+          <span>версия 0.001</span>
         </Content>
       </Wrapper>
     );

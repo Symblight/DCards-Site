@@ -15,9 +15,7 @@ class TextButton extends PureComponent {
       const { children } = this.props;
 
       return (<ButtonWrap>
-        <Button>
-          {children}
-        </Button>
+        {children}
       </ButtonWrap>
       );
     }

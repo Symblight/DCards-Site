@@ -26,7 +26,15 @@ class ButtonWith extends Component {
           className={className}
           color={color}
           onClick={onClick}
-        >
+          {...this.props}
+        >{Icon ?
+          <div>
+            <Icon width={20} height={20} />
+            &nbsp;
+          </div>
+          : null
+        }
+        &nbsp;
           {children}
         </ButtonWrap>
       );
