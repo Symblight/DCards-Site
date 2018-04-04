@@ -31,6 +31,27 @@ import FieldForm from 'ui/atoms/FieldForm';
 import FlatButton from 'ui/atoms/FlatButton';
 
 class TestPage extends Component {
+  state = {
+    validInputFirst: '',
+    validInputSecond: ''
+  }
+
+  handleToggleWarn = (checked) => {
+    if (checked) {
+      this.setState({ validInputFirst: 'warning' });
+    } else {
+      this.setState({ validInputFirst: '' });
+    }
+  };
+
+  handleToggleError = (checked) => {
+    if (checked) {
+      this.setState({ validInputSecond: 'error' });
+    } else {
+      this.setState({ validInputSecond: '' });
+    }
+  };
+
   render() {
     const { auth } = this.props;
 
@@ -47,14 +68,15 @@ class TestPage extends Component {
               </FieldForm>
               <FieldForm>
                 <Label>Warning</Label>
-                <FormInput />
+                <FormInput validation={this.state.validInputFirst} errorMessage="Не заполненно!" />
               </FieldForm>
               <FieldForm>
                 <Label>Error</Label>
-                <FormInput type="password" />
+                <FormInput type="password" validation={this.state.validInputSecond} errorMessage="не заполненно!" />
               </FieldForm>
               <PrimaryButton type="submit">submit</PrimaryButton>
-              <Checkbox value="Error" />
+              <Checkbox onChecked={this.handleToggleError} value="Error" />
+              <Checkbox onChecked={this.handleToggleWarn} value="Warning" />
             </form>
           </Block>
           <Block title="Checkbox">
