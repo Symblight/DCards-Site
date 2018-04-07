@@ -29,6 +29,8 @@ import FormInput from 'ui/molecules/FormControlInput';
 import Checkbox from 'ui/atoms/Checkbox';
 import FieldForm from 'ui/atoms/FieldForm';
 import FlatButton from 'ui/atoms/FlatButton';
+import Post from 'ui/molecules/Post';
+import ContextMenu from 'ui/molecules/ContextMenu';
 
 class TestPage extends Component {
   state = {
@@ -82,6 +84,21 @@ class TestPage extends Component {
           <Block title="Checkbox">
             <Checkbox value="Checkbox" />
           </Block>
+          <Block title="POST">
+            <Post />
+          </Block>
+
+          <Block title="Menu">
+            <ContextMenu position="top-left">
+              <DropdownItem primary>
+                Profile
+              </DropdownItem>
+              <DropdownItem primary>
+                Settings
+              </DropdownItem>
+            </ContextMenu>
+          </Block>
+
           <Block title="Flat button">
             <FlatButton>Flat button</FlatButton>
             <FlatButton primary>Flat button primary</FlatButton>

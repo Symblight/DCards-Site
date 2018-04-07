@@ -19,7 +19,12 @@ const initialState = {
   guest: {
 
   },
-  config: {},
+  config: {
+    title: 'DiCards',
+    name: 'Discount Cards',
+    discription: '',
+    language: 'ru',
+  },
   Authentication: true,
   didInvalid: false,
   isFetching: false,

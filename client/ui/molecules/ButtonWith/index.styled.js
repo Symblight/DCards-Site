@@ -4,7 +4,7 @@ import Button from 'ui/atoms/Button';
 
 const changeColor = (arrayColors, nextColor, index) => {
   let colors = [];
-  let newColor = '#efefef';
+  let newColor = arrayColors.primary[0];
 
   if (nextColor) {
     let hasOwnProperty = Object.prototype.hasOwnProperty.call(arrayColors, nextColor);
@@ -16,7 +16,7 @@ const changeColor = (arrayColors, nextColor, index) => {
       newColor = nextColor;
     }
   } else {
-    newColor = arrayColors.white[index || 1];
+    newColor = arrayColors.primary[index || 0];
   }
 
   return newColor;

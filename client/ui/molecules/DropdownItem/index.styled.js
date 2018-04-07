@@ -8,11 +8,12 @@ export const Wrapper = styled.div`
     line-height: 1rem;
     display: flex;
     align-items: center;
-    color:${props => props.theme.MainTheme.white[0]};
+    color: inherit;
 
     &:hover {
-        background-color:${props => props.theme.MainTheme.black[3]};
+        background-color:${props => (!props.primary ? props.theme.MainTheme.black[3] : props.theme.MainTheme.primary[0])};
         cursor: pointer;
+        color:${props => props.theme.MainTheme.white[0]};
     }
 `;
 

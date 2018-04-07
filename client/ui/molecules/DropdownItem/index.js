@@ -7,11 +7,14 @@ class DropdownItem extends PureComponent {
     static propTypes = {
       children: PropTypes.string,
       onClick: PropTypes.func,
-      divider: PropTypes.bool
+      divider: PropTypes.bool,
+      primary: PropTypes.bool
     };
 
     render() {
-      const { onClick, children, divider } = this.props;
+      const {
+        onClick, children, divider, primary
+      } = this.props;
 
       if (divider) {
         return (
@@ -20,7 +23,7 @@ class DropdownItem extends PureComponent {
       }
 
       return (
-        <Wrapper onClick={onClick} custom>
+        <Wrapper onClick={onClick} custom primary={primary}>
           {children}
         </Wrapper>
       );

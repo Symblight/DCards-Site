@@ -34,7 +34,6 @@ class ButtonWith extends Component {
           </div>
           : null
         }
-        &nbsp;
           {children}
         </ButtonWrap>
       );

@@ -11,21 +11,27 @@ import { Form, Control, WrapButtons, Wrapper } from './index.styled';
 class SignInForm extends PureComponent {
   static propTypes = {
     onSubmit: PropTypes.func,
-    validation: PropTypes.object
+    validation: PropTypes.object,
+    onChangeLogin: PropTypes.func,
+    onChangePassword: PropTypes.func
   }
 
-  state = {
-    username: {
-      value: '',
-      valid: '',
-      error: ''
-    },
-    password: {
-      value: '',
-      valid: '',
-      error: ''
-    }
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: {
+        value: '',
+        valid: props.validation && props.validation.valid ? props.validation.valid : '',
+        error: props.validation && props.validation.error ? props.validation.error : ''
+      },
+      password: {
+        value: '',
+        valid: props.validation && props.validation.valid ? props.validation.valid : '',
+        error: props.validation && props.validation.error ? props.validation.error : ''
+      }
+    };
+  }
 
   checkValidInputs = () => {
     const inputFirst = this.state.username;
@@ -71,6 +77,8 @@ class SignInForm extends PureComponent {
   };
 
   handleChangeInput = (event) => {
+    const { onChangeLogin, onChangePassword } = this.props;
+
     const valueInput = event.target.value;
     const inputs = this.state;
     const field = event.target.name;
