@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from 'ui/molecules/PrimaryButton';
+import Button from 'ui/molecules/ButtonWith';
 import Field from 'ui/atoms/Field';
 
 import { FieldTitle, ContentWrap, DotsWrap } from './index.styled';

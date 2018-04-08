@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import withDiscountCards from 'components/proxy-props/withDiscountCards';
 import Grid from 'ui/molecules/Grid';
-import Card from 'ui/organisms/Card';
+import Card from 'ui/molecules/Card';
 import ListGrids from 'ui/organisms/ListGrids';
 import Button from 'ui/molecules/AddButton';
 

@@ -11,7 +11,8 @@ class PostContainer extends PureComponent {
     static propTypes = {
       onDelete: PropTypes.func,
       onClick: PropTypes.func,
-      children: PropTypes.node
+      children: PropTypes.node,
+      button: PropTypes.node
     }
 
     handleOnMenu = (event) => {
@@ -40,9 +41,11 @@ class PostContainer extends PureComponent {
     }
 
     renderBottomMenu() {
+      const { button } = this.props;
+  
       return (
         <BottomWrap>
-          <ButtonWith onClick={this.handleOnClick}>Open</ButtonWith>
+          {button}
         </BottomWrap>
       );
     }

@@ -38,4 +38,5 @@ export const ListWrap = styled.div`
     background-color:${props => props.theme.MainTheme.black[2]};
     padding: 0;
     width: 132px;
+    z-index: 9999;
 `;

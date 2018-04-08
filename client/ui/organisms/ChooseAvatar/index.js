@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Photo from 'ui/atoms/Photo';
-import Button from 'ui/molecules/PrimaryButton';
+import Button from 'ui/molecules/ButtonWith';
 import ImgTest from 'assets/images/person.png';
 
 import { Wrapper, ButtonWrap } from './index.styled';

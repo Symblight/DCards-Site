@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import PageTemplate from 'ui/templates/BlockTemplate';
+import PageTemplate from 'ui/templates/PageTemplate';
 import Footer from 'ui/organisms/Footer';
 import Header from 'components/Header';
 import InfoPanelAccount from 'ui/organisms/InfoPanel';
@@ -19,7 +19,6 @@ class MainPage extends PureComponent {
   render() {
     return (
       <PageTemplate
-        nav={<InfoPanelAccount />}
         header={<Header />}
         footer={<Footer />}
         src={TestImg}

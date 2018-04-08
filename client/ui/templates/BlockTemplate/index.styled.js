@@ -19,14 +19,14 @@ export const Content = styled.main`
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color:${props => props.theme.MainTheme.white[0]};
+    background-color:${props => props.theme.MainTheme.white[2]};
     display: flex;
     justify-content: center;
     min-height: 324px;
 `;
 
 export const HeroWrap = styled.nav`
-    height: 400px;
+    height: 240px;
     color:${props => props.theme.MainTheme.white[0]};
     display: flex;
     justify-content: center;

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #F5F5F5;
+    background-color: ${props => props.theme.MainTheme.white[2]};
     margin: 25px;
-    max-width: 70vw;
+    border-radius: 6px;
 `;
 
 export const Title = styled.div`
@@ -14,6 +14,7 @@ export const Title = styled.div`
     padding: 3px;
     text-align: center;
     font-weight: 600;
+    border-radius: 4px;
 `;
 
 export const Content = styled.div`

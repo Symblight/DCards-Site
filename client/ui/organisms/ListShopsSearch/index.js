@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import withSearchShops from 'components/proxy-props/withSearchShops';
 import ListGrids from 'ui/organisms/ListGrids';
-import Shop from 'ui/organisms/Shop';
+import Shop from 'ui/molecules/Shop';
 
 import { Wrapper } from './index.styled';
 

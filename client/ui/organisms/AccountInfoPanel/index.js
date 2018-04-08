@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import FieldText from 'ui/molecules/FieldText';
 import FieldPassword from 'ui/molecules/FieldPassword';
-import Button from 'ui/molecules/PrimaryButton';
+import Button from 'ui/molecules/ButtonWith';
 import Menu from 'ui/molecules/Menu';
 import UserInfoEdit from 'ui/organisms/UserInfoEdit';
 import UserPasswordEdit from 'ui/organisms/UserPasswordEdit';

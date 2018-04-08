@@ -32,6 +32,8 @@ import FlatButton from 'ui/atoms/FlatButton';
 import Post from 'ui/molecules/Post';
 import ContextMenu from 'ui/molecules/ContextMenu';
 
+import CardSVG from 'assets/images/card.svg';
+
 class TestPage extends Component {
   state = {
     validInputFirst: '',
@@ -84,8 +86,15 @@ class TestPage extends Component {
           <Block title="Checkbox">
             <Checkbox value="Checkbox" />
           </Block>
+
           <Block title="POST">
-            <Post />
+            <Post button={<ButtonWith>Open</ButtonWith>}>
+              <CardSVG height={140} />
+              <div>
+                <div>Title</div>
+                <div>content</div>
+              </div>
+            </Post>
           </Block>
 
           <Block title="Menu">

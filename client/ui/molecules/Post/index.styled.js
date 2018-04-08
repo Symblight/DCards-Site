@@ -5,10 +5,10 @@ export const Wrapper = styled.article`
     flex-direction: column;
     background-color: #fff;
     border-radius: 6px;
-    padding: 12px;
+    padding: 6px;
 
-    height: 260px;
-    width: 260px;
+    height: 310px;
+    width: 280px;
 `;
 
 export const TopWrap = styled.div`
