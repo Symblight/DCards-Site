@@ -32,4 +32,8 @@ export const ButtonWrap = styled(Button)`
     &:hover {
         background-color: ${props => changeColor(props.theme.MainTheme, props.color, 1)};;
     }
+
+    &:active {
+      background-color: ${props => changeColor(props.theme.MainTheme, props.color, 0)};;
+    }
 `;

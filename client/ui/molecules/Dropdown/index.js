@@ -45,7 +45,7 @@ class MenuStrip extends PureComponent {
         <Wrapper onMouseEnter={this.handleOverTriggered} onMouseLeave={this.handleOutTriggered}>
           <TitleWrap>{title}</TitleWrap> <Triangle />
           {
-                   this.state.triggered ? this.renderItems() : null
+            this.state.triggered ? this.renderItems() : null
           }
         </Wrapper>
       );

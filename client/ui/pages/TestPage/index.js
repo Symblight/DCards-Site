@@ -16,7 +16,6 @@ import WayBlock from 'ui/molecules/WayBlock';
 import BlockBorder from 'ui/molecules/BlockBorder';
 import TextFieldButton from 'ui/molecules/TextFieldButton';
 import PageTemplates from 'ui/templates/PageTemplate';
-import Container from 'ui/molecules/Container';
 import LogoSVG from 'assets/images/react.svg';
 import Spinner from 'ui/atoms/Spinner';
 import AddButton from 'ui/molecules/AddButton';
@@ -63,7 +62,6 @@ class TestPage extends Component {
       <PageTemplates
         header={<Header />}
       >
-        <Container>
           <Block title="Form">
             <form>
               <FieldForm>
@@ -190,7 +188,6 @@ class TestPage extends Component {
             </Tabs>
 
           </Block>
-        </Container>
       </PageTemplates>
     );
   }

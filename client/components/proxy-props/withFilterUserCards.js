@@ -13,7 +13,7 @@ const withFilterUserCards = (Component) => {
       const { cards } = this.props;
 
       return (
-        <Component {...this.props} data={cards} />
+        <Component cards={cards} {...this.props} />
       );
     }
   }

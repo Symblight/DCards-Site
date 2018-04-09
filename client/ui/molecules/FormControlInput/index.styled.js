@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const stateColor = (state) => {
-  const defaultColor = '#fff';
+  const defaultColor = '#eaeaea';
   let newColor;
 
   if (state === 'warning') {

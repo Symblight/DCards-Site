@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
     background-color: ${props => props.theme.MainTheme.white[0]};
     margin-bottom: 24px;
+    border-radius: 6px;
 `;
 
 export const HeaderWrap = styled.div`
@@ -18,4 +19,6 @@ export const HeaderWrap = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 `;

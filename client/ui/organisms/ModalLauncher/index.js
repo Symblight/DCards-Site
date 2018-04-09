@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Modal from 'ui/molecules/Modal';
-import CardArticle from 'ui/organisms/Card';
+import CardArticle from 'ui/molecules/Card';
 
 class ModalLauncher extends PureComponent {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from 'ui/molecules/PrimaryButton';
+import Button from 'ui/molecules/ButtonWith';
 import Label from 'ui/atoms/Label';
 import FormInput from 'ui/molecules/FormControlInput';
 import FieldForm from 'ui/atoms/FieldForm';

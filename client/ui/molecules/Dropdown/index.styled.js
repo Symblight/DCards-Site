@@ -39,4 +39,5 @@ export const ListWrap = styled.div`
     padding: 0;
     width: 132px;
     z-index: 9999;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.38);
 `;

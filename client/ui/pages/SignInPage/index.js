@@ -38,7 +38,7 @@ class SignInPage extends PureComponent {
           <ButtonWith color="#4267b2"><IconFace height={20} width={20} /></ButtonWith>
         </SocialWrap>
         <SocialWrap>
-          <ButtonWith><IconGoo height={20} width={20} /></ButtonWith>
+          <ButtonWith color="#efefef"><IconGoo height={20} width={20} /></ButtonWith>
         </SocialWrap>
         <SocialWrap>
           <ButtonWith color="#4a76a8"><IconVK height={20} width={20} /></ButtonWith>

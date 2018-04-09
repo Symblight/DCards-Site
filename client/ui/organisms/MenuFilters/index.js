@@ -9,9 +9,9 @@ class MenuFilters extends PureComponent {
     return (
       <Menu title="Фильтры">
         <Wrapper>
-                    Filters
+            Поиск по названию магазина
+            Фильтр по типу карточки
         </Wrapper>
-        <ButtonWrap>Применить</ButtonWrap>
       </Menu>
     );
   }
