@@ -16,33 +16,6 @@ import {
 } from './index.styled';
 
 class CardArticle extends PureComponent {
-
-  renderCard() {
-    const { data, location, link } = this.props;
-
-    return (
-      <Post button={
-        <Link
-          to={{
-        pathname: `${link}/${data.id}`,
-        state: { modal: true }
-      }}
-        >
-          <ButtonWith>Open</ButtonWith>
-        </Link>
-      }
-      >
-        <CardSVG />
-        <NameCardWrap>
-          {data.shop}
-        </NameCardWrap>
-        <DiscriptionWrap>
-          {data.discription}
-        </DiscriptionWrap>
-      </Post>
-    );
-  }
-
   render() {
     const { data, location, link } = this.props;
 
@@ -55,7 +28,7 @@ class CardArticle extends PureComponent {
             state: { modal: true }
           }}
           >
-            <ButtonWith>Open</ButtonWith>
+            <ButtonWith>Открыть</ButtonWith>
           </Link>
           }
           >

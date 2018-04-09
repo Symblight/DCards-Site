@@ -20,7 +20,7 @@ class ShopArticle extends PureComponent {
           pathname: `/shop/${data.name}`
         }}
         >
-          <ButtonWith>Open</ButtonWith>
+          <ButtonWith>Открыть</ButtonWith>
         </Link>
       }
         >

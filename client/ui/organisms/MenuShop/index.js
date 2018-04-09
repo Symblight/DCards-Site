@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Picture from 'ui/atoms/Picture';
 import ImageTEST from 'assets/images/coffe.png';
-import Button from 'ui/molecules/PrimaryButton';
+import Button from 'ui/molecules/ButtonWith';
 
 import { Wrapper, HeadWrap, Head } from './index.styled';
 
