@@ -4,41 +4,43 @@ import PropTypes from 'prop-types';
 import Menu from 'ui/molecules/Menu';
 import MenuItem from 'ui/molecules/MenuItem';
 
-import { } from './index.styled';
+import { Wrapper, MenuWrap } from './index.styled';
 
 class MenuAdminShop extends PureComponent {
-  state = {
-    activeItem: ''
-  };
-
   handleSelectedItem = (event, name) => {
-    this.setState({ activeItem: name });
+    const { onSelect } = this.props;
+
+    if (onSelect) {
+      onSelect(name);
+    }
   };
 
   render() {
-    const { activeItem } = this.state;
+    const { activeItem } = this.props;
 
     return (
-      <Menu title="Меню">
-        <MenuItem
-          name="item1"
-          onClick={this.handleSelectedItem}
-          content="Edit info shop"
-          active={activeItem === 'item1'}
-        />
-        <MenuItem
-          name="item2"
-          onClick={this.handleSelectedItem}
-          content="Edit type card"
-          active={activeItem === 'item2'}
-        />
-        <MenuItem
-          name="item3"
-          onClick={this.handleSelectedItem}
-          content="Edit card"
-          active={activeItem === 'item3'}
-        />
-      </Menu>
+      <Wrapper>
+        <MenuWrap title="Меню">
+          <MenuItem
+            name="BaseInfo"
+            onClick={this.handleSelectedItem}
+            content="Редактировать инофрмацию о магазине"
+            active={activeItem === 'BaseInfo'}
+          />
+          <MenuItem
+            name="EditCards"
+            onClick={this.handleSelectedItem}
+            content="Редактировать карты"
+            active={activeItem === 'EditCards'}
+          />
+          <MenuItem
+            name="EditAdmins"
+            onClick={this.handleSelectedItem}
+            content="Администраторы"
+            active={activeItem === 'EditAdmins'}
+          />
+        </MenuWrap>
+      </Wrapper>
     );
   }
 }

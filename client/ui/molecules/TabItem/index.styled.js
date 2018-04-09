@@ -5,4 +5,5 @@ export const Wrapper = styled.div`
     height: 100%;
     min-height: 100px;
     border-top: 1px solid #e0e0e0;
+    padding-top: 24px
 `;

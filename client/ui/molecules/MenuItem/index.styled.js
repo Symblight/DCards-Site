@@ -18,7 +18,7 @@ export const Slider = styled.div`
     top: 0;
     left: 0;
     border: none;
-    height: 40px;
+    height: 100%;
     width: 3px;
     background-color: ${props => props.theme.MainTheme.primary[1]};
     transform: scale(${props => (props.state ? 1 : 0)});

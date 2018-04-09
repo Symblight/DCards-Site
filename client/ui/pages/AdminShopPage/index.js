@@ -5,8 +5,8 @@ import PageTemplate from 'ui/templates/PageTemplate';
 import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
 
-import AdminShopTabs from 'ui/organisms/AdminShopTabs';
-import MenuAdminShop from 'ui/organisms/MenuAdminShop';
+import AdminShopContainer from 'ui/organisms/AdminShopContainer';
+import InfoShop from 'ui/organisms/InfoShop';
 
 import { Wrapper } from './index.styled';
 
@@ -24,8 +24,8 @@ class AdminShopPage extends PureComponent {
           footer={<Footer />}
         >
           <Wrapper>
-            <MenuAdminShop />
-            <AdminShopTabs />
+            <InfoShop />
+            <AdminShopContainer />
           </Wrapper>
         </PageTemplate>
       );

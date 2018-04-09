@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import TabTitle from 'ui/atoms/TabTitle';
 
-import { TitlesWrap } from './index.styled';
+import { TitlesWrap, Content } from './index.styled';
 
 class TabConatiner extends PureComponent {
     static displayName = 'Tabs';
@@ -54,10 +54,7 @@ class TabConatiner extends PureComponent {
       return (
         <div>
           {this._renderTitles()}
-
-          <div>
-            {children[this.state.selected]}
-          </div>
+          {children[this.state.selected]}
         </div>
       );
     }
