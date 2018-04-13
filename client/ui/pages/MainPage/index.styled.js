@@ -7,8 +7,6 @@ export const Wrapper = styled.main`
 export const ContentWrap = styled.section`
     display: flex;
     justify-content: center;
-  //  margin-bottom: 24px;
-    margin-top: 24px;
 `;
 
 export const MenuWrap = styled.div`

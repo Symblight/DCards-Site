@@ -14,7 +14,7 @@ export const Content = styled.div`
     flex: 1 1 auto;
     justify-content: space-between;
     flex-direction: row;
-    max-width: 1124px;
+    max-width: 1400px;
     margin: 0 auto;
     height: 100%;
     color:${props => props.theme.MainTheme.white[3]};

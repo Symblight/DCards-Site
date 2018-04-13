@@ -5,6 +5,7 @@ import Tabs from 'ui/molecules/Tabs';
 import TabItem from 'ui/molecules/TabItem';
 import ListCardsShop from 'ui/organisms/ListCardsShop';
 import withShopInfo from 'components/proxy-props/withShopInfo';
+import Button from 'ui/molecules/ButtonWith';
 
 import { } from './index.styled';
 
@@ -89,6 +90,7 @@ class AdminShopTabs extends PureComponent {
       <Tabs selected={this.props.firstSelect || 0}>
         <TabItem label="Карты">
           <ListCardsShop shop={data} />
+          <Button>Создать карту</Button>
         </TabItem>
         <TabItem label="Клиенты">
           {this.renderTableUsers()}

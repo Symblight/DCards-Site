@@ -35,7 +35,6 @@ class ListCards extends PureComponent {
           <ListGrids
             items={data}
             countRow={COUNT_ITEMS_ROW}
-            Item={Card}
             link="/main/card"
           />
           {this.renderButton()}

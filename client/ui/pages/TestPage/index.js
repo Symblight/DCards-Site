@@ -33,7 +33,36 @@ import ContextMenu from 'ui/molecules/ContextMenu';
 import Menu from 'ui/molecules/Menu';
 import MenuItem from 'ui/molecules/MenuItem';
 
+import Card from 'ui/molecules/CardLayout';
+import CardFront from 'ui/atoms/CardFront';
+import CardBack from 'ui/atoms/CardBack';
+
 import CardSVG from 'assets/images/card.svg';
+
+import { GridWrap } from './index.styled';
+
+const CARD = {
+  id: '123445',
+  author: 'Parikmacher.by',
+  logo: '',
+  title: 'Parikmacher.by',
+  barcode: '232f5guhg',
+  front: {
+    discription: 'Интернет магазин',
+    createBy: '12.04.2018',
+    footer: 'Дисконтная карта'
+  },
+  back: {
+    discription: '100% скидка на все товары для мастеров',
+    footer: 'Дисконтная карта'
+  },
+  configCard: {
+    colorFont: '#fff',
+    backgroundFront: '',
+    backgroundBack: '',
+    type: 'discont'
+  }
+};
 
 class TestPage extends Component {
   state = {
@@ -70,6 +99,45 @@ class TestPage extends Component {
       <PageTemplates
         header={<Header />}
       >
+        <Block title="Card">
+          <GridWrap>
+            <Card edit={true} remove={true}>
+              <CardFront
+                title={CARD.title}
+                isUser={false}
+                data={CARD.front}
+              />
+              <CardBack
+                title={CARD.title}
+                data={CARD.back}
+              />
+            </Card>
+
+            <Card edit={true} remove={true}>
+              <CardFront
+                title={CARD.title}
+                isUser={false}
+                data={CARD.front}
+              />
+              <CardBack
+                title={CARD.title}
+                data={CARD.back}
+              />
+            </Card>
+
+            <Card>
+              <CardFront
+                title={CARD.title}
+                isUser={false}
+                data={CARD.front}
+              />
+              <CardBack
+                title={CARD.title}
+                data={CARD.back}
+              />
+            </Card>
+          </GridWrap>
+        </Block>
         <Block title="Menu & Menu Items">
           <Menu title="Menu">
             <MenuItem

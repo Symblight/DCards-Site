@@ -5,69 +5,179 @@ import { fetchCardsUser } from 'components/Main/actions';
 
 const LIST_DICSOUNTS = [
   {
-    id: '21',
-    shop: 'OZ',
-    discription: 'Книжный',
-    procent: '30'
+    id: '123445',
+    author: 'Parikmacher.by',
+    logo: '',
+    title: 'Parikmacher.by',
+    barcode: '232f5guhg',
+    front: {
+      discription: 'Интернет магазин',
+      createBy: '12.04.2018',
+      footer: 'Дисконтная карта'
+    },
+    back: {
+      discription: '100% скидка на все товары для мастеров',
+      footer: 'Дисконтная карта'
+    }
   }, {
-    id: '22',
-    shop: 'Bufet',
-    discription: 'There is not great talent without great will power.',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '23',
-    shop: 'Suchi',
-    discription: '30 procent for barber fgfgfgfgfgfgfgf',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '24',
-    shop: 'Pizza',
-    discription: 'Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от',
-    procent: '10'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '25',
-    shop: 'Megogo',
-    discription: 'Книжный',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '26',
-    shop: 'yes',
-    discription: '30 procent for barber fgfgfgfgfgfgfgf',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '27',
-    shop: 'xiaomi',
-    discription: 'Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от',
-    procent: '10'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '28',
-    shop: 'apple',
-    discription: 'There is not great talent without great will power.',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '29',
-    shop: 'Bar',
-    discription: '30 procent for barber fgfgfgfgfgfgfgf',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '30',
-    shop: 'Kino',
-    discription: 'Все! Мы потратили много времени, но надеюсь, что вам это понравилось. Я считаю, что этот небольшой пример является от',
-    procent: '10'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   },
   {
-    id: '31',
-    shop: 'OZ',
-    discription: 'Книжный',
-    procent: '30'
+    id: '',
+    author: '',
+    logo: '',
+    title: '',
+    barcode: '',
+    front: {
+      discription: '',
+      createBy: '12.04.2018',
+      footer: ''
+    },
+    back: {
+      discription: '',
+      footer: 'Дисконтная карта'
+    }
   }
 ];
 

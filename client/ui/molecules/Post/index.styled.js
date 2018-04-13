@@ -9,6 +9,14 @@ export const Wrapper = styled.article`
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
     height: 310px;
     width: 280px;
+
+    transition: transform .2s ease,box-shadow .2s ease;
+    will-change: transform,box-shadow; 
+
+    &:hover {
+        transform: translate(0,-3px);
+        box-shadow: 0 3px 4px 0 rgba(0,0,0,0.10);
+    }
 `;
 
 export const TopWrap = styled.div`

@@ -26,7 +26,6 @@ export const ButtonWrap = styled(Button)`
     background-color: ${props => changeColor(props.theme.MainTheme, props.color, 0)};
     color: #fff;
     border-radius: 4px;
-    margin-top: 12px;
     transition: background .2s,color .2s;
 
     &:hover {
