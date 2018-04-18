@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react';
 
-import AccountPage from 'ui/pages/AccountPage';
 import DynamicImport from 'components/proxy-props/withDynamicImport';
 
-class Account extends PureComponent {
+class AdminShop extends PureComponent {
   render() {
     return (
-      <DynamicImport load={() => import('ui/pages/AccountPage')}>
+      <DynamicImport load={() => import('ui/pages/AdminShopPage')}>
         {(Component) => (Component === null
         ? <p>Loading</p>
         : <Component {...this.props} />)}
@@ -15,4 +14,4 @@ class Account extends PureComponent {
   }
 }
 
-export default Account;
+export default AdminShop;

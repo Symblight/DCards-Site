@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import PageTemplate from 'ui/templates/PageTemplate';
+import PageTemplate from 'ui/templates/AdminTemplate';
 import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
+import SideBar from 'ui/atoms/SideBar';
 
 import AdminShopContainer from 'ui/organisms/AdminShopContainer';
 import InfoShop from 'ui/organisms/InfoShop';
@@ -24,8 +25,7 @@ class AdminShopPage extends PureComponent {
           footer={<Footer />}
         >
           <Wrapper>
-            <InfoShop />
-            <AdminShopContainer />
+            <SideBar />
           </Wrapper>
         </PageTemplate>
       );

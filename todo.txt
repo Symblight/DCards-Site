@@ -1,0 +1,17 @@
+#BUGS
+
+UglifiJS can't build project
+
+#TODO
+
+~Front-end
+— We should be create admin page:
+— create admin card module
+— input cards in main list of cards page
+— create loading page!
+
+~Back-end
+
+— Maybe we will use GraphQL for middleware between Front-end and Back-end?
+— Make api for cards
+— Make auth.js

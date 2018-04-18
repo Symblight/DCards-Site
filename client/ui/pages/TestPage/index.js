@@ -112,30 +112,6 @@ class TestPage extends Component {
                 data={CARD.back}
               />
             </Card>
-
-            <Card edit={true} remove={true}>
-              <CardFront
-                title={CARD.title}
-                isUser={false}
-                data={CARD.front}
-              />
-              <CardBack
-                title={CARD.title}
-                data={CARD.back}
-              />
-            </Card>
-
-            <Card>
-              <CardFront
-                title={CARD.title}
-                isUser={false}
-                data={CARD.front}
-              />
-              <CardBack
-                title={CARD.title}
-                data={CARD.back}
-              />
-            </Card>
           </GridWrap>
         </Block>
         <Block title="Menu & Menu Items">

@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const plugins = [
   new webpack.LoaderOptionsPlugin({
@@ -20,6 +21,15 @@ const plugins = [
     'process.env': {
       NODE_ENV: JSON.stringify('production'),
     },
+  }),
+  new UglifyJsPlugin({
+    sourceMap: true,
+    uglifyOptions: {
+      ecma: 8,
+      compress: {
+        warnings: false
+      }
+    }
   }),
 ];
 

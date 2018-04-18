@@ -6,3 +6,4 @@ build
 _nogit
 todo.md
 .vscode
+dist
