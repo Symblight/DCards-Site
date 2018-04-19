@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
 
 export const WrapEditBlock = styled.div`
     display: flex;
-    margin-left: 24px;
     background-color: white;
     padding: 12px;
     border-radius: 6px;

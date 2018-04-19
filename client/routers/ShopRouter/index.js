@@ -9,7 +9,7 @@ import Main from 'components/Main';
 import Shops from 'components/Shops';
 import Shop from 'components/Shop';
 import Card from 'components/Card';
-import Admin from 'ui/pages/AdminShopPage';
+import Admin from 'ui/pages/AdminPageShop';
 
 import withSwitchModal from '../../components/proxy-props/withSwitchModal';
 import withAuthorization from '../../components/proxy-props/withAuthorization';

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import MainPage from 'ui/pages/MainPage';
+import Loading from 'ui/atoms/Loading';
 import DynamicImport from 'components/proxy-props/withDynamicImport';
 
 class Main extends PureComponent {
@@ -13,7 +14,7 @@ class Main extends PureComponent {
       return (
         <DynamicImport load={() => import('ui/pages/MainPage')}>
           {(Component) => (Component === null
-        ? <p>Loading</p>
+        ? <Loading />
         : <Component {...this.props} />)}
         </DynamicImport>
       );

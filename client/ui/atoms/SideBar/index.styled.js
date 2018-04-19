@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     width: 16rem;
-    height: 100%!important;
-    background-color:${props => props.theme.MainTheme.black[2]};
+    min-height: 100vh;
+    background-color:${props => props.theme.MainTheme.black[3]};
 `;
 
 export const WrapPadding = styled.div`

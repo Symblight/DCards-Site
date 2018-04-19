@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 
 import PageTemplate from 'ui/templates/AdminTemplate';
 import Header from 'components/Header';
+import HeaderAdmin from 'ui/molecules/HeaderAdmin';
 import Footer from 'ui/organisms/Footer';
-import SideBar from 'ui/atoms/SideBar';
+import SideBar from 'ui/molecules/SideBarAdmin';
 
 import AdminShopContainer from 'ui/organisms/AdminShopContainer';
 import InfoShop from 'ui/organisms/InfoShop';
 
 import { Wrapper } from './index.styled';
 
-class AdminShopPage extends PureComponent {
+class AdminPageShop extends PureComponent {
     static propTypes = {
       children: PropTypes.node
     }
@@ -21,15 +22,15 @@ class AdminShopPage extends PureComponent {
 
       return (
         <PageTemplate
-          header={<Header />}
+          header={<HeaderAdmin />}
           footer={<Footer />}
         >
           <Wrapper>
-            <SideBar />
+            <AdminShopContainer />
           </Wrapper>
         </PageTemplate>
       );
     }
 }
 
-export default AdminShopPage;
+export default AdminPageShop;

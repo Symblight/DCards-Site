@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 
 import AdminShopTabs from 'ui/organisms/AdminShopTabs';
-import MenuAdminShop from 'ui/organisms/MenuAdminShop';
+import MenuAdminShop from 'ui/molecules/SideBarAdmin';
+import CreateCardModule from 'ui/organisms/CreateCardModule';
 
 import { Wrapper, WrapEditBlock } from './index.styled';
 
@@ -20,6 +21,7 @@ class AdminShopContainer extends PureComponent {
 
   renderBlockEdit() {
     if (this.state.selected === 'BaseInfo') { return (<AdminShopTabs />); }
+    if (this.state.selected === 'EditCards') { return (<CreateCardModule />); }
 
     return null;
   }

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import withDiscountCards from 'components/proxy-props/withDiscountCards';
 import Grid from 'ui/molecules/Grid';
@@ -26,7 +27,7 @@ class ListCardsShop extends PureComponent {
       return (
         <Wrapper>
           {
-          data ?
+          !_.isEmpty(data) && !_.isEmpty(shop) ?
             <ListGrids
               items={data}
               countRow={COUNT_ITEMS_ROW}

@@ -9,7 +9,6 @@ import Button from 'ui/molecules/ButtonWith';
 
 import { } from './index.styled';
 
-@withShopInfo
 class AdminShopTabs extends PureComponent {
 
   renderTableUsers() {
