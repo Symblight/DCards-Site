@@ -16,3 +16,17 @@ export const MenuWrap = styled.div`
     display: flex;
     flex-direction: column;
 `;
+
+// TEST
+
+export const LoadingBar = styled.div`
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 800;
+    background: #34e79a;
+    transform: translateX(100%);
+`;

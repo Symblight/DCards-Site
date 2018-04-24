@@ -1,14 +1,8 @@
 import styled from 'styled-components';
 
-const Wrap = styled.div`
-    cursor: pointer;
-    height: 190px;
-    width: 300px;
-    border-radius: 12px;
-    color: #fff;
-`;
+import Card from 'ui/atoms/Card';
 
-const PositionWrap = styled(Wrap)`
+const PositionWrap = styled(Card)`
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +10,7 @@ const PositionWrap = styled(Wrap)`
     overflow: hidden;
 `;
 
-export const Wrapper = styled(Wrap)`
+export const Wrapper = styled(Card)`
     perspective: 1000px; 
 
     transition: transform .2s ease,box-shadow .2s ease;

@@ -1,6 +1,8 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
+import { loadingBarMiddleware } from 'react-redux-loading-bar';
+
 import rootReducer from '../rootReducer';
 
 /**
@@ -11,6 +13,7 @@ import rootReducer from '../rootReducer';
 export default function configureStore(initialState) {
   const middleWare = [];
   middleWare.push(thunk);
+  middleWare.push(loadingBarMiddleware());
 
   const loggerMiddleware = createLogger({
     predicate: () => process.env.NODE_ENV === 'development',

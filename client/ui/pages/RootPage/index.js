@@ -1,17 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import PageTemplate from 'ui/templates/PageTemplate';
+import PageTemplate from 'ui/templates/AdminTemplate';
 import Header from 'components/Header';
 import Footer from 'ui/organisms/Footer';
 
-import { Wrapper, MenuWrap } from './index.styled';
+import { Wrapper } from './index.styled';
 
 class AdminPage extends PureComponent {
-    static propTypes = {
-      children: PropTypes.node
-    }
-
     render() {
       const { auth, children } = this.props;
 

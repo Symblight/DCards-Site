@@ -9,14 +9,14 @@ import Main from 'components/Main';
 import Shops from 'components/Shops';
 import Shop from 'components/Shop';
 import Card from 'components/Card';
-import Admin from 'ui/pages/AdminPageShop';
+import Admin from 'components/AdminShop';
 
 import withSwitchModal from '../../components/proxy-props/withSwitchModal';
 import withAuthorization from '../../components/proxy-props/withAuthorization';
 import withAuthenticated from '../../components/proxy-props/withAuthenticated';
 
-@withAuthorization
-@withSwitchModal
+// @withAuthorization
+// @withSwitchModal
 class ShopRouter extends Component {
 
   render() {

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { loadingBarReducer } from 'react-redux-loading-bar';
 
 import reducerMain from './components/Main/reducer';
 import reducerCard from './components/Card/reducer';
@@ -11,5 +12,6 @@ export default combineReducers({
   reducerCard,
   reducerShops,
   reducerShop,
-  reducerConfig
+  reducerConfig,
+  loadingBar: loadingBarReducer
 });
